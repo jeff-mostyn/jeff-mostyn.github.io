@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'urbanist': ['urbanist', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }

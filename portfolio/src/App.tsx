@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Nav } from './components/Nav';
 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import { Home } from './pages/Home';
+import { Portfolio } from './pages/Portfolio';
+import { SonsOfRa } from './pages/Portfolio/SonsOfRa';
+
 function App() {
+  const head = document.head;
+  if (!document.getElementById("urbanist-font")) {
+    let link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://fonts.googleapis.com/css?family=Urbanist";
+    link.id = "urbanist-font"
+    head.append(link);
+  }
+
   return (
     <div className="App">
-      <Nav />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/Portfolio' element={<Portfolio/>} />
+          <Route path='/Portfolio/SonsOfRa' element={<SonsOfRa/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
