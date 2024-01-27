@@ -9,7 +9,7 @@ export enum ButtonType {
 type ButtonProps = {
   type: ButtonType;
   label: string;
-  path?: string;
+  path: string;
 }
 
 export const Button = ( { type, label, path } : ButtonProps) => {
@@ -17,7 +17,7 @@ export const Button = ( { type, label, path } : ButtonProps) => {
     <div className="flex text-white border-2 border-white rounded-md items-center justify-center cursor-pointer">
       <div className=" px-8 py-2">
         { type === ButtonType.NAV_LINK ?
-            <NavLink to="/Portfolio/SonsOfRa">
+            <NavLink to={path}>
               {label}
             </NavLink>
             : <button />

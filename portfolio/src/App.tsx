@@ -10,6 +10,7 @@ import {
 import { Home } from './pages/Home';
 import { Portfolio } from './pages/Portfolio';
 import { SonsOfRa } from './pages/Portfolio/SonsOfRa';
+import { RacingGame } from './pages/Portfolio/RacingGame'
 
 function App() {
   const head = document.head;
@@ -22,13 +23,14 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App min-h-screen bg-zinc-700">
       <Router>
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/Portfolio' element={<Portfolio/>} />
           <Route path='/Portfolio/SonsOfRa' element={<SonsOfRa/>} />
+          <Route path='/Portfolio/RacingGame' element={<RacingGame/>} />
         </Routes>
       </Router>
     </div>

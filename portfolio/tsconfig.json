@@ -24,6 +24,9 @@
       "@components/*": ["src/components", "/components/*"],
       "@_data/*": ["src/_data", "src/_data/*"]
     }
+    // "typeRoots": [
+    //   "types/index.d.ts"
+    // ]
   },
   "include": [
     "src"

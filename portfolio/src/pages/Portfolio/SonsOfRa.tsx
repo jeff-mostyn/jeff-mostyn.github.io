@@ -1,9 +1,14 @@
 import React from "react";
 
+import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
+
+import { PortfolioItemData } from "src/components/Portfolio/FeatureDisplay";
+import { PortfolioPage } from "./PortfolioPage";
+
 export const SonsOfRa = () => {
+  const data: PortfolioItemData = sonsOfRaData;
+
   return (
-    <div>
-      This is the Sons of Ra Portfolio Page
-    </div>
+    <PortfolioPage data={sonsOfRaData} />
   )
 }
