@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5c3a582d.css",
+    "main.js": "/static/js/main.c99ca51b.js",
+    "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
+    "static/media/racingGame_banner.png": "/static/media/racingGame_banner.b93893ba409dbbf9445b.png",
+    "static/media/sor_banner.jpg": "/static/media/sor_banner.fcfdb2cf25dd1bd9dbc1.jpg",
+    "index.html": "/index.html",
+    "main.5c3a582d.css.map": "/static/css/main.5c3a582d.css.map",
+    "main.c99ca51b.js.map": "/static/js/main.c99ca51b.js.map",
+    "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c3a582d.css",
+    "static/js/main.c99ca51b.js"
+  ]
+}
