@@ -14,7 +14,7 @@ export const racingGameData = {
     "roles": [
       "Programming",
       "UI/UX",
-      "Technical Art",
+      "Tech Art",
       "Animation"
     ],
     "duties": [],

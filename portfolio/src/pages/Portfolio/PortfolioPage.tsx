@@ -16,7 +16,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
         <div className="text-6xl text-white font-urbanist font-normal">
           {data.content.title}
         </div>
-        <div className="flex pt-2 text-md flex-row text-white font-urbanist font-normal">
+        <div className="flex pt-3 text-md flex-row text-white font-urbanist font-normal">
           {data.content.roles.map((role, key) => {
             return <RoleBadge role={role} key={key}/>
           })}
