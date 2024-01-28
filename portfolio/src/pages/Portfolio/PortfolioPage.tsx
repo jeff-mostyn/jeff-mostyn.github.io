@@ -32,7 +32,7 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
             })}
           </div>
         </div>
-        <div className="flex flex-col md:grid md:grid-cols-12 px-16 pt-8 pb-8 divide-y md:divide-x">
+        <div className="flex flex-col md:grid md:grid-cols-12 px-8 pt-8 pb-8 divide-y md:divide-x mdpx-16">
           <div className="pb-4 md:grid md:col-span-6 md:pb-0 md:pr-8">
             {data.content.keyVideo && 
               <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />
