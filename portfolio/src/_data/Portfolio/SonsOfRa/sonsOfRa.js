@@ -28,6 +28,10 @@ export const sonsOfRaData = {
       {
         "text": "FTW Philly TV Spot",
         "url": "https://youtu.be/0B0YYqkLePk?si=LbNTnWJLRq61mk_B&t=880"
+      },
+      {
+        "text": "Drexel University 40 Under 40",
+        "url": "https://drexelmagazine.org/2020/code-like-an-egyptian/"
       }
     ],
     "keyVideo": "3aAvEn6kEM4?si=BDdoSWe8pDN1VFuj",

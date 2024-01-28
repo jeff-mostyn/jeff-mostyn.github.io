@@ -35,7 +35,7 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
 
         <div className="px-6 md:px-16">
           {/* Summary */}
-          <div className="pt-4 md:px-28">
+          <div className="pt-4 md:px-20">
             {data.content.summary}
           </div>
 

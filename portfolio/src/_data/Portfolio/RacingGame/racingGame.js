@@ -18,7 +18,7 @@ export const racingGameData = {
       "Tech Art",
       "Animation"
     ],
-    "summary": "",
+    "summary": "Our currently unannounced anti-grav racer seeks to emulate the adrenaline of F-Zero's lightning-fast gameplay, while also incorporating the accesibility and casual fun of Mario Kart. Gain advantage with the careful use of items and your vehicle's boost gauge, but be careful as your opponents have access to the same dangerous tools. Weave through the skyscrapers of the cities of future America at breakneck speed as you aim to become the greatest racer alive.",
     "hyperlinks": [],
     "keyImage": keyImage,
     "accomplishments": [
