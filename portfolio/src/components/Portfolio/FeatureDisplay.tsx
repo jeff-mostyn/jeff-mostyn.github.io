@@ -48,13 +48,11 @@ export const FeatureDisplay = ( { data, alignLeft, setActiveProject } : FeatureD
 
 					{/* Button */}
 					<div className="flex text-white border-2 border-white rounded-md items-center justify-center cursor-pointer">
-						<div className=" px-8 py-2">
-							<button type="button" onClick={() => {
-								setActiveProject(data)
-							}}>
-								{"DETAILS"}
-							</button>
-						</div>
+						<button type="button" className="px-8 py-2" onClick={() => {
+							setActiveProject(data)
+						}}>
+							{"DETAILS"}
+						</button>
 					</div>
 				</div>
 			</div>
