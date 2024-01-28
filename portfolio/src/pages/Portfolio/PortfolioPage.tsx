@@ -22,7 +22,7 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
           onClick={() => setActiveProject(undefined)}>
           {"< Back"}
         </button>
-        <div className="flex flex-col justify-center items-center pt-4">
+        <div className="flex flex-col justify-center items-center pt-8 md:pt-4">
           <div className="text-6xl font-urbanist font-normal">
             {data.content.title}
           </div>
@@ -32,8 +32,8 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
             })}
           </div>
         </div>
-        <div className="grid grid-cols-12 px-16 pt-8 pb-8 divide-x">
-          <div className="grid col-span-6 pr-8">
+        <div className="flex flex-col md:grid md:grid-cols-12 px-16 pt-8 pb-8 divide-y md:divide-x">
+          <div className="pb-4 md:grid md:col-span-6 md:pb-0 md:pr-8">
             {data.content.keyVideo && 
               <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />
             }
@@ -42,7 +42,7 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
               <img className="aspect-video" src={data.content.keyImage} />
             }
           </div>
-          <div className="grid col-span-6 pl-8">
+          <div className="pt-4 md:grid md:col-span-6 md:pt-4 md:pl-8">
             <ul className="text-left list-disc list-outside pl-4 self-center">
               {data.content.accomplishments.map((line, key) => {
                 return <li className="list-item" key={key}>{line}</li>
