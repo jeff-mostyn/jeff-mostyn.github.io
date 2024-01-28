@@ -1,6 +1,9 @@
-import banner from './sor_banner.jpg'
+import banner from './sor_banner.jpg';
+
+import { Projects } from 'src/pages/Portfolio/';
 
 export const sonsOfRaData = {
+  // "project": Projects.SONS_OF_RA,
   "banner": {
     "image": banner,
     "label": "Sons of Ra",

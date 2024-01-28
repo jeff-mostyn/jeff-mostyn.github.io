@@ -3,14 +3,22 @@ import { PortfolioItemData } from "src/components/Portfolio/FeatureDisplay";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 
 type PortfolioPageProps = {
-  data: PortfolioItemData
+  data: PortfolioItemData;
+  banner: string
+  setActiveProject: (data: PortfolioItemData | undefined) => void;
 }
 
-export const PortfolioPage = ( { data }: PortfolioPageProps) => {
+export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPageProps) => {
   return (
     <div>
+      <button 
+        type="button" 
+        className="absolute top-0 left-0 pt-2 pl-3 text-white"
+        onClick={() => setActiveProject(undefined)}>
+        {"< Back"}
+      </button>
       <div className="relative w-full h-60">
-        <img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
+        <img className="w-full h-full object-cover object-center" src={banner} alt="bannerImage"/>
       </div>
       <div className="flex flex-col justify-center items-center pt-4">
         <div className="text-6xl text-white font-urbanist font-normal">

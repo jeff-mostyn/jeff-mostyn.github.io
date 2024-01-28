@@ -2,8 +2,10 @@ import React from "react";
 
 import classNames from "classnames";
 import { Button, ButtonType } from "../Util/Button";
+import { Projects } from "src/pages/Portfolio";
 
 export type PortfolioItemData = {
+	project?: Projects;
 	banner: {
 		image: string;
 		label: string;
@@ -25,9 +27,10 @@ const labelStyles = (alignLeft: boolean) => classNames("absolute flex flex-row w
 type FeatureDisplayProps = {
 	data: PortfolioItemData;
 	alignLeft: boolean
+	setActiveProject: (data: PortfolioItemData) => void;
 }
 
-export const FeatureDisplay = ( { data, alignLeft } : FeatureDisplayProps ) => {
+export const FeatureDisplay = ( { data, alignLeft, setActiveProject } : FeatureDisplayProps ) => {
 	return (
 		<div className="relative w-full h-80">
 			<img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
@@ -39,7 +42,18 @@ export const FeatureDisplay = ( { data, alignLeft } : FeatureDisplayProps ) => {
 					<div className="pb-4 text-white font-urbanist font-medium text-sm">
 						{data.banner.tagline}
 					</div>
-					<Button type={ButtonType.NAV_LINK} label="DETAILS" path={data.path} />
+
+					{/* Button */}
+					<div className="flex text-white border-2 border-white rounded-md items-center justify-center cursor-pointer">
+						<div className=" px-8 py-2">
+							<button type="button" onClick={() => {
+								console.log("clicky clicky")
+								setActiveProject(data)
+							}}>
+								{"DETAILS"}
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

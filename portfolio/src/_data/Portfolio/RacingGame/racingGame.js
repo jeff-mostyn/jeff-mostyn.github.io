@@ -1,6 +1,9 @@
 import banner from './racingGame_banner.png'
 
+import { Projects } from 'src/pages/Portfolio/';
+
 export const racingGameData = {
+  // "project": Projects.RACING_GAME,
   "banner": {
     "image": banner,
     "label": "Unannounced Racing Game",
