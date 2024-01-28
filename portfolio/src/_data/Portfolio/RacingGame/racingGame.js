@@ -19,6 +19,7 @@ export const racingGameData = {
       "Animation"
     ],
     "summary": "",
+    "hyperlinks": [],
     "keyImage": keyImage,
     "accomplishments": [
       "Designed and developed most in-game UI, including main menu flow and the player HUD",

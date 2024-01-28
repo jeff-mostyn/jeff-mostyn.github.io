@@ -32,22 +32,39 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
             })}
           </div>
         </div>
-        <div className="flex flex-col md:grid md:grid-cols-12 px-8 pt-6 pb-8 divide-y md:divide-x md:divide-y-0 md:px-16">
-          <div className="pb-4 md:grid md:col-span-6 md:pb-0 md:pr-8">
-            {data.content.keyVideo && 
-              <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />
-            }
-            {
-              data.content.keyImage &&
-              <img className="aspect-video" src={data.content.keyImage} />
+
+        <div className="px-6 md:px-16">
+          {/* Summary */}
+          <div className="pt-4 md:px-28">
+            {data.content.summary}
+          </div>
+
+          {/* Links */}
+          <div className="flex flex-col justify-center pt-4 md:flex-row md:divide-x">
+            { data.content.hyperlinks.map((link, key) => {
+                return <a className="pb-1 px-3 text-theme1 underline" href={link.url} key={key}>{link.text}</a>
+              })
             }
           </div>
-          <div className="pt-4 md:grid md:col-span-6 md:pt-4 md:pl-8">
-            <ul className="text-left list-disc list-outside pl-4 self-center">
-              {data.content.accomplishments.map((line, key) => {
-                return <li className="list-item" key={key}>{line}</li>
-              })}
-            </ul>
+
+          {/* Main Content */}
+          <div className="flex flex-col md:grid md:grid-cols-12 pt-8 pb-8 divide-y md:divide-x md:divide-y-0 ">
+            <div className="pb-4 md:grid md:col-span-6 md:pb-0 md:pr-12">
+              {data.content.keyVideo && 
+                <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />
+              }
+              {
+                data.content.keyImage &&
+                <img className="aspect-video" src={data.content.keyImage} />
+              }
+            </div>
+            <div className="pt-4 md:grid md:col-span-6 md:pt-4 md:pl-12">
+              <ul className="text-left list-disc list-outside pl-4 self-center">
+                {data.content.accomplishments.map((line, key) => {
+                  return <li className="list-item" key={key}>{line}</li>
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

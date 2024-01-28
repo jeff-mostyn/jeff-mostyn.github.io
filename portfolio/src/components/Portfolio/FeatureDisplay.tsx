@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 import { Button, ButtonType } from "../Util/Button";
 import { Projects } from "src/pages/Portfolio";
+import { StringLiteral } from "typescript";
 
 export type PortfolioItemData = {
 	project?: Projects;
@@ -15,6 +16,10 @@ export type PortfolioItemData = {
 		title: string;
 		roles: string[];
 		summary: string;
+		hyperlinks: {
+			text: string;
+			url: string;
+		}[];
 		keyImage?: string;
 		keyVideo?: string;
 		accomplishments: string[];
