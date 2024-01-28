@@ -14,7 +14,10 @@ export type PortfolioItemData = {
 	content: {
 		title: string;
 		summary: string;
+		keyImage?: string;
+		keyVideo?: string;
 		roles: string[];
+		accomplishments: string[];
 	}
 	path: string;
 }
@@ -47,7 +50,6 @@ export const FeatureDisplay = ( { data, alignLeft, setActiveProject } : FeatureD
 					<div className="flex text-white border-2 border-white rounded-md items-center justify-center cursor-pointer">
 						<div className=" px-8 py-2">
 							<button type="button" onClick={() => {
-								console.log("clicky clicky")
 								setActiveProject(data)
 							}}>
 								{"DETAILS"}

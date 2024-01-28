@@ -1,4 +1,5 @@
 import banner from './racingGame_banner.png'
+import keyImage from './racingGame_keyImage.png'
 
 import { Projects } from 'src/pages/Portfolio/';
 
@@ -11,8 +12,7 @@ export const racingGameData = {
   },
   "content": {
     "title": "Unannounced Racing Game",
-    "keyImage": "",
-    "keyVideo": "",
+    "keyImage": keyImage,
     "summary": "",
     "roles": [
       "Programming",
@@ -20,7 +20,13 @@ export const racingGameData = {
       "Tech Art",
       "Animation"
     ],
-    "duties": [],
+    "accomplishments": [
+      "Designed and developed most in-game UI, including main menu flow and the player HUD",
+      "Programmed functionality of items & item pickups",
+      "Created VFX and post-process shaders for holograms and projections, vehicle cel shading, and outlines",
+      "Animated vehicles and in-game actors",
+      "Performed varied programming assignments and resolved technical defects as they arose"
+    ],
     "skills": [],
     "sections": [
       {
