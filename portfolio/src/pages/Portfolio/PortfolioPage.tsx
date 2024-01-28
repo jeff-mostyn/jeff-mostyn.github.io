@@ -23,16 +23,16 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
           {"< Back"}
         </button>
         <div className="flex flex-col justify-center items-center pt-8 md:pt-4">
-          <div className="text-6xl font-urbanist font-normal">
+          <div className="text-5xl font-urbanist font-normal md:text-6xl">
             {data.content.title}
           </div>
-          <div className="flex pt-3 text-md flex-row font-urbanist font-normal">
+          <div className="flex flex-wrap justify-center pt-3 text-md flex-row font-urbanist font-normal">
             {data.content.roles.map((role, key) => {
               return <RoleBadge role={role} key={key}/>
             })}
           </div>
         </div>
-        <div className="flex flex-col md:grid md:grid-cols-12 px-8 pt-8 pb-8 divide-y md:divide-x mdpx-16">
+        <div className="flex flex-col md:grid md:grid-cols-12 px-8 pt-6 pb-8 divide-y md:divide-x md:divide-y-0 md:px-16">
           <div className="pb-4 md:grid md:col-span-6 md:pb-0 md:pr-8">
             {data.content.keyVideo && 
               <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />

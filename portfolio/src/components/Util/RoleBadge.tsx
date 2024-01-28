@@ -9,7 +9,7 @@ enum Roles {
   UI_UX = "UI/UX",
 }
 
-const pillBadgeStyles = (role: string) => classNames('mx-1 px-2.5 py-0.5 rounded-md', {
+const pillBadgeStyles = (role: string) => classNames('mx-1 px-2.5 py-0.5 my-1 rounded-md', {
   "bg-[#e05865]": role === Roles.ANIMATION,
   "bg-[#54bf7a]": role === Roles.DESIGN,
   "bg-[#9454bf]": role === Roles.PROGRAMMING,
