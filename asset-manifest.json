@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.e74a7e44.css",
-    "main.js": "./static/js/main.7a7898c7.js",
+    "main.css": "./static/css/main.5e8a31c6.css",
+    "main.js": "./static/js/main.8f266de5.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/racingGame_keyImage.png": "./static/media/racingGame_keyImage.01f46824ab9601d1ff80.png",
     "static/media/racingGame_banner.png": "./static/media/racingGame_banner.b93893ba409dbbf9445b.png",
     "static/media/sor_banner.jpg": "./static/media/sor_banner.fcfdb2cf25dd1bd9dbc1.jpg",
     "index.html": "./index.html",
-    "main.e74a7e44.css.map": "./static/css/main.e74a7e44.css.map",
-    "main.7a7898c7.js.map": "./static/js/main.7a7898c7.js.map",
+    "main.5e8a31c6.css.map": "./static/css/main.5e8a31c6.css.map",
+    "main.8f266de5.js.map": "./static/js/main.8f266de5.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e74a7e44.css",
-    "static/js/main.7a7898c7.js"
+    "static/css/main.5e8a31c6.css",
+    "static/js/main.8f266de5.js"
   ]
 }
