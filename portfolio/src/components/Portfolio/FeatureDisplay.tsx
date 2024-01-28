@@ -13,18 +13,18 @@ export type PortfolioItemData = {
 	}
 	content: {
 		title: string;
+		roles: string[];
 		summary: string;
 		keyImage?: string;
 		keyVideo?: string;
-		roles: string[];
 		accomplishments: string[];
 	}
 	path: string;
 }
 
-const labelStyles = (alignLeft: boolean) => classNames("absolute flex flex-row w-full bottom-0 items-end pb-12 px-16", {
-	"justify-start": alignLeft,
-	"justify-end": !alignLeft
+const labelStyles = (alignLeft: boolean) => classNames("absolute flex flex-row w-full bottom-0 items-end pb-12 px-16 justify-center", {
+	"md:justify-start": alignLeft,
+	"md:justify-end": !alignLeft
 });
 
 type FeatureDisplayProps = {
@@ -38,7 +38,7 @@ export const FeatureDisplay = ( { data, alignLeft, setActiveProject } : FeatureD
 		<div className="relative w-full h-80">
 			<img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
 			<div className={labelStyles(alignLeft)}>
-				<div className={`flex flex-col ${alignLeft ? 'items-start' : 'items-end'}`}>
+				<div className={`flex flex-col items:center ${alignLeft ? 'md:items-start' : 'md:items-end'}`}>
 					<div className="pb-1 text-white font-urbanist font-medium text-5xl">
 						{data.banner.label}
 					</div>
@@ -47,7 +47,8 @@ export const FeatureDisplay = ( { data, alignLeft, setActiveProject } : FeatureD
 					</div>
 
 					{/* Button */}
-					<div className="flex text-white border-2 border-white rounded-md items-center justify-center cursor-pointer">
+					<div 
+						className={`flex max-w-min text-white border-2 border-white rounded-md self-center justify-center ${alignLeft ? "md:self-start" : "md:self-end"}`}>
 						<button type="button" className="px-8 py-2" onClick={() => {
 							setActiveProject(data)
 						}}>

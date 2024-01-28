@@ -12,14 +12,14 @@ export const racingGameData = {
   },
   "content": {
     "title": "Unannounced Racing Game",
-    "keyImage": keyImage,
-    "summary": "",
     "roles": [
       "Programming",
       "UI/UX",
       "Tech Art",
       "Animation"
     ],
+    "summary": "",
+    "keyImage": keyImage,
     "accomplishments": [
       "Designed and developed most in-game UI, including main menu flow and the player HUD",
       "Programmed functionality of items & item pickups",
