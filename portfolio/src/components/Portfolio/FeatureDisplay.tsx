@@ -23,6 +23,14 @@ export type PortfolioItemData = {
 		keyImage?: string;
 		keyVideo?: string;
 		accomplishments: string[];
+		skills: string[];
+		sections: {
+			title: string;
+			image?: string;
+			video?: string;
+			text: string[];
+			imageLeft: boolean;
+		}[]
 	}
 	path: string;
 }

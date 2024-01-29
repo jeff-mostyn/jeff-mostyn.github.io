@@ -1,5 +1,6 @@
 import React from "react";
 import { PortfolioItemData } from "src/components/Portfolio/FeatureDisplay";
+import { ImageAndText } from "src/components/Util/ImageAndText";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { YoutubeEmbed } from "src/components/Util/YoutubeEmbed";
 
@@ -48,8 +49,8 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
           </div>
 
           {/* Main Content */}
-          <div className="flex flex-col md:grid md:grid-cols-12 pt-8 pb-8 divide-y md:divide-x md:divide-y-0 ">
-            <div className="pb-4 md:grid md:col-span-6 md:pb-0 md:pr-12">
+          <div className="flex flex-col md:grid md:grid-cols-12 pt-8 pb-8 divide-y md:divide-x md:divide-y-0">
+            <div className="pb-4 self-center md:grid md:col-span-6 md:pb-0 md:pr-12">
               {data.content.keyVideo && 
                 <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />
               }
@@ -58,7 +59,7 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
                 <img className="aspect-video" src={data.content.keyImage} />
               }
             </div>
-            <div className="pt-4 md:grid md:col-span-6 md:pt-4 md:pl-12">
+            <div className="pt-4 md:grid md:col-span-6 md:pt-0 md:pl-12">
               <ul className="text-left list-disc list-outside pl-4 self-center">
                 {data.content.accomplishments.map((line, key) => {
                   return <li className="list-item" key={key}>{line}</li>
@@ -66,6 +67,9 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
               </ul>
             </div>
           </div>
+          { data.content.sections.map((section, key) => {
+            return <ImageAndText image={section.image} text={section.text} imageLeft={section.imageLeft} key={key} />
+          })}
         </div>
       </div>
     </div>

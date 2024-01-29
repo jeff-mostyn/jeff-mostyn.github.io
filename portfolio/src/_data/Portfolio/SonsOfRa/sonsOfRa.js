@@ -1,4 +1,5 @@
 import banner from './sor_banner.jpg';
+import radialMenu from './radialMenu.gif'
 
 import { Projects } from 'src/pages/Portfolio/';
 
@@ -41,8 +42,6 @@ export const sonsOfRaData = {
       "Programmed Peer-to-Peer Networked Multiplayer with Facepunch.Steamworks",
       "Designed and developed Unit Behavior Architecture, which dictates the actions of 7 unit types",
       "Coded Menu UI systems and implemented UX requirements",
-      "Carried out general development tasks",
-      "Assisted in animation and 3D art tasks when needed"
     ],
     "skills": [
       "Unity Engine",
@@ -54,13 +53,17 @@ export const sonsOfRaData = {
     "sections": [
       {
         "title": "Radial UI",
-        "image": "",
-        "alignment": "left"
+        "image": radialMenu,
+        "text": [
+          "As a lifelong console player, a goal of mine from the start was to make Sons of Ra playable on controller. After working together with Jo and Mark, our designer and artist, to settle on a concept and put together some temporary assets, I hashed out a prototype over the course of a couple of days. The primary goal I adopted was to present as much information as possible while not overloading the player.  \r\n\r\nFollowing playtests of the initial version, we were extremely happy with how it performed, to the extent that aside from replacing the temp art with cleaner UI elements and adding some minor features like unlockable abilities, the final result ultimately differed little from that initial prototype."
+        ],
+        "imageLeft": false
       },
       {
         "title": "Peer-to-Peer Multiplayer",
         "image": "",
-        "alignment": "right"
+        "text": [""],
+        "imageLeft": true
       },
     ]
   },

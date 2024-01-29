@@ -33,12 +33,8 @@ export const racingGameData = {
       {
         "title": "UI/UX Design & Development",
         "image": "",
-        "alignment": "left"
-      },
-      {
-        "title": "",
-        "image": "",
-        "alignment": "right"
+        "text": [""],
+        "imageLeft": true
       }
     ]
   },
