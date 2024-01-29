@@ -22,6 +22,7 @@ export type PortfolioItemData = {
 		}[];
 		keyImage?: string;
 		keyVideo?: string;
+		involvement: string;
 		accomplishments: string[];
 		skills: string[];
 		sections: {

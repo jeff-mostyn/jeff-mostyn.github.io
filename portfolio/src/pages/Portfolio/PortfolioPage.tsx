@@ -49,8 +49,8 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
           </div>
 
           {/* Main Content */}
-          <div className="flex flex-col md:grid md:grid-cols-12 pt-8 pb-8 divide-y md:divide-x md:divide-y-0">
-            <div className="pb-4 self-center md:grid md:col-span-6 md:pb-0 md:pr-12">
+          <div className="flex flex-col md:flex-row pt-8 pb-8">
+            <div className="pb-4 self-center md:w-1/2 md:pb-0 md:pr-12">
               {data.content.keyVideo && 
                 <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />
               }
@@ -59,17 +59,29 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
                 <img className="aspect-video" src={data.content.keyImage} />
               }
             </div>
-            <div className="pt-4 md:grid md:col-span-6 md:pt-0 md:pl-12">
-              <ul className="text-left list-disc list-outside pl-4 self-center">
-                {data.content.accomplishments.map((line, key) => {
-                  return <li className="list-item" key={key}>{line}</li>
-                })}
-              </ul>
+            <div 
+              className="
+                w-full h-px self-center bg-gradient-to-r from-gray-500 via-white to-gray-500
+                md:max-height-96 md:h-80 md:min-h-[1em] md:w-px md:bg-gradient-to-t md:row-span-full
+              "
+            />
+            <div className="pt-4 self-center md:w-1/2 md:pt-0 md:pl-12">
+              <div className="text-left self-center">
+                <div className="pb-6 whitespace-pre-line">
+                  {data.content.involvement}
+                </div>
+                <ul className="text-left list-disc list-outside pl-4">
+                  {data.content.accomplishments.map((line, key) => {
+                    return <li className="list-item" key={key}>{line}</li>
+                  })}
+                </ul>
+              </div>
             </div>
           </div>
-          { data.content.sections.map((section, key) => {
+
+          {/* data.content.sections.map((section, key) => {
             return <ImageAndText image={section.image} text={section.text} imageLeft={section.imageLeft} key={key} />
-          })}
+          })*/}
         </div>
       </div>
     </div>
