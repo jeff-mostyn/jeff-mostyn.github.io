@@ -56,7 +56,7 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
               }
               {
                 data.content.keyImage &&
-                <img className="aspect-video" src={data.content.keyImage} />
+                <img className="aspect-video rounded-md" src={data.content.keyImage} />
               }
             </div>
             <div 
@@ -67,14 +67,18 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
             />
             <div className="pt-4 self-center md:w-1/2 md:pt-0 md:pl-12">
               <div className="text-left self-center">
-                <div className="pb-6 whitespace-pre-line">
-                  {data.content.involvement}
-                </div>
-                <ul className="text-left list-disc list-outside pl-4">
+                <ul className="text-left list-disc list-outside pl-4 pb-6">
                   {data.content.accomplishments.map((line, key) => {
                     return <li className="list-item" key={key}>{line}</li>
                   })}
                 </ul>
+                {data.content.involvement.map((paragraph, i) => {
+                  return (
+                    <div className="pb-4 whitespace-pre-line indent-6" key={i}>
+                      {paragraph}
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>

@@ -36,7 +36,9 @@ export const sonsOfRaData = {
       }
     ],
     "keyVideo": "3aAvEn6kEM4?si=BDdoSWe8pDN1VFuj",
-    "involvement": "Sons of Ra began as a 6-month class project at Drexel University built around a concept I proposed, after which myself and three of my teammates continued development through to and following graduation. During this time, Sons of Ra won multiple competitions for student-created games, including at E3 2019. Given the small size of our team, I was involved in most all aspects of development, though primarily I served as the lead programmer. Sons of Ra released on Steam in April of 2021.",
+    "involvement": [
+      "Sons of Ra began as a 6-month class project at Drexel University built around a concept I proposed, after which myself and three of my teammates continued development through to and following graduation. During this time, Sons of Ra won multiple competitions for student-created games, including at E3 2019. Given the small size of our team, I was involved in most all aspects of development, though primarily I served as the lead programmer. Sons of Ra released on Steam in April of 2021.",
+    ],
     "accomplishments": [
       "Led development of gameplay systems and mechanics",
       "Implemented Radial UI that is friendly for both controller and keyboard & mouse users",

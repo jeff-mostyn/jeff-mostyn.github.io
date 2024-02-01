@@ -26,16 +26,23 @@ export const Portfolio = () => {
 						setActiveProject={setActiveProject}
 					/>
 				:	<div>
-						<FeatureDisplay 
-							data={sonsOfRaData}
-							alignLeft={true}
-							setActiveProject={setActiveProject}
-						/>
-						<FeatureDisplay 
-							data={racingGameData}
-							alignLeft={false}
-							setActiveProject={setActiveProject}
-						/>
+						<div>
+							<FeatureDisplay 
+								data={sonsOfRaData}
+								alignLeft={true}
+								setActiveProject={setActiveProject}
+							/>
+							<FeatureDisplay 
+								data={racingGameData}
+								alignLeft={false}
+								setActiveProject={setActiveProject}
+							/>
+						</div>
+
+						{/* Professional Work */}
+						<div>
+							
+						</div>
 					</div>
 			}
 		</>
