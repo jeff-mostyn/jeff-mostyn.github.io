@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FeatureDisplay, PortfolioItemData } from "../../components/Portfolio/FeatureDisplay";
 
-import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
+import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "../../_data/Portfolio/RacingGame/racingGame";
+import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
 import { PortfolioPage } from "./PortfolioPage";
 
 export enum Projects {
@@ -37,11 +38,16 @@ export const Portfolio = () => {
 								alignLeft={false}
 								setActiveProject={setActiveProject}
 							/>
+							<FeatureDisplay 
+								data={miniMinecraftData}
+								alignLeft={true}
+								setActiveProject={setActiveProject}
+							/>
 						</div>
 
 						{/* Professional Work */}
 						<div>
-							
+
 						</div>
 					</div>
 			}

@@ -49,7 +49,7 @@ type FeatureDisplayProps = {
 
 export const FeatureDisplay = ( { data, alignLeft, setActiveProject } : FeatureDisplayProps ) => {
 	return (
-		<div className="relative w-full h-64 md:h-80">
+		<div className="relative w-full h-64 md:h-72">
 			<img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
 			<div className={labelStyles(alignLeft)}>
 				<div className={`flex flex-col items:center ${alignLeft ? 'md:items-start' : 'md:items-end'}`}>
