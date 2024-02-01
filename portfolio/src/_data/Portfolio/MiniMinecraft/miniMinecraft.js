@@ -15,19 +15,16 @@ export const racingGameData = {
       "Programming",
       "Tech Art",
     ],
-    "summary": "",
+    "summary": "Mini Minecraft is the final project for CIS 5600 - Introduction to Computer Graphics at the University of Pennsylvania. As a group, our task was to create a very basic version of Minecraft from scratch, with requirements including terrain generation, rendering of terrain with OpenGL, and implementing player physics and interactions, among others. In addition to this, we were tasked with adding some  original features of our own.",
     "hyperlinks": [],
     "keyVideo": "VvQwWRIcAGM?si=9gZ1dwFEEcZ3q69o",
     "involvement": [
-      "For this project, I explored aspects of development that were new to me, and deepened my experience with others. My Master's degree program at the University of Pennsylvania was my first exposure to shader writing, and the visual effects here, like the toon-styled vehicles and abundant holograms, were the perfect chance to put that learning into practice. I also did more in the realm of UI/UX than I ever had in a game before, moving beyond just writing its code to also create the designs, effects, and much of the art myself, excluding the characters.",
-      "Furthermore, I've programmed a number of gameplay mechanics and systems, done animations, and used my cross-disciplinary experience to bridge the gap between the tech and art specialists.",
-    ],
+      ],
     "accomplishments": [
-      "Designed and developed most in-game UI, including main menu flow and player HUD",
-      "Programmed functionality of items & item pickups",
-      "Created VFX and post-process shaders for holograms, vehicle cel shading, and outlines",
-      "Animated vehicles and in-game actors",
-      "Performed varied programming duties and resolved technical defects as they arose"
+      "Rendered generated terrain data, using C++ and OpenGL for rasterization",
+      "Optimized rendering by grouping individual blocks into chunks for batch processing, and de-rendering based on player proximity",
+      "Used multithreaded execution to further improve render efficiency",
+      "Implemented the \"mirror dimension\" and the ability of the player to swap between worlds"
     ],
     "skills": [],
     "sections": [
