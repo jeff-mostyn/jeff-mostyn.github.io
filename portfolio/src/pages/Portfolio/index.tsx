@@ -58,7 +58,7 @@ export const Portfolio = () => {
 							<div className="grid grid-cols-3">
 								{ workSampleData.map((sample: WorkSampleContent, key: number) => {
 									return (
-										<div className="col-span-1 px-6">
+										<div className="col-span-1">
 											<WorkSample {...sample} key={key}/>
 										</div>
 									)

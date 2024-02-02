@@ -62,8 +62,8 @@ export const FeatureDisplay = ( { data, alignLeft, setActiveProject } : FeatureD
 
 					{/* Button */}
 					<div 
-						className={`flex max-w-min text-white border-2 border-white rounded-md self-center justify-center ${alignLeft ? "md:self-start" : "md:self-end"}`}>
-						<button type="button" className="px-8 py-2" onClick={() => {
+						className={`flex max-w-min border-2 border-white rounded-md self-center justify-center ${alignLeft ? "md:self-start" : "md:self-end"}`}>
+						<button type="button" className="px-8 py-2 transition-colors duration-200 text-white bg-transparent hover:bg-white hover:text-black" onClick={() => {
 							setActiveProject(data)
 						}}>
 							{"DETAILS"}
