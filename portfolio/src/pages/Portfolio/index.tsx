@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { FeatureDisplay, PortfolioItemData } from "../../components/Portfolio/FeatureDisplay";
+import { PortfolioPage } from "./PortfolioPage";
 
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "../../_data/Portfolio/RacingGame/racingGame";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
-import { PortfolioPage } from "./PortfolioPage";
+
+import workSampleData from "../../_data/WorkSamples/workSamples";
+import { WorkSample, WorkSampleContent } from "src/components/Portfolio/WorkSample";
 
 export enum Projects {
   SONS_OF_RA = "Sons of Ra",
@@ -12,6 +15,8 @@ export enum Projects {
 }
 
 export const Portfolio = () => {
+	const workSamples: WorkSampleContent[] = workSampleData;
+
 	const [openedProjectData, setOpenedProjectData] = useState<PortfolioItemData | undefined>(undefined);
 
 	const setActiveProject = (data: PortfolioItemData | undefined) => {
@@ -19,7 +24,7 @@ export const Portfolio = () => {
 	}
 
 	return (
-		<>
+		<div className="bg-zinc-700">
 			{ openedProjectData 
 				?	<PortfolioPage 
 						data={openedProjectData} 
@@ -46,11 +51,22 @@ export const Portfolio = () => {
 						</div>
 
 						{/* Professional Work */}
-						<div>
-
+						<div className="flex flex-col px-16 pt-14 pb-10">
+							<div className="text-white font-urbanist font-medium text-6xl pb-8">
+								Work Samples
+							</div>
+							<div className="grid grid-cols-3">
+								{ workSampleData.map((sample: WorkSampleContent, key: number) => {
+									return (
+										<div className="col-span-1 px-6">
+											<WorkSample {...sample} key={key}/>
+										</div>
+									)
+								}) }
+							</div>
 						</div>
 					</div>
 			}
-		</>
+		</div>
 	)
 }
