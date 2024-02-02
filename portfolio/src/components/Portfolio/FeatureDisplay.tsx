@@ -36,7 +36,7 @@ export type PortfolioItemData = {
 	path: string;
 }
 
-const labelStyles = (alignLeft: boolean) => classNames("absolute flex flex-row justify-center w-full bottom-0 items-end pb-6 px-12 md:pb-12 md:px-16", {
+const labelStyles = (alignLeft: boolean) => classNames("absolute flex flex-row justify-center w-full bottom-0 items-end pb-6 px-12 md:pb-12 md:px-16 ", {
 	"md:justify-start": alignLeft,
 	"md:justify-end": !alignLeft
 });
@@ -50,6 +50,7 @@ type FeatureDisplayProps = {
 export const FeatureDisplay = ( { data, alignLeft, setActiveProject } : FeatureDisplayProps ) => {
 	return (
 		<div className="relative w-full h-64 md:h-72">
+			<div className="absolute w-full h-full bg-black opacity-10"/>
 			<img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
 			<div className={labelStyles(alignLeft)}>
 				<div className={`flex flex-col items:center ${alignLeft ? 'md:items-start' : 'md:items-end'}`}>
