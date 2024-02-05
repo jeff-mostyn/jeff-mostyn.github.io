@@ -3,18 +3,12 @@ import React from "react";
 import triangle_down from '../../media/triangle_down.svg';
 import triangle_up from '../../media/triangle_up.svg';
 import classNames from "classnames";
+import { Sizes } from "./util";
 
 const iconsMap: Map<string, string> = new Map<string, string>([
   ["triangle_down", triangle_down],
   ["triangle_up", triangle_up]
 ])
-
-enum Sizes {
-  SM = "sm",
-  MD = "md",
-  LG = "lg",
-  XL = "xl"
-}
 
 const iconStyles = (size: string) => classNames(
   "",

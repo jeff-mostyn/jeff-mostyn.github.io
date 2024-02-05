@@ -51,11 +51,11 @@ export const Portfolio = () => {
 						</div>
 
 						{/* Professional Work */}
-						<div className="flex flex-col px-16 pt-14 pb-10">
-							<div className="text-white font-urbanist font-medium text-6xl pb-8">
+						<div className="flex flex-col px-6 pt-14 pb-10 md:px-16">
+							<div className="pb-8 text-white font-urbanist font-medium text-5xl md:text-6xl">
 								Work Samples
 							</div>
-							<div className="grid grid-cols-3">
+							<div className="grid grid-cols-1 md:grid-cols-3">
 								{ workSampleData.map((sample: WorkSampleContent, key: number) => {
 									return (
 										<div className="col-span-1">

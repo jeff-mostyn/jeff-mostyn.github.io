@@ -3,6 +3,8 @@ import keyImage from './racingGame_keyImage.png'
 
 import { Projects } from 'src/pages/Portfolio/';
 
+import { Roles } from 'src/components/Util/util';
+
 export const racingGameData = {
   // "project": Projects.RACING_GAME,
   "banner": {
@@ -13,10 +15,10 @@ export const racingGameData = {
   "content": {
     "title": "Unannounced Racing Game",
     "roles": [
-      "Programming",
-      "UI/UX",
-      "Tech Art",
-      "Animation"
+      Roles.PROGRAMMING,
+      Roles.UI_UX,
+      Roles.TECH_ART,
+      Roles.ANIMATION
     ],
     "summary": "Our currently unannounced anti-grav racer seeks to emulate the adrenaline of F-Zero's lightning-fast gameplay, while also incorporating the accesibility and casual fun of Mario Kart. Gain advantage with the careful use of items and your vehicle's boost gauge, but be careful as your opponents have access to the same dangerous tools. Weave through the skyscrapers of the cities of future America at breakneck speed as you aim to become the greatest racer alive.",
     "hyperlinks": [],

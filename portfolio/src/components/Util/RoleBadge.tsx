@@ -1,15 +1,11 @@
 import classNames from "classnames";
 import React from "react";
 
-enum Roles {
-  ANIMATION = "Animation",
-  DESIGN = "Design",
-  PROGRAMMING = "Programming",
-  TECH_ART = "Tech Art",
-  UI_UX = "UI/UX",
-}
+import { Roles, Sizes } from "./util";
 
-const pillBadgeStyles = (role: string) => classNames('mx-1 px-2.5 py-0.5 my-1 rounded-md', {
+const pillBadgeStyles = (role: string, size: string) => classNames('mx-1 px-2.5 py-0.5 my-1 text-base font-urbanist rounded-md', {
+  "px-2.5 py-0.5 my-1 text-sm": size === Sizes.SM,
+  "px-2.5 py-0.5 my-1 text-base": size === Sizes.MD,
   "bg-[#e05865]": role === Roles.ANIMATION,
   "bg-[#54bf7a]": role === Roles.DESIGN,
   "bg-[#9454bf]": role === Roles.PROGRAMMING,
@@ -19,11 +15,12 @@ const pillBadgeStyles = (role: string) => classNames('mx-1 px-2.5 py-0.5 my-1 ro
 
 type RoleBadgeProps = {
   role: string;
+  size: string;
 }
 
-export const RoleBadge = ( { role }: RoleBadgeProps) => {
+export const RoleBadge = ( { role, size }: RoleBadgeProps) => {
   return (
-    <div className={pillBadgeStyles(role)}>
+    <div className={pillBadgeStyles(role, size)}>
       {role}
     </div>
   )

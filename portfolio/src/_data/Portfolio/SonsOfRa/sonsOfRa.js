@@ -1,7 +1,9 @@
 import banner from './sor_banner.jpg';
-import radialMenu from './radialMenu.gif'
+import radialMenu from '../../WorkSamples/radialMenu.gif'
 
 import { Projects } from 'src/pages/Portfolio/';
+
+import { Roles } from 'src/components/Util/util';
 
 export const sonsOfRaData = {
   // "project": Projects.SONS_OF_RA,
@@ -13,8 +15,8 @@ export const sonsOfRaData = {
   "content": {
     "title": "Sons of Ra",
     "roles": [
-      "Programming",
-      "Design"
+      Roles.PROGRAMMING,
+      Roles.DESIGN
     ],
     "summary": "Sons of Ra is an award winning two-player competitive tower defense game where players take control of opposing pharaohs in Egypt. Send your armies and build up defenses in a fast-paced strategy game designed for competition between two local or online players. Choose a patron deity and unleash mighty abilities to turn the tide of battle, or expand your kingdom to gain a strategic edge.",
     "hyperlinks": [

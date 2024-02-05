@@ -3,6 +3,7 @@ import { PortfolioItemData } from "src/components/Portfolio/FeatureDisplay";
 import { ImageAndText } from "src/components/Util/ImageAndText";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { YoutubeEmbed } from "src/components/Util/YoutubeEmbed";
+import { Sizes } from "src/components/Util/util";
 
 type PortfolioPageProps = {
   data: PortfolioItemData;
@@ -27,9 +28,9 @@ export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPage
           <div className="text-5xl font-urbanist font-normal md:text-6xl">
             {data.content.title}
           </div>
-          <div className="flex flex-wrap justify-center pt-3 text-md flex-row font-urbanist font-normal">
+          <div className="flex flex-wrap justify-center pt-3 flex-row">
             {data.content.roles.map((role, key) => {
-              return <RoleBadge role={role} key={key}/>
+              return <RoleBadge role={role} size={Sizes.MD} key={key}/>
             })}
           </div>
         </div>
