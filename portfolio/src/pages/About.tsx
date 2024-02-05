@@ -5,7 +5,7 @@ import profilePhoto from "./profilePhoto.png"
 
 import { data } from "../_data/Home/home";
 
-export const Home = () => {
+export const About = () => {
 	return (
 		<div className="px-12 md:px-24">
 			<div className="flex flex-col md:flex-row pt-8 pb-8 md:pt-16">

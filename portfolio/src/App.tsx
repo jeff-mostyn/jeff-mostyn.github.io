@@ -7,7 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 
-import { Home } from './pages/Home';
+import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
 
 function App() {
@@ -25,8 +25,8 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path='/Portfolio' element={<Portfolio/>} />
+          <Route path="/" element={<Portfolio />} />
+          <Route path='/About' element={<About/>} />
         </Routes>
       </Router>
     </div>
