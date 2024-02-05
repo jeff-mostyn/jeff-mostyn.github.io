@@ -3,9 +3,9 @@ import React from "react";
 
 import { Roles, Sizes } from "./util";
 
-const pillBadgeStyles = (role: string, size: string) => classNames('mx-1 px-2.5 py-0.5 my-1 text-base font-urbanist rounded-md', {
+const pillBadgeStyles = (role: string, size: string) => classNames('mx-1 px-2.5 py-0.5 my-1 font-urbanist rounded-md', {
   "px-2.5 py-0.5 my-1 text-sm": size === Sizes.SM,
-  "px-2.5 py-0.5 my-1 text-base": size === Sizes.MD,
+  "px-2.5 py-0.5 my-1 text-base": size === Sizes.MD || size === Sizes.LG || size === Sizes.XL,
   "bg-[#e05865]": role === Roles.ANIMATION,
   "bg-[#54bf7a]": role === Roles.DESIGN,
   "bg-[#9454bf]": role === Roles.PROGRAMMING,
