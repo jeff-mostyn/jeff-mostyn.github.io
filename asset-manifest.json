@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.850fc5d2.css",
-    "main.js": "./static/js/main.cb07a675.js",
+    "main.css": "./static/css/main.539461b5.css",
+    "main.js": "./static/js/main.9a1c430e.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/radialMenu.gif": "./static/media/radialMenu.1e674e3c5c1535675349.gif",
     "static/media/racingGame_keyImage.png": "./static/media/racingGame_keyImage.01f46824ab9601d1ff80.png",
@@ -14,12 +14,12 @@
     "index.html": "./index.html",
     "static/media/triangle_up.svg": "./static/media/triangle_up.eec8fe15eca15ebf822cfd0b94e89f29.svg",
     "static/media/triangle_down.svg": "./static/media/triangle_down.d1b6ec3405e6600f027de0cb9b5f2d69.svg",
-    "main.850fc5d2.css.map": "./static/css/main.850fc5d2.css.map",
-    "main.cb07a675.js.map": "./static/js/main.cb07a675.js.map",
+    "main.539461b5.css.map": "./static/css/main.539461b5.css.map",
+    "main.9a1c430e.js.map": "./static/js/main.9a1c430e.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.850fc5d2.css",
-    "static/js/main.cb07a675.js"
+    "static/css/main.539461b5.css",
+    "static/js/main.9a1c430e.js"
   ]
 }
