@@ -8,9 +8,9 @@ export const About = () => {
 		<div className="
 			flex flex-col justify-center px-12 pt-8 pb-8 
 			md:max-w-full md:flex-row md:pt-16 
-			lg:px-0 lg:w-[900px]
+			lg:px-0 lg:w-[1000px]
 		">
-			<div className="flex pb-4 justify-center md:justify-end md:w-1/2 md:pb-0 md:pr-12">
+			<div className="flex pb-4 justify-center md:w-1/2 md:pb-0 md:pr-12">
 				<img className="w-48 h-[256px] object-scale-down rounded-md md:w-80 md:h-[426px]" src={data.photo} alt={"Portrait"} />
 			</div>
 			<div 
