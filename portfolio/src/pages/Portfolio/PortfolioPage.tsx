@@ -27,9 +27,9 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
           </div>
         </div>
 
-        <div className="px-6 md:px-16">
+        <div className="flex flex-col px-8 items-center md:px-16">
           {/* Summary */}
-          <div className="pt-4 md:px-20">
+          <div className="pt-4 md:w-[600px] lg:w-[800px]">
             {data.content.summary}
           </div>
 
