@@ -50,14 +50,14 @@ export const FeatureDisplay = ( { data, route, alignLeft } : FeatureDisplayProps
 				/>
 				<img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
 				<div className="
-					absolute flex flex-row justify-center w-full bottom-0 items-end pb-6 px-12 
+					absolute flex flex-row justify-center w-full bottom-0 items-end pb-6 px-6 
 					md:pb-16 md:px-16 md:pointer-events-none
 				" >
 					<div className={`flex flex-col items:center ${alignLeft ? 'md:items-center' : 'md:items-center'}`}>
 						<div className="pb-1 text-white font-urbanist font-medium text-5xl">
 							{data.banner.label}
 						</div>
-						<div className="pb-4 text-white font-urbanist font-medium text-md">
+						<div className="pb-4 text-white font-urbanist font-medium text-md md:text-lg">
 							{data.banner.tagline}
 						</div>
 
