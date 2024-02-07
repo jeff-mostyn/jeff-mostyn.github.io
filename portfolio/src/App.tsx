@@ -7,8 +7,14 @@ import {
   Route,
 } from "react-router-dom";
 
+import miniMinecraftData from "./_data/Portfolio/MiniMinecraft/miniMinecraft";
+import racingGameData from "./_data/Portfolio/RacingGame/racingGame";
+import sonsOfRaData from './_data/Portfolio/SonsOfRa/sonsOfRa'
+
 import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
+import { SonsOfRa } from './pages/Portfolio/SonsOfRa';
+import { PortfolioPage } from './pages/Portfolio/PortfolioPage';
 
 function App() {
   const head = document.head;
@@ -27,6 +33,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path='/About' element={<About/>} />
+          <Route path='/Portfolio/SonsOfRa' element={<PortfolioPage data={sonsOfRaData}/>} />
+          <Route path='/Portfolio/RacingGame' element={<PortfolioPage data={racingGameData}/>} />
+          <Route path='/Portfolio/MiniMinecraft' element={<PortfolioPage data={miniMinecraftData}/>} />
         </Routes>
       </Router>
     </div>

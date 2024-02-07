@@ -7,23 +7,15 @@ import { Sizes } from "src/components/Util/util";
 
 type PortfolioPageProps = {
   data: PortfolioItemData;
-  banner: string
-  setActiveProject: (data: PortfolioItemData | undefined) => void;
 }
 
-export const PortfolioPage = ( { data, banner, setActiveProject }: PortfolioPageProps) => {
+export const PortfolioPage = ( { data }: PortfolioPageProps) => {
   return (
     <div className="text-white">
       <div className="relative w-full h-60">
-        <img className="w-full h-full object-cover object-center" src={banner} alt="bannerImage"/>
+        <img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
       </div>
       <div className="relative h-full">
-        <button 
-          type="button" 
-          className="absolute top-0 left-0 pt-2 pl-3"
-          onClick={() => setActiveProject(undefined)}>
-          {"< Back"}
-        </button>
         <div className="flex flex-col justify-center items-center pt-8 md:pt-4">
           <div className="text-5xl font-urbanist font-normal md:text-6xl">
             {data.content.title}
