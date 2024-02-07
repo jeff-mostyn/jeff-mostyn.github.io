@@ -1,12 +1,9 @@
 import banner from './sor_banner.jpg';
 import radialMenu from '../../WorkSamples/radialMenu.gif'
 
-import { Projects } from 'src/pages/Portfolio/';
-
 import { Roles } from 'src/components/Util/util';
 
 export const sonsOfRaData = {
-  // "project": Projects.SONS_OF_RA,
   "banner": {
     "image": banner,
     "label": "Sons of Ra",

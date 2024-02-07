@@ -1,7 +1,4 @@
 import React from "react";
-import { ImageAndText } from "src/components/Util/ImageAndText";
-
-import profilePhoto from "./profilePhoto.png"
 
 import { data } from "../_data/Home/home";
 
@@ -10,7 +7,7 @@ export const About = () => {
 		<div className="px-12 md:px-24">
 			<div className="flex flex-col md:flex-row pt-8 pb-8 md:pt-16">
 				<div className="flex pb-4 justify-center md:justify-end md:w-1/2 md:pb-0 md:pr-12 lg:w-2/5">
-					<img className="w-auto h-auto max-w-52 max-h-[277px] rounded-md md:max-w-80 md:max-h-[426px]" src={data.photo} />
+					<img className="w-auto h-auto max-w-52 max-h-[277px] rounded-md md:max-w-80 md:max-h-[426px]" src={data.photo} alt={"Portrait"} />
 				</div>
 				<div 
 					className="

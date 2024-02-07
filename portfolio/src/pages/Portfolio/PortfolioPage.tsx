@@ -1,6 +1,6 @@
 import React from "react";
 import { PortfolioItemData } from "src/components/Portfolio/FeatureDisplay";
-import { ImageAndText } from "src/components/Util/ImageAndText";
+// import { ImageAndText } from "src/components/Util/ImageAndText";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { YoutubeEmbed } from "src/components/Util/YoutubeEmbed";
 import { Sizes } from "src/components/Util/util";
@@ -49,7 +49,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
               }
               {
                 data.content.keyImage &&
-                <img className="aspect-video rounded-md" src={data.content.keyImage} />
+                <img className="aspect-video rounded-md" src={data.content.keyImage} alt={"Key"} />
               }
             </div>
             <div 

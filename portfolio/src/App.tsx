@@ -13,7 +13,6 @@ import sonsOfRaData from './_data/Portfolio/SonsOfRa/sonsOfRa'
 
 import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
-import { SonsOfRa } from './pages/Portfolio/SonsOfRa';
 import { PortfolioPage } from './pages/Portfolio/PortfolioPage';
 
 function App() {

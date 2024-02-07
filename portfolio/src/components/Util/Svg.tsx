@@ -13,10 +13,10 @@ const iconsMap: Map<string, string> = new Map<string, string>([
 const iconStyles = (size: string) => classNames(
   "",
   {
-    "h-3 w-3": size == Sizes.SM,
-    "h-4 w-4": size == Sizes.MD,
-    "h-6 w-6": size == Sizes.LG,
-    "h-8 w-8": size == Sizes.XL,
+    "h-3 w-3": size === Sizes.SM,
+    "h-4 w-4": size === Sizes.MD,
+    "h-6 w-6": size === Sizes.LG,
+    "h-8 w-8": size === Sizes.XL,
   }
 );
 

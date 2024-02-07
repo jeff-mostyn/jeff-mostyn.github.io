@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import triangleIcon from '../../media/triangle.svg'
 import { SVG } from "../Util/Svg";
 import { RoleBadge } from "../Util/RoleBadge";
 import { Sizes } from "../Util/util";
@@ -22,7 +21,7 @@ export const WorkSample = ({ image, title, tags, description }: WorkSampleConten
         <button className="absolute text-white top-0 right-0 pt-6 pr-6" onClick={() => setModalOpen(false)}>
           X
         </button>
-        <img className="flex w-5/6 aspect-video rounded-md top-0 right-0 left-0 md:w-3/4" src={image} />
+        <img className="flex w-5/6 aspect-video rounded-md top-0 right-0 left-0 md:w-3/4" src={image} alt={"Work Sample"} />
         <div className="fixed w-full h-full top-0 bg-black opacity-60 -z-10" onClick={() => setModalOpen(false)}/>
       </div>
 

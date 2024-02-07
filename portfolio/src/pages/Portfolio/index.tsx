@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { FeatureDisplay, PortfolioItemData } from "../../components/Portfolio/FeatureDisplay";
-import { PortfolioPage } from "./PortfolioPage";
+import React from "react";
+import { FeatureDisplay } from "../../components/Portfolio/FeatureDisplay";
 
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "../../_data/Portfolio/RacingGame/racingGame";

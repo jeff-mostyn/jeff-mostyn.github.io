@@ -1,9 +1,6 @@
 import banner from './miniMinecraft_banner.png'
 
-import { Projects } from 'src/pages/Portfolio/';
-
 export const racingGameData = {
-  // "project": Projects.RACING_GAME,
   "banner": {
     "image": banner,
     "label": "Mini Minecraft",
