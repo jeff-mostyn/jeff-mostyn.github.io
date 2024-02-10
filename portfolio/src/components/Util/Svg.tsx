@@ -11,10 +11,11 @@ const iconsMap: Map<string, JSX.Element> = new Map<string, JSX.Element>([
   ["triangle_up", triangle_up_path]
 ])
 
-const iconStyles = (size: string, baseColor: string, transition?: boolean, transitionColor?: string) => classNames(
-  [`fill-${baseColor}`],
+const iconStyles = (baseColor: string, transition?: boolean, transitionColor?: string) => classNames(
+  "",
   {
-    [`transition-colors duration-300 hover:fill-${transitionColor}`]: transition,
+    "fill-white": baseColor === "white",
+    "transition-colors duration-300 hover:fill-theme1": transition && transitionColor === "theme1",
   }
 );
 
@@ -41,7 +42,7 @@ export const SVG = ({ name, size, transition, baseColor, transitionColor }: SvgP
       width={sizeMap.get(size)} 
       height={sizeMap.get(size)} 
       viewBox="0 0 24 24"
-      className={iconStyles(size, baseColor, transition ?? false, transitionColor ?? "")}
+      className={iconStyles(baseColor, transition ?? false, transitionColor ?? "")}
     >
       {iconsMap.get(name)}
     </svg>
