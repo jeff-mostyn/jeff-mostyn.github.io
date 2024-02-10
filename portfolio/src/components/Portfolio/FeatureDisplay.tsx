@@ -46,7 +46,7 @@ export const FeatureDisplay = ( { data, route, alignLeft } : FeatureDisplayProps
 			<div className="relative w-full h-64 md:h-72">
 				<div className="
 					absolute w-full h-full bg-black opacity-15 
-					md:transition-opacity md:duration-200 md:opacity-55 md:hover:opacity-15"
+					md:transition-opacity md:duration-300 md:opacity-55 md:hover:opacity-15"
 				/>
 				<img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
 				<div className="
@@ -64,7 +64,7 @@ export const FeatureDisplay = ( { data, route, alignLeft } : FeatureDisplayProps
 						{/* Button */}
 						<div 
 							className={`flex max-w-min border-2 border-white rounded-md self-center justify-center md:hidden`}>
-							<NavLink to={route} type="button" className="px-8 py-2 transition-colors duration-200 text-white bg-transparent hover:bg-white hover:text-black" >
+							<NavLink to={route} type="button" className="px-8 py-2 transition-colors duration-300 text-white bg-transparent hover:bg-white hover:text-black" >
 								{"DETAILS"}
 							</NavLink>
 						</div>

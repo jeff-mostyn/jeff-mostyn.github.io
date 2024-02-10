@@ -8,7 +8,7 @@ type NavLinkWrapperProps = {
 
 export const NavLinkWrapper = ({ route, label }: NavLinkWrapperProps) => {
 	return (
-		<div className="flex px-4">
+		<div className="flex transition-colors duration-300 text-gray-200 hover:text-theme1">
 			<NavLink to={route}>{label}</NavLink>
 		</div>
 	)

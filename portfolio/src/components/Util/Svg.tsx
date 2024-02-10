@@ -1,32 +1,49 @@
 import React from "react";
 
-import triangle_down from '../../media/triangle_down.svg';
-import triangle_up from '../../media/triangle_up.svg';
 import classNames from "classnames";
-import { Sizes } from "./util";
+import { Sizes } from "./util"
+import { linkedin_path, triangle_down_path, triangle_up_path } from "./svgPaths";
 
-const iconsMap: Map<string, string> = new Map<string, string>([
-  ["triangle_down", triangle_down],
-  ["triangle_up", triangle_up]
+
+const iconsMap: Map<string, JSX.Element> = new Map<string, JSX.Element>([
+  ["linkedin", linkedin_path],
+  ["triangle_down", triangle_down_path],
+  ["triangle_up", triangle_up_path]
 ])
 
-const iconStyles = (size: string) => classNames(
-  "",
+const iconStyles = (size: string, baseColor: string, transition?: boolean, transitionColor?: string) => classNames(
+  [`fill-${baseColor}`],
   {
-    "h-3 w-3": size === Sizes.SM,
-    "h-4 w-4": size === Sizes.MD,
-    "h-6 w-6": size === Sizes.LG,
-    "h-8 w-8": size === Sizes.XL,
+    [`transition-colors duration-300 hover:fill-${transitionColor}`]: transition,
   }
 );
 
+const sizeMap: Map<Sizes, string> = new Map<Sizes, string>([
+  [Sizes.XS, "12px"],
+  [Sizes.SM, "16px"],
+  [Sizes.MD, "24px"],
+  [Sizes.LG, "32px"],
+  [Sizes.XL, "40px"]
+])
+
 type SvgProps = {
   name: string;
-  size: string;
+  size: Sizes;
+  transition?: boolean;
+  baseColor: string;
+  transitionColor?: string;
 }
 
-export const SVG = ({ name, size }: SvgProps) => {
+export const SVG = ({ name, size, transition, baseColor, transitionColor }: SvgProps) => {
   return (
-    <img className={iconStyles(size)} src={iconsMap.get(name)} alt="" />
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width={sizeMap.get(size)} 
+      height={sizeMap.get(size)} 
+      viewBox="0 0 24 24"
+      className={iconStyles(size, baseColor, transition ?? false, transitionColor ?? "")}
+    >
+      {iconsMap.get(name)}
+    </svg>
   )
 }

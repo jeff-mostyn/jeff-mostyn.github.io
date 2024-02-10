@@ -53,7 +53,7 @@ export const WorkSample = ({ image, title, tags, description }: WorkSampleConten
             onClick={() => setDetailsOpen(!detailsOpen)}
           >
             <div className="flex w-full justify-center">
-              <SVG name={detailsOpen ? "triangle_up" : "triangle_down"} size="md" />
+              <SVG name={detailsOpen ? "triangle_up" : "triangle_down"} size={Sizes.SM} baseColor="white"/>
             </div>
           </button>
         </div>
