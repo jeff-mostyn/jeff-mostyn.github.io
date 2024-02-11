@@ -21,17 +21,17 @@ export const Portfolio = () => {
 				<FeatureDisplay 
 					data={sonsOfRaData}
 					route={"/Portfolio/SonsOfRa"}
-					alignLeft={true}
+					order={0}
 				/>
 				<FeatureDisplay 
 					data={racingGameData}
 					route={"/Portfolio/RacingGame"}
-					alignLeft={false}
+					order={1}
 				/>
 				<FeatureDisplay 
 					data={miniMinecraftData}
 					route={"/Portfolio/MiniMinecraft"}
-					alignLeft={true}
+					order={2}
 				/>
 			</div>
 
@@ -43,8 +43,8 @@ export const Portfolio = () => {
 				<div className="grid grid-cols-1 md:grid-cols-3">
 					{ workSampleData.map((sample: WorkSampleContent, key: number) => {
 						return (
-							<div className="col-span-1">
-								<WorkSample {...sample} key={key}/>
+							<div className="col-span-1" key={key}>
+								<WorkSample {...sample}/>
 							</div>
 						)
 					}) }
