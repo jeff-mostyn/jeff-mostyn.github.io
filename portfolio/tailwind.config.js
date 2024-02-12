@@ -12,8 +12,10 @@ module.exports = {
         darkOverlayFade: "darkOverlayFade 750ms ease-in-out",
         darkOverlayFadeResponsive: "darkOverlayFadeResponsive 750ms ease-in-out",
         slideInFromRight: "slideInFromRight 750ms ease-in-out forwards",
-        slideUpFeatureDisplay: "slideUp48px 200ms ease-out forwards",
-        slideDownFeatureDisplay: "slideUp48px 200ms ease-out backwards"
+        slideUpFeatureDisplay: "slideUp48px 250ms ease-out forwards",
+        slideDownFeatureDisplay: "slideDown48px 250ms ease-out forwards",
+        fastFadeIn: "fadeIn 250ms ease-in-out forwards",
+        fastFadeOut: "fadeOut 250ms ease-in-out forwards",
       },
       colors: {
         theme1: "#e68d09",
@@ -23,13 +25,21 @@ module.exports = {
         'urbanist': ['urbanist', 'sans-serif']
       },
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: "0" },
+          '100%': { opacity: "1" }
+        },
+        fadeOut: {
+          '0%': { opacity: "1" },
+          '100%': { opacity: "0" }
+        },
         darkOverlayFade: {
           '0%': { opacity: "0" },
-          '100%': { opacity: "0.55" }
+          '100%': { opacity: "0.6" }
         },
         darkOverlayFadeResponsive: {
           '0%': { opacity: "0" },
-          '100%': { opacity: "0.2" }
+          '100%': { opacity: "0.25" }
         },
         slideInFromRight: {
           '0%': {
@@ -47,6 +57,14 @@ module.exports = {
           },
           '100%': {
             transform: "translateY(-48px)"
+          }
+        },
+        slideDown48px: {
+          '0%': {
+            transform: "translateY(-48px)"
+          },
+          '100%': {
+            transform: "translateY(0px)"
           }
         },
       }

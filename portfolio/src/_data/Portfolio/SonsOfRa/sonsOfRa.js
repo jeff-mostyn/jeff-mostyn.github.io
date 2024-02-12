@@ -4,6 +4,7 @@ import radialMenu from '../../WorkSamples/radialMenu.gif'
 import { Roles } from 'src/components/Util/util';
 
 import csharp from '../../../media/csharp.png'
+import unity from '../../../media/unity.png'
 
 export const sonsOfRaData = {
   "banner": {
@@ -71,7 +72,7 @@ export const sonsOfRaData = {
       },
     ]
   },
-  "icons": [csharp],
+  "icons": [unity, csharp],
   "path": "/Portfolio/SonsOfRa"
 }
 

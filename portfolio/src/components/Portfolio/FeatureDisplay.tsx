@@ -57,7 +57,7 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 	useEffect(() => {
 		setTimeout(() => {
 			setAnimationStarted(true);
-		}, getAnimationDelay(order))	
+		}, getAnimationDelay(order));	
 	}, [animationStarted])
 
 	const handleMouseOver = () => {
@@ -70,26 +70,26 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 
 	return (
 		<NavLink to={route}>
-			<div className="relative w-full h-64 md:h-72 overflow-hidden" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+			<div className="relative w-full h-64 overflow-hidden" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
 				{ animationStarted 
 					? <div className={`
-							absolute w-full h-full bg-black opacity-20 animate-darkOverlayFadeResponsive
-						 	md:animate-darkOverlayFade md:transition-opacity md:duration-300 md:opacity-55 md:hover:opacity-15`}
+							absolute w-full h-full bg-black opacity-25 animate-darkOverlayFadeResponsive
+						 	md:animate-darkOverlayFade md:transition-opacity md:duration-300 md:opacity-60 md:hover:opacity-15`}
 						/> 
 					:	<div className="absolute w-full h-full bg-black opacity-0"/>
 					}
 				<img className={`w-full h-full object-cover object-center`} src={data.banner.image} alt="bannerImage"/>
 				<div className="
-					absolute flex flex-col justify-center w-full h-full bottom-0 items-center pb-6 px-6 
+					absolute flex flex-col justify-center w-full h-full bottom-0 items-center pb-2 px-6 
 					md:pb-4 md:px-16 md:pointer-events-none
 				" >
 					{animationStarted &&
 						<div className={`flex flex-col h-full justify-end opacity-0 animate-slideInFromRight`}>
-							<div className={`${isHovered && "md:animate-slideUpFeatureDisplay"}`}>
+							<div className={` translate-y-0 ${isHovered && "md:animate-slideUpFeatureDisplay"} ${!isHovered && "md:animate-slideDownFeatureDisplay"}`}>
 								<div className="pb-1 text-white font-urbanist font-medium text-5xl">
 									{data.banner.label}
 								</div>
-								<div className={`${isHovered ? "md:opacity-100" : "md:opacity-0"}`}>
+								<div className={`${isHovered && "md:animate-fastFadeIn"} ${!isHovered && "md:animate-fastFadeOut"}`}>
 									<div className="pb-2 text-white font-urbanist font-medium text-md md:text-lg">
 										{data.banner.tagline}
 									</div>
