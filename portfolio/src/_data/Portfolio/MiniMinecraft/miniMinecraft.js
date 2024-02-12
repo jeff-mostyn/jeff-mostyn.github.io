@@ -1,5 +1,7 @@
 import banner from './miniMinecraft_banner.png'
 
+import cpp from '../../../media/cpp.png'
+
 export const racingGameData = {
   "banner": {
     "image": banner,
@@ -33,6 +35,7 @@ export const racingGameData = {
       }
     ]
   },
+  "icons": [cpp],
   "path": "/Portfolio/RacingGame"
 }
 

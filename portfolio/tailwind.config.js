@@ -11,7 +11,9 @@ module.exports = {
       animation: {
         darkOverlayFade: "darkOverlayFade 750ms ease-in-out",
         darkOverlayFadeResponsive: "darkOverlayFadeResponsive 750ms ease-in-out",
-        slideInFromRight: "slideInFromRight 750ms ease-in-out forwards"
+        slideInFromRight: "slideInFromRight 750ms ease-in-out forwards",
+        slideUpFeatureDisplay: "slideUp48px 200ms ease-out forwards",
+        slideDownFeatureDisplay: "slideUp48px 200ms ease-out backwards"
       },
       colors: {
         theme1: "#e68d09",
@@ -37,6 +39,14 @@ module.exports = {
           '100%': {
             opacity: "1",
             transform: "translateX(0)"
+          }
+        },
+        slideUp48px: {
+          '0%': {
+            transform: "translateY(0px)"
+          },
+          '100%': {
+            transform: "translateY(-48px)"
           }
         },
       }

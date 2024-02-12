@@ -31,7 +31,8 @@ export type PortfolioItemData = {
 			text: string[];
 			imageLeft: boolean;
 		}[]
-	}
+	};
+	icons: string[];
 	path: string;
 }
 
@@ -51,6 +52,7 @@ const getPageLoadAnimationWithDelay = (order: number) => {
 
 export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) => {
 	const [animationStarted, setAnimationStarted] = useState(false);
+	const [isHovered, setIsHovered] = useState(false);
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -58,9 +60,17 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 		}, getAnimationDelay(order))	
 	}, [animationStarted])
 
+	const handleMouseOver = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
+
 	return (
 		<NavLink to={route}>
-			<div className="relative w-full h-64 md:h-72 overflow-hidden">
+			<div className="relative w-full h-64 md:h-72 overflow-hidden" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
 				{ animationStarted 
 					? <div className={`
 							absolute w-full h-full bg-black opacity-20 animate-darkOverlayFadeResponsive
@@ -70,16 +80,29 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 					}
 				<img className={`w-full h-full object-cover object-center`} src={data.banner.image} alt="bannerImage"/>
 				<div className="
-					absolute flex flex-row justify-center w-full bottom-0 items-end pb-6 px-6 
-					md:pb-16 md:px-16 md:pointer-events-none
+					absolute flex flex-col justify-center w-full h-full bottom-0 items-center pb-6 px-6 
+					md:pb-4 md:px-16 md:pointer-events-none
 				" >
 					{animationStarted &&
-						<div className={`flex flex-col opacity-0 animate-slideInFromRight items:center`}>
-							<div className="pb-1 text-white font-urbanist font-medium text-5xl">
-								{data.banner.label}
-							</div>
-							<div className="pb-4 text-white font-urbanist font-medium text-md md:text-lg">
-								{data.banner.tagline}
+						<div className={`flex flex-col h-full justify-end opacity-0 animate-slideInFromRight`}>
+							<div className={`${isHovered && "md:animate-slideUpFeatureDisplay"}`}>
+								<div className="pb-1 text-white font-urbanist font-medium text-5xl">
+									{data.banner.label}
+								</div>
+								<div className={`${isHovered ? "md:opacity-100" : "md:opacity-0"}`}>
+									<div className="pb-2 text-white font-urbanist font-medium text-md md:text-lg">
+										{data.banner.tagline}
+									</div>
+									<div className="collapse md:visible ">
+										<div className="flex flex-row justify-center gap-3">
+											{
+												data.icons.map((icon, key) => {
+													return <img src={icon} key={key} height={"48"} width={"48px"}/>
+												})
+											}
+										</div>
+									</div>
+								</div>
 							</div>
 
 							{/* Button */}

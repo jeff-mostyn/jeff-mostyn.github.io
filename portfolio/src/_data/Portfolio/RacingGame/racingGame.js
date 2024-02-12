@@ -1,6 +1,9 @@
 import banner from './racingGame_banner.png'
 import keyImage from './racingGame_keyImage.png'
 
+import unreal_notext from '../../../media/unreal_notext.png'
+import cpp from '../../../media/cpp.png'
+
 import { Roles } from 'src/components/Util/util';
 
 export const racingGameData = {
@@ -41,6 +44,10 @@ export const racingGameData = {
       }
     ]
   },
+  "icons": [
+    unreal_notext,
+    cpp
+  ],
   "path": "/Portfolio/RacingGame"
 }
 

@@ -3,6 +3,8 @@ import radialMenu from '../../WorkSamples/radialMenu.gif'
 
 import { Roles } from 'src/components/Util/util';
 
+import csharp from '../../../media/csharp.png'
+
 export const sonsOfRaData = {
   "banner": {
     "image": banner,
@@ -69,6 +71,7 @@ export const sonsOfRaData = {
       },
     ]
   },
+  "icons": [csharp],
   "path": "/Portfolio/SonsOfRa"
 }
 
