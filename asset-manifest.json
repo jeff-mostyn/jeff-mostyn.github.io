@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.dc72d1ba.css",
-    "main.js": "./static/js/main.a9508512.js",
+    "main.css": "./static/css/main.58770068.css",
+    "main.js": "./static/js/main.15c768ce.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/radialMenu.gif": "./static/media/radialMenu.1e674e3c5c1535675349.gif",
     "static/media/racingGame_keyImage.png": "./static/media/racingGame_keyImage.01f46824ab9601d1ff80.png",
@@ -14,13 +14,15 @@
     "static/media/cpp.png": "./static/media/cpp.191c0892a2a3dca56087.png",
     "static/media/cart3.png": "./static/media/cart3.bb23bb75f5317a271dc7.png",
     "static/media/Headshot1.png": "./static/media/Headshot1.b09db54604de0c42b728.png",
+    "static/media/qt.png": "./static/media/qt.3c3229ec39fc9915d857.png",
+    "static/media/unity.png": "./static/media/unity.dce03716ca0bd431081e.png",
     "index.html": "./index.html",
-    "main.dc72d1ba.css.map": "./static/css/main.dc72d1ba.css.map",
-    "main.a9508512.js.map": "./static/js/main.a9508512.js.map",
+    "main.58770068.css.map": "./static/css/main.58770068.css.map",
+    "main.15c768ce.js.map": "./static/js/main.15c768ce.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc72d1ba.css",
-    "static/js/main.a9508512.js"
+    "static/css/main.58770068.css",
+    "static/js/main.15c768ce.js"
   ]
 }
