@@ -1,28 +1,31 @@
 {
   "files": {
-    "main.css": "./static/css/main.48f1ac18.css",
-    "main.js": "./static/js/main.c29ec4ef.js",
+    "main.css": "./static/css/main.ef3ce20e.css",
+    "main.js": "./static/js/main.c116ec59.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/radialMenu.gif": "./static/media/radialMenu.1e674e3c5c1535675349.gif",
     "static/media/racingGame_keyImage.png": "./static/media/racingGame_keyImage.01f46824ab9601d1ff80.png",
     "static/media/racingGame_banner.png": "./static/media/racingGame_banner.b93893ba409dbbf9445b.png",
     "static/media/miniMinecraft_banner.png": "./static/media/miniMinecraft_banner.df434a9deab77f2a7ed3.png",
     "static/media/racingGame_characterSelect.png": "./static/media/racingGame_characterSelect.7ca665b7806e14d057a3.png",
+    "static/media/banner.png": "./static/media/banner.50825b95432e2c567628.png",
     "static/media/sor_banner.jpg": "./static/media/sor_banner.fcfdb2cf25dd1bd9dbc1.jpg",
+    "static/media/react.png": "./static/media/react.6bcffb56bd0efaa47767.png",
     "static/media/csharp.png": "./static/media/csharp.f0ad910d245c243c42d9.png",
     "static/media/unreal_notext.png": "./static/media/unreal_notext.03538c192a294cc67750.png",
     "static/media/cpp.png": "./static/media/cpp.191c0892a2a3dca56087.png",
     "static/media/cart3.png": "./static/media/cart3.bb23bb75f5317a271dc7.png",
     "static/media/Headshot1.png": "./static/media/Headshot1.b09db54604de0c42b728.png",
+    "static/media/typescript.png": "./static/media/typescript.1e3902edbe4c3f2970d8.png",
     "static/media/qt.png": "./static/media/qt.3c3229ec39fc9915d857.png",
     "static/media/unity.png": "./static/media/unity.dce03716ca0bd431081e.png",
     "index.html": "./index.html",
-    "main.48f1ac18.css.map": "./static/css/main.48f1ac18.css.map",
-    "main.c29ec4ef.js.map": "./static/js/main.c29ec4ef.js.map",
+    "main.ef3ce20e.css.map": "./static/css/main.ef3ce20e.css.map",
+    "main.c116ec59.js.map": "./static/js/main.c116ec59.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48f1ac18.css",
-    "static/js/main.c29ec4ef.js"
+    "static/css/main.ef3ce20e.css",
+    "static/js/main.c116ec59.js"
   ]
 }

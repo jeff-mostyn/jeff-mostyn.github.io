@@ -1,5 +1,6 @@
 import React from "react";
 import { PortfolioItemData } from "src/components/Portfolio/FeatureDisplay";
+import { ImageAndText } from "src/components/Util/ImageAndText";
 // import { ImageAndText } from "src/components/Util/ImageAndText";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { YoutubeEmbed } from "src/components/Util/YoutubeEmbed";
@@ -27,7 +28,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
           </div>
         </div>
 
-        <div className="flex flex-col px-8 items-center md:px-16">
+        <div className="flex flex-col px-12 items-center md:px-28">
           {/* Summary */}
           <div className="pt-4 md:w-[600px] lg:w-[800px]">
             {data.content.summary}
@@ -42,43 +43,46 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
           </div>
 
           {/* Main Content */}
-          <div className="flex flex-col md:flex-row pt-8 pb-8">
-            <div className="pb-4 self-center md:w-1/2 md:pb-0 md:pr-12">
-              {data.content.keyVideo && 
-                <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />
-              }
-              {
-                data.content.keyImage &&
-                <img className="aspect-video rounded-md" src={data.content.keyImage} alt={"Key"} />
-              }
-            </div>
-            <div 
-              className="
-                w-full h-px self-center bg-gradient-to-r from-gray-500 via-white to-gray-500
-                md:max-height-96 md:h-80 md:min-h-[1em] md:w-px md:bg-gradient-to-t md:row-span-full
-              "
-            />
-            <div className="pt-4 self-center md:w-1/2 md:pt-0 md:pl-12">
-              <div className="text-left self-center">
-                <ul className="text-left list-disc list-outside pl-4 pb-6">
-                  {data.content.accomplishments.map((line, key) => {
-                    return <li className="list-item" key={key}>{line}</li>
+          { ((data.content.keyImage || data.content.keyVideo) 
+            && (data.content.accomplishments.length > 0 || data.content.involvement)) &&
+            <div className="flex flex-col lg:flex-row pt-8 pb-8">
+              <div className="pb-4 self-center w-full lg:w-1/2 lg:pb-0 lg:pr-12">
+                {data.content.keyVideo && 
+                  <YoutubeEmbed embedId={data.content.keyVideo ?? ""} />
+                }
+                {
+                  data.content.keyImage &&
+                  <img className="aspect-video rounded-md" src={data.content.keyImage} alt={"Key"} />
+                }
+              </div>
+              {(data.content.keyImage || data.content.keyVideo) && <div 
+                className="
+                  w-full h-px self-center bg-gradient-to-r from-gray-500 via-white to-gray-500
+                  lg:max-height-96 lg:h-80 lg:min-h-[1em] lg:w-px lg:bg-gradient-to-t lg:row-span-full
+                "
+              />}
+              <div className="pt-4 self-center lg:w-1/2 lg:pt-0 lg:pl-12">
+                <div className="text-left self-center">
+                  <ul className="text-left list-disc list-outside pl-4 pb-6">
+                    {data.content.accomplishments.map((line, key) => {
+                      return <li className="list-item" key={key}>{line}</li>
+                    })}
+                  </ul>
+                  {data.content.involvement.map((paragraph, i) => {
+                    return (
+                      <div className="pb-4 whitespace-pre-line indent-6" key={i}>
+                        {paragraph}
+                      </div>
+                    )
                   })}
-                </ul>
-                {data.content.involvement.map((paragraph, i) => {
-                  return (
-                    <div className="pb-4 whitespace-pre-line indent-6" key={i}>
-                      {paragraph}
-                    </div>
-                  )
-                })}
+                </div>
               </div>
             </div>
-          </div>
+          }
 
-          {/* data.content.sections.map((section, key) => {
-            return <ImageAndText image={section.image} text={section.text} imageLeft={section.imageLeft} key={key} />
-          })*/}
+          {data.content.sections.map((section, key) => {
+            return <ImageAndText title={section.title} image={section.image} text={section.description ?? []} imageLeft={section.imageLeft} key={key} />
+          })}
         </div>
       </div>
     </div>

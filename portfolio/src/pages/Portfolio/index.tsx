@@ -1,6 +1,7 @@
 import React from "react";
 import { FeatureDisplay } from "../../components/Portfolio/FeatureDisplay";
 
+import comcastData from "../../_data/Portfolio/Comcast/comcast";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "../../_data/Portfolio/RacingGame/racingGame";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
@@ -33,10 +34,15 @@ export const Portfolio = () => {
 					route={"/Portfolio/MiniMinecraft"}
 					order={2}
 				/>
+				<FeatureDisplay 
+					data={comcastData}
+					route={"/Portfolio/Comcast"}
+					order={3}
+				/>
 			</div>
 
 			{/* Professional Work */}
-			<div className="flex flex-col px-6 pt-14 pb-10 md:px-16">
+			{/* <div className="flex flex-col px-6 pt-14 pb-10 md:px-16">
 				<div className="pb-8 text-white font-urbanist font-medium text-5xl md:text-6xl">
 					Work Samples
 				</div>
@@ -49,7 +55,7 @@ export const Portfolio = () => {
 						)
 					}) }
 				</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }

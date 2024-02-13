@@ -1,5 +1,6 @@
 import banner from './racingGame_banner.png'
 import keyImage from './racingGame_keyImage.png'
+import characterSelect from './racingGame_characterSelect.png'
 
 import unreal_notext from '../../../media/unreal_notext.png'
 import cpp from '../../../media/cpp.png'
@@ -37,9 +38,21 @@ export const racingGameData = {
     "skills": [],
     "sections": [
       {
-        "title": "UI/UX Design & Development",
-        "image": "",
-        "text": [""],
+        "title": "Character Select",
+        "image": characterSelect,
+        "description": [
+          "My goal when designing the character select screen was to maintain readability of the roster while prominently highlighting our character and vehicle art, and to do so with a sleek, stylish UI. To do this, I often referred to spacing and arrangement decisions made in other character-focused games, like Overwatch and MiHoYo's Genshin Impact and Honkai: Star Rail.",
+          "The character cards in particular went through a number of design iterations. Initially with much sharper corners and font styles, I opted to round things out a little bit while also adding additional subtle detail to the cards, specifically the gradient background fields which have had subtle \"digitization\" and noise effects applied. The screen is still a work in progress, and I hope to add more to the right half of the screen, including unique wordmarks for the characters' names."
+        ],
+        "imageLeft": false
+      },
+      {
+        "title": "Racing Heads-Up-Display",
+        "image": keyImage,
+        "description": [
+          "The process of designing the Heads-Up Display mandated that I balance a number of asks with the need to maintain readability. Specifically, two requirements were that character portraits be highly visible, and that it be abundantly clear when a character holds an item. Pushing either of those elements too far would block visbility in a fast-paced, visually busy game, so finding a way to compromise was key.",
+          "In doing so, I found a way to address another issue that we were discovering. We had found that opponents were often hard to see on the track, so rather than fix full-size portraits to the side of the viewport, which I found to be a readability concern, I made it so nearby opponents had their portrait and placement hovering above them. This helped to avoid cluttering the HUD, while also keeping our characters in the forefront."
+        ],
         "imageLeft": true
       }
     ]

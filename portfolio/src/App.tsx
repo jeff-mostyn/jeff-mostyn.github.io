@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 
+import comcastData from "./_data/Portfolio/Comcast/comcast";
 import miniMinecraftData from "./_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "./_data/Portfolio/RacingGame/racingGame";
 import sonsOfRaData from './_data/Portfolio/SonsOfRa/sonsOfRa'
@@ -35,6 +36,7 @@ function App() {
           <Route path='/Portfolio/SonsOfRa' element={<PortfolioPage data={sonsOfRaData}/>} />
           <Route path='/Portfolio/RacingGame' element={<PortfolioPage data={racingGameData}/>} />
           <Route path='/Portfolio/MiniMinecraft' element={<PortfolioPage data={miniMinecraftData}/>} />
+          <Route path='/Portfolio/Comcast' element={<PortfolioPage data={comcastData}/>} />
         </Routes>
       </Router>
     </div>

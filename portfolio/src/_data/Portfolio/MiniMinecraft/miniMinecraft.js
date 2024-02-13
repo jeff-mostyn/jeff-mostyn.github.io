@@ -27,14 +27,7 @@ export const racingGameData = {
       "Implemented the \"mirror dimension\" and the ability of the player to swap between worlds"
     ],
     "skills": [],
-    "sections": [
-      {
-        "title": "UI/UX Design & Development",
-        "image": "",
-        "text": [""],
-        "imageLeft": true
-      }
-    ]
+    "sections": []
   },
   "icons": [qt, cpp],
   "path": "/Portfolio/RacingGame"

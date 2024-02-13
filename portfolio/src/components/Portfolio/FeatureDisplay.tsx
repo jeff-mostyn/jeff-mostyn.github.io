@@ -14,7 +14,7 @@ export type PortfolioItemData = {
 	content: {
 		title: string;
 		roles: string[];
-		summary: string;
+		summary?: string;
 		hyperlinks: {
 			text: string;
 			url: string;
@@ -28,7 +28,7 @@ export type PortfolioItemData = {
 			title: string;
 			image?: string;
 			video?: string;
-			text: string[];
+			description?: string[];
 			imageLeft: boolean;
 		}[]
 	};
@@ -103,7 +103,7 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 									<div className="hidden md:flex md:flex-row md:justify-center md:gap-3 md:visible">
 										{
 											data.icons.map((icon, key) => {
-												return <img src={icon} key={key} height={"48"} width={"48px"}/>
+												return <img className="rounded-md" src={icon} key={key} height={"48"} width={"48px"}/>
 											})
 										}
 									</div>

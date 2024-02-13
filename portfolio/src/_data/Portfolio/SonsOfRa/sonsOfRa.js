@@ -59,17 +59,18 @@ export const sonsOfRaData = {
       {
         "title": "Radial UI",
         "image": radialMenu,
-        "text": [
-          "As a lifelong console player, a goal of mine from the start was to make Sons of Ra playable on controller. After working together with Jo and Mark, our designer and artist, to settle on a concept and put together some temporary assets, I hashed out a prototype over the course of a couple of days. The primary goal I adopted was to present as much information as possible while not overloading the player.  \r\n\r\nFollowing playtests of the initial version, we were extremely happy with how it performed, to the extent that aside from replacing the temp art with cleaner UI elements and adding some minor features like unlockable abilities, the final result ultimately differed little from that initial prototype."
+        "description": [
+          "The Radial Menu in Sons of Ra was an immense design challenge. In a game that often hinged on quick decisions, we wanted players to be able to access any of their possible actions quickly and intuitively, be it with keyboard or controller.",
+          "Our game has 3 main action types: unit spawning, tower placement, and active ability usage, with each of these having 4 associated options. We saw this as a natural point on which to base our UI, so we chose to separate the Radial into 3 sections, each with 4 sub-zones. The section the player is engaging with has its options displayed, while those of the other two are obscured to avoid information overload. With this setup, only one action in the game takes more than two button presses to accomplish (and none more than three), which allows players to act quickly and decisively."
         ],
         "imageLeft": false
       },
-      {
-        "title": "Peer-to-Peer Multiplayer",
-        "image": "",
-        "text": [""],
-        "imageLeft": true
-      },
+      // {
+      //   "title": "Peer-to-Peer Multiplayer",
+      //   "image": "",
+      //   "text": [""],
+      //   "imageLeft": true
+      // },
     ]
   },
   "icons": [unity, csharp],
