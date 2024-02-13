@@ -52,12 +52,17 @@ const getPageLoadAnimationWithDelay = (order: number) => {
 
 export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) => {
 	const [animationStarted, setAnimationStarted] = useState(false);
+	const [animationFinished, setAnimationFinished] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);
 
 	useEffect(() => {
 		setTimeout(() => {
 			setAnimationStarted(true);
 		}, getAnimationDelay(order));	
+
+		setTimeout(() => {
+			setAnimationFinished(true);
+		}, getAnimationDelay(order) + 750);	
 	}, [animationStarted])
 
 	const handleMouseOver = () => {
@@ -70,37 +75,37 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 
 	return (
 		<NavLink to={route}>
-			<div className="relative w-full h-64 overflow-hidden" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+			<div className={`relative w-full h-64 overflow-hidden ${!animationFinished && "md:pointer-events-none"}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
 				{ animationStarted 
 					? <div className={`
-							absolute w-full h-full bg-black opacity-25 animate-darkOverlayFadeResponsive
-						 	md:animate-darkOverlayFade md:transition-opacity md:duration-300 md:opacity-60 md:hover:opacity-15`}
+							absolute w-full h-full bg-black opacity-35 animate-darkOverlayFadeResponsive
+						 	md:animate-darkOverlayFade md:transition-opacity md:duration-300 md:opacity-60 md:hover:opacity-25`}
 						/> 
 					:	<div className="absolute w-full h-full bg-black opacity-0"/>
 					}
 				<img className={`w-full h-full object-cover object-center`} src={data.banner.image} alt="bannerImage"/>
 				<div className="
-					absolute flex flex-col justify-center w-full h-full bottom-0 items-center pb-2 px-6 
-					md:pb-4 md:px-16 md:pointer-events-none
+					absolute flex flex-col justify-center w-full h-full bottom-0 items-center pb-8 px-6 
+					md:pb-2 md:px-16 md:pointer-events-none
 				" >
 					{animationStarted &&
 						<div className={`flex flex-col h-full justify-end opacity-0 animate-slideInFromRight`}>
-							<div className={` translate-y-0 ${isHovered && "md:animate-slideUpFeatureDisplay"} ${!isHovered && "md:animate-slideDownFeatureDisplay"}`}>
+							<div className={`translate-y-0 ${isHovered && "md:animate-slideUpFeatureDisplay"} ${!isHovered && "md:animate-slideDownFeatureDisplay"}`}>
 								<div className="pb-1 text-white font-urbanist font-medium text-5xl">
 									{data.banner.label}
 								</div>
-								<div className={`${isHovered && "md:animate-fastFadeIn"} ${!isHovered && "md:animate-fastFadeOut"}`}>
+								<div 
+									className={`${isHovered && "md:animate-fastFadeIn"} ${!isHovered && "md:animate-fastFadeOut"}`}
+								>
 									<div className="pb-2 text-white font-urbanist font-medium text-md md:text-lg">
 										{data.banner.tagline}
 									</div>
-									<div className="collapse md:visible ">
-										<div className="flex flex-row justify-center gap-3">
-											{
-												data.icons.map((icon, key) => {
-													return <img src={icon} key={key} height={"48"} width={"48px"}/>
-												})
-											}
-										</div>
+									<div className="hidden md:flex md:flex-row md:justify-center md:gap-3 md:visible">
+										{
+											data.icons.map((icon, key) => {
+												return <img src={icon} key={key} height={"48"} width={"48px"}/>
+											})
+										}
 									</div>
 								</div>
 							</div>
