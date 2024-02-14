@@ -12,7 +12,7 @@ export const ImageAndText = ({ title, image, text, imageLeft }: ImageAndTextProp
   return (
     <div className="flex flex-col pt-4">
       {/* Title */}
-      <div className=" text-5xl text-white pb-8">
+      <div className=" text-3xl text-white pb-8 md:text-5xl">
         {title}
       </div>
       <div className={`flex flex-col items-center w-full pb-8 lg:grid-rows-1 ${imageLeft ? "lg:flex-row" : "lg:flex-row-reverse"} `}>

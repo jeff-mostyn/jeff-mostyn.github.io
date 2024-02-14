@@ -9,11 +9,11 @@ import tailwind from '../../../media/tailwind.png'
 export const racingGameData = {
   "banner": {
     "image": banner,
-    "label": "Software Engineer at Comcast",
+    "label": "Front-end Engineer @ Comcast",
     "tagline": "Development of business critical sales website features and initiatives"
   },
   "content": {
-    "title": "Comcast Software Engineering",
+    "title": "Front-end Engineer @ Comcast",
     "roles": [
       Roles.PROGRAMMING,
     ],

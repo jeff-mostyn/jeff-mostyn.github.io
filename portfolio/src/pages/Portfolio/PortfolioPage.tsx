@@ -18,7 +18,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
       </div>
       <div className="relative h-full">
         <div className="flex flex-col justify-center items-center pt-8 md:pt-4">
-          <div className="text-5xl font-urbanist font-normal md:text-6xl">
+          <div className="text-4xl font-urbanist font-normal md:text-6xl px-8">
             {data.content.title}
           </div>
           <div className="flex flex-wrap justify-center pt-3 flex-row">
@@ -28,7 +28,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
           </div>
         </div>
 
-        <div className="flex flex-col px-12 items-center md:px-28">
+        <div className="flex flex-col px-8 items-center md:px-28">
           {/* Summary */}
           <div className="pt-4 md:w-[600px] lg:w-[800px]">
             {data.content.summary}

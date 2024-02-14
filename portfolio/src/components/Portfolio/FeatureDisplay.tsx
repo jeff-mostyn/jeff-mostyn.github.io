@@ -75,7 +75,11 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 
 	return (
 		<NavLink to={route}>
-			<div className={`relative w-full h-64 overflow-hidden ${!animationFinished && "md:pointer-events-none"}`} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+			<div 
+				className={`relative w-full h-64 overflow-hidden ${!animationFinished && "md:pointer-events-none"}`} 
+				onMouseOver={handleMouseOver} 
+				onMouseOut={handleMouseOut}
+			>
 				{ animationStarted 
 					? <div className={`
 							absolute w-full h-full bg-black opacity-35 animate-darkOverlayFadeResponsive
@@ -91,7 +95,7 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 					{animationStarted &&
 						<div className={`flex flex-col h-full justify-end opacity-0 animate-slideInFromRight`}>
 							<div className={`translate-y-0 ${isHovered && "md:animate-slideUpFeatureDisplay"} ${!isHovered && "md:animate-slideDownFeatureDisplay"}`}>
-								<div className="pb-1 text-white font-urbanist font-medium text-5xl">
+								<div className="pb-1 text-4xl text-white font-urbanist font-medium md:text-5xl">
 									{data.banner.label}
 								</div>
 								<div 
