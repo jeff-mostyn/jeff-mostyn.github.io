@@ -11,5 +11,6 @@ export enum Roles {
   DESIGN = "Game Design",
   PROGRAMMING = "Programming",
   TECH_ART = "Tech Art",
+  UI_PROGRAMMING = "UI Programming",
   UI_UX = "UI/UX Design",
 }

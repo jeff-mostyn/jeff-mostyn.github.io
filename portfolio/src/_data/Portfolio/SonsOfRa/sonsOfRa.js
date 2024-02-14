@@ -16,6 +16,7 @@ export const sonsOfRaData = {
     "title": "Sons of Ra",
     "roles": [
       Roles.PROGRAMMING,
+      Roles.UI_PROGRAMMING,
       Roles.DESIGN
     ],
     "summary": "Sons of Ra is an award winning two-player competitive tower defense game where players take control of opposing pharaohs in Egypt. Send your armies and build up defenses in a fast-paced strategy game designed for competition between two local or online players. Choose a patron deity and unleash mighty abilities to turn the tide of battle, or expand your kingdom to gain a strategic edge.",

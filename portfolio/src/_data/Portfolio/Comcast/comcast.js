@@ -15,6 +15,7 @@ export const racingGameData = {
   "content": {
     "title": "Front-end Engineer @ Comcast",
     "roles": [
+      Roles.UI_PROGRAMMING,
       Roles.PROGRAMMING,
     ],
     "hyperlinks": [],

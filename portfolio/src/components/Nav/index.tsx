@@ -1,5 +1,7 @@
 import React from "react";
 
+import github from "../../media/github-mark-white.png"
+
 import { NavLinkWrapper } from "./NavLinkWrapper";
 import { SVG } from "../Util/Svg";
 import { Sizes } from "../Util/util";
@@ -11,7 +13,10 @@ export const Nav = () => {
 			<NavLinkWrapper route={"/About"} label={"About"}/>
 			<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
 				<SVG name="linkedin" size={Sizes.MD} baseColor="white" transition={true} transitionColor="theme1"/>
-			</a>		
+			</a>
+			<a className="flex self-center pt-0.5" href="https://github.com/jeff-mostyn">
+				<img src={github} className="h-6 w-6"/>
+			</a>	
 		</div>
 	)
 }

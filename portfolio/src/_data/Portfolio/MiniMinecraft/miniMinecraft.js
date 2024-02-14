@@ -2,6 +2,7 @@ import banner from './miniMinecraft_banner.png'
 
 import cpp from '../../../media/cpp.png'
 import qt from '../../../media/qt.png'
+import opengl from '../../../media/opengl.jpg'
 
 export const racingGameData = {
   "banner": {
@@ -29,7 +30,7 @@ export const racingGameData = {
     "skills": [],
     "sections": []
   },
-  "icons": [qt, cpp],
+  "icons": [qt, cpp, opengl],
   "path": "/Portfolio/RacingGame"
 }
 

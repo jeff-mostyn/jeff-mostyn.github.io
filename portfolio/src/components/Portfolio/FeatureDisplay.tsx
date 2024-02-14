@@ -43,11 +43,7 @@ type FeatureDisplayProps = {
 }
 
 const getAnimationDelay = (order: number): number => {
-	return 600 + (300 * order);
-}
-
-const getPageLoadAnimationWithDelay = (order: number) => {
-	return [`md:animation-delay-[${getAnimationDelay(order)}ms]`];
+	return 300 + (300 * order);
 }
 
 export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) => {

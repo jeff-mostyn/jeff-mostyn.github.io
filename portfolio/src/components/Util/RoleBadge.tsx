@@ -10,6 +10,7 @@ const pillBadgeStyles = (role: string, size: string) => classNames('mx-1 px-2.5 
   "bg-[#54bf7a]": role === Roles.DESIGN,
   "bg-[#9454bf]": role === Roles.PROGRAMMING,
   "bg-[#d1905a]": role === Roles.TECH_ART,
+  "bg-[#6734eb]": role === Roles.UI_PROGRAMMING,
   "bg-[#5abfd1]": role === Roles.UI_UX,
 })
 

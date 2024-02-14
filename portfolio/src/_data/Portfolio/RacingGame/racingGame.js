@@ -18,6 +18,7 @@ export const racingGameData = {
     "roles": [
       Roles.PROGRAMMING,
       Roles.UI_UX,
+      Roles.UI_PROGRAMMING,
       Roles.TECH_ART,
       Roles.ANIMATION
     ],
