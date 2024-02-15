@@ -1,6 +1,7 @@
 import React from "react";
 
 import { data } from "../_data/Home/home";
+import Markdown from "markdown-to-jsx";
 
 export const About = () => {
 	return (
@@ -28,7 +29,7 @@ export const About = () => {
 						{data.bio.map((line, i) => {
 							return (
 								<li className="pb-2.5 list-inside list-disc text-base" key={i}>
-									{line}
+									<Markdown>{line}</Markdown>
 								</li>
 							)
 						})}
