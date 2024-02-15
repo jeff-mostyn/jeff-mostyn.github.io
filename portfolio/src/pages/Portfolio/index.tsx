@@ -15,8 +15,6 @@ export enum Projects {
 }
 
 export const Portfolio = () => {
-
-	const [imagesLoaded, setImagesLoaded] = useState(false);
 	
 	return (
 		<div className="bg-zinc-700">
