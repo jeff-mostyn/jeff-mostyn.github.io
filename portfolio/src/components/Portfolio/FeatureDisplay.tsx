@@ -15,6 +15,7 @@ export type PortfolioItemData = {
 		title: string;
 		roles: string[];
 		summary?: string;
+		steamEmbed?: string;
 		hyperlinks: {
 			text: string;
 			url: string;

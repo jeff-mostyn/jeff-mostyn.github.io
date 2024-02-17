@@ -34,6 +34,8 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
             {data.content.summary}
           </div>
 
+          {/* {data.content.steamEmbed && <iframe src={data.content.steamEmbed} className="mt-6 mb-4" width="646" height="190"></iframe>} */}
+
           {/* Links */}
           <div className="flex flex-col justify-center pt-4 md:flex-row md:divide-x">
             { data.content.hyperlinks.map((link, key) => {
