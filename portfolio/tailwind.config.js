@@ -39,7 +39,7 @@ module.exports = {
         },
         darkOverlayFadeResponsive: {
           '0%': { opacity: "0" },
-          '100%': { opacity: "0.25" }
+          '100%': { opacity: "0.35" }
         },
         slideInFromRight: {
           '0%': {
