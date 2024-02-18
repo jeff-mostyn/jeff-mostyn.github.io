@@ -16,7 +16,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
       <div className="relative w-full h-60">
         <img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
       </div>
-      <div className="relative h-full">
+      <div className="relative flex flex-col justify-center h-full px-5 md:px-28 2xl:w-[1500px]">
         <div className="flex flex-col justify-center items-center pt-8 md:pt-4">
           <div className="text-4xl font-urbanist font-normal md:text-6xl px-8">
             {data.content.title}
@@ -28,9 +28,9 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
           </div>
         </div>
 
-        <div className="flex flex-col px-8 items-center md:px-28">
+        <div className="flex flex-col items-center px-2">
           {/* Summary */}
-          <div className="pt-4 md:w-[600px] lg:w-[800px]">
+          <div className="pt-4 text-left indent-6 md:w-[600px] lg:w-[800px]">
             {data.content.summary}
           </div>
 
