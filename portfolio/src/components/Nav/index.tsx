@@ -1,6 +1,6 @@
 import React from "react";
 
-import github from "../../media/github-mark-white.png"
+import github from "../../media/github-mark.png"
 
 import { NavLinkWrapper } from "./NavLinkWrapper";
 import { SVG } from "../Util/Svg";
@@ -18,11 +18,13 @@ export const Nav = () => {
 				Resume
 			</a>
 			<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
-				<SVG name="linkedin" size={Sizes.MD} baseColor="white" transition={true} transitionColor="theme1"/>
+				<SVG name="linkedin" size={Sizes.LG} baseColor="white" transition={true} transitionColor="theme1"/>
 			</a>
-			<a className="flex self-center pt-0.5" href="https://github.com/jeff-mostyn">
+			<div className="flex w-8 h-8 items-center justify-center transition-colors duration-300 bg-gray-200 hover:bg-theme1 rounded-lg">
+			<a className="flex self-center" href="https://github.com/jeff-mostyn">
 				<img src={github} className="h-6 w-6"/>
 			</a>	
+			</div>
 		</div>
 	)
 }

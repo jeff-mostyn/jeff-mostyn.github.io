@@ -4,7 +4,6 @@ import classNames from "classnames";
 import { Sizes } from "./util"
 import { linkedin_path, triangle_down_path, triangle_up_path } from "./svgPaths";
 
-
 const iconsMap: Map<string, JSX.Element> = new Map<string, JSX.Element>([
   ["linkedin", linkedin_path],
   ["triangle_down", triangle_down_path],
