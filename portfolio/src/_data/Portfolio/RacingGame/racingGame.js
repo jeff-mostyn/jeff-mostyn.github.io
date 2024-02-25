@@ -1,4 +1,5 @@
 import banner from './racingGame_banner.png'
+import main_menu_flow from './main_menu_flow.gif'
 import keyImage from './racingGame_keyImage.png'
 import characterSelect from './racingGame_characterSelect.png'
 
@@ -39,6 +40,15 @@ export const racingGameData = {
     "skills": [],
     "sections": [
       {
+        "title": "Main Menu Flow",
+        "image": main_menu_flow,
+        "description": [
+          "When I began to design the main menu, I asked the project director what sort of style he envisioned for it, and the suggestion that was given to me was to aim for sleek and futuristic, with just a little rebellious flavor. With that, and without so much as a wireframe, I began to lay things out in Unreal's Slate UI to start envisioning where I could go with the design.",
+          "Ultimately, I chose to keep controls to the left of the screen so as to allow the right half for displaying information and thematic flair. As for design, I began with sharp-angled black and white elements, and lit up selected buttons with a yellow-orange gradient which hearkens back to our iconography, while having a sharp black shadow strike behind them on selection. This splashy treatment makes for sharp contrast next to the simplicity of the other UI elements, and incorporates a litle of that 'rebellious' feeling."
+        ],
+        "imageLeft": false
+      },
+      {
         "title": "Character Select",
         "image": characterSelect,
         "description": [
@@ -55,7 +65,8 @@ export const racingGameData = {
           "In doing so, I found a way to address another issue that we were discovering. We had found that opponents were often hard to see on the track, so rather than fix full-size portraits to the side of the viewport, which I found to be a readability concern, I made it so nearby opponents had their portrait and placement hovering above them. This helped to avoid cluttering the HUD, while also keeping our characters in the forefront."
         ],
         "imageLeft": true
-      }
+      },
+      
     ]
   },
   "icons": [
