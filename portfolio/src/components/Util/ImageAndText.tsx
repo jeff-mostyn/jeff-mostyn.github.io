@@ -24,7 +24,7 @@ export const ImageAndText = ({ title, image, text, imageLeft }: ImageAndTextProp
           
           {/* Image */}
           <div className={`pb-4 lg:w-1/2 ${imageLeft ? "lg:pr-12" : "lg:pl-12"} lg:row-span-full lg:pb-0`}>
-            <img className="aspect-video rounded cursor-pointer" src={image} alt={`${title} Sample`} onClick={() => setModalOpen(true)}/>
+            <img className="aspect-video rounded-md cursor-pointer" src={image} alt={`${title} Sample`} onClick={() => setModalOpen(true)}/>
           </div>
           
           {/* Divider */}
