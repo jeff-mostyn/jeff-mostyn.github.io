@@ -9,7 +9,10 @@ import unity from '../../../media/unity.png'
 export const sonsOfRaData = {
   "banner": {
     "image": banner,
-    "label": "Sons of Ra",
+    "label": {
+      "en": "Sons of Ra",
+      "ja": "サンズ・オブ・ラー"
+    },
     "tagline": "Competitive tower defense game that draws on ancient Egyptian mythology"
   },
   "content": {

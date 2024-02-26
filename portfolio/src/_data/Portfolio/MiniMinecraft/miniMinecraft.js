@@ -7,7 +7,10 @@ import opengl from '../../../media/opengl.jpg'
 export const racingGameData = {
   "banner": {
     "image": banner,
-    "label": "Mini Minecraft",
+    "label": {
+      "en": "Mini Minecraft",
+      "ja": "ミニMinecraft"
+    },
     "tagline": "University of Pennsylvania CIS 5600 Introduction to Computer Graphics Final Project"
   },
   "content": {

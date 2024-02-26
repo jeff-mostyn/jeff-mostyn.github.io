@@ -4,18 +4,33 @@ import github from "../../media/github-mark.png"
 
 import { NavLinkWrapper } from "./NavLinkWrapper";
 import { SVG } from "../Util/Svg";
-import { Sizes } from "../Util/util";
+import { Sizes, browserLanguage, languages } from "../Util/util";
 
 export const Nav = () => {
+	const labels = {
+		about: {
+			"en": "About",
+			"ja": "私について",
+		},
+		portfolio: {
+			"en": "Portfolio",
+			"ja": "ポートフォリオ",
+		},
+		resume: {
+			"en": "Resume",
+			"ja": "履歴書",
+		}
+	}
+
 	return (
 		<div className="flex flex-row self-center justify-center items-center gap-6 h-16 bg-zinc-800 border-b-2 border-theme1 md:gap-8">
-			<NavLinkWrapper route={"/"} label={"Portfolio"}/>
-			<NavLinkWrapper route={"/About"} label={"About"}/>
+			<NavLinkWrapper route={"/"} label={browserLanguage() == languages.JAPANESE ? labels.portfolio.ja : labels.portfolio.en}/>
+			<NavLinkWrapper route={"/About"} label={browserLanguage() == languages.JAPANESE ? labels.about.ja : labels.about.en}/>
 			<a 
 				className="flex self-center pt-0.5 transition-colors duration-300 text-white hover:text-theme1" 
 				href="https://drive.google.com/file/d/1MVsDg8WRjpZ-Z0BcPrGbZSVS87TsJs53/view?usp=drive_link"
 			>
-				Resume
+				{browserLanguage() == languages.JAPANESE ? labels.resume.ja : labels.resume.en}
 			</a>
 			<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
 				<SVG name="linkedin" size={Sizes.LG} baseColor="white" transition={true} transitionColor="theme1"/>

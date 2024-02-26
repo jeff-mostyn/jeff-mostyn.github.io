@@ -1,3 +1,13 @@
+export interface LocalizedContent {
+  "en": string;
+  "ja": string;
+}
+
+export enum languages {
+  ENGLISH = "en",
+  JAPANESE = "ja"
+}
+
 export enum Sizes {
   XS = "xs",
   SM = "sm",
@@ -13,4 +23,8 @@ export enum Roles {
   TECH_ART = "Tech Art",
   UI_PROGRAMMING = "UI Programming",
   UI_UX = "UI/UX Design",
+}
+
+export const browserLanguage = (): string => {
+  return navigator.language
 }

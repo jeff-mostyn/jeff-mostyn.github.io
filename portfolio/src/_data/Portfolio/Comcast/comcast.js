@@ -9,7 +9,10 @@ import tailwind from '../../../media/tailwind.png'
 export const racingGameData = {
   "banner": {
     "image": banner,
-    "label": "Front-end Engineer @ Comcast",
+    "label": {
+      "en": "Front-end Engineer @ Comcast",
+      "ja": "コムキャストでのWebプログラマー"
+    },
     "tagline": "Development of business critical sales website features and initiatives"
   },
   "content": {

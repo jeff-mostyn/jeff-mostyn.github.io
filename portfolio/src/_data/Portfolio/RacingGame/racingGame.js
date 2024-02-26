@@ -12,7 +12,10 @@ import { Roles } from 'src/components/Util/util';
 export const racingGameData = {
   "banner": {
     "image": banner,
-    "label": "Unannounced Racing Game",
+    "label": {
+      "en": "Unannounced Racing Game",
+      "ja": "未発表なレーシング・ゲーム"
+    },
     "tagline": "Anti-grav racer inspired by F-Zero and Mario Kart"
   },
   "content": {
