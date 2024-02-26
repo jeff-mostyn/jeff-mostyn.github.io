@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "./static/css/main.dda675c0.css",
-    "main.js": "./static/js/main.5cecd2fc.js",
+    "main.css": "./static/css/main.2074fc62.css",
+    "main.js": "./static/js/main.7490502e.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
+    "static/media/racing_game_feature.gif": "./static/media/racing_game_feature.540757eb1330b458560b.gif",
     "static/media/radialMenu.gif": "./static/media/radialMenu.1e674e3c5c1535675349.gif",
+    "static/media/main_menu_flow.gif": "./static/media/main_menu_flow.6b33c9033442a7e21a16.gif",
     "static/media/racingGame_keyImage.png": "./static/media/racingGame_keyImage.01f46824ab9601d1ff80.png",
     "static/media/racingGame_banner.png": "./static/media/racingGame_banner.b93893ba409dbbf9445b.png",
     "static/media/miniMinecraft_banner.png": "./static/media/miniMinecraft_banner.df434a9deab77f2a7ed3.png",
@@ -21,12 +23,12 @@
     "static/media/opengl.jpg": "./static/media/opengl.f4f49a3cba1c7365852d.jpg",
     "static/media/unity.png": "./static/media/unity.dce03716ca0bd431081e.png",
     "index.html": "./index.html",
-    "main.dda675c0.css.map": "./static/css/main.dda675c0.css.map",
-    "main.5cecd2fc.js.map": "./static/js/main.5cecd2fc.js.map",
+    "main.2074fc62.css.map": "./static/css/main.2074fc62.css.map",
+    "main.7490502e.js.map": "./static/js/main.7490502e.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dda675c0.css",
-    "static/js/main.5cecd2fc.js"
+    "static/css/main.2074fc62.css",
+    "static/js/main.7490502e.js"
   ]
 }

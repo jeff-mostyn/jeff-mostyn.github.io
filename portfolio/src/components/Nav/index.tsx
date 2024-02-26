@@ -12,7 +12,7 @@ export const Nav = () => {
 			<NavLinkWrapper route={"/"} label={"Portfolio"}/>
 			<NavLinkWrapper route={"/About"} label={"About"}/>
 			<a 
-				className="flex self-center pt-0.5 transition-colors duration-300 text-gray-200 hover:text-theme1" 
+				className="flex self-center pt-0.5 transition-colors duration-300 text-white hover:text-theme1" 
 				href="https://drive.google.com/file/d/1MVsDg8WRjpZ-Z0BcPrGbZSVS87TsJs53/view?usp=drive_link"
 			>
 				Resume
@@ -20,7 +20,7 @@ export const Nav = () => {
 			<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
 				<SVG name="linkedin" size={Sizes.LG} baseColor="white" transition={true} transitionColor="theme1"/>
 			</a>
-			<div className="flex w-8 h-8 items-center justify-center transition-colors duration-300 bg-gray-200 hover:bg-theme1 rounded-lg">
+			<div className="flex w-8 h-8 items-center justify-center transition-colors duration-300 bg-white hover:bg-theme1 rounded-lg">
 			<a className="flex self-center" href="https://github.com/jeff-mostyn">
 				<img src={github} className="h-6 w-6"/>
 			</a>	
