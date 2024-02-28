@@ -28,3 +28,7 @@ export enum Roles {
 export const browserLanguage = (): string => {
   return navigator.language
 }
+
+export const GetLocalizedContentValue = (content: LocalizedContent) => {
+  return browserLanguage() == languages.JAPANESE ? content.ja : content.en
+}

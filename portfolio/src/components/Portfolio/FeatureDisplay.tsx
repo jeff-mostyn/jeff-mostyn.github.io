@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Projects } from "src/pages/Portfolio";
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
-import { LocalizedContent, browserLanguage, languages } from "../Util/util";
+import { GetLocalizedContentValue, LocalizedContent, browserLanguage, languages } from "../Util/util";
 
 export type PortfolioItemData = {
 	project?: Projects;
@@ -94,7 +94,7 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 						<div className={`flex flex-col h-full justify-end opacity-0 animate-slideInFromRight`}>
 							<div className={`translate-y-0 ${isHovered && "md:animate-slideUpFeatureDisplay"} ${!isHovered && "md:animate-slideDownFeatureDisplay"}`}>
 								<div className="pb-1 text-4xl text-white font-urbanist font-medium md:text-5xl">
-									{browserLanguage() == languages.JAPANESE ? data.banner.label.ja : data.banner.label.en}
+									{GetLocalizedContentValue(data.banner.label)}
 								</div>
 								<div 
 									className={`${isHovered && "md:animate-fastFadeIn"} ${!isHovered && "md:animate-fastFadeOut"}`}
