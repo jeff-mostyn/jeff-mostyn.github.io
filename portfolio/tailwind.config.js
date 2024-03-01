@@ -22,7 +22,7 @@ module.exports = {
         "zinc-750": "#33333c"
       },
       fontFamily: {
-        'noto-sans-jp': ['noto-sans-jp', 'sans-serif'],
+        'noto-sans-jp': ['Noto Sans Jp', 'sans-serif'],
         'urbanist': ['urbanist', 'sans-serif']
       },
       keyframes: {

@@ -1,4 +1,4 @@
-import banner from './miniMinecraft_banner.png'
+import banner from './miniMinecraft_banner.webp'
 
 import cpp from '../../../media/cpp.png'
 import qt from '../../../media/qt.png'

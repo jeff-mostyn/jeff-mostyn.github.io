@@ -1,6 +1,6 @@
 import { Roles } from 'src/components/Util/util'
 
-import banner from './banner.png'
+import banner from './banner.webp'
 import cart3 from './cart3.png'
 import typescript from '../../../media/typescript.png'
 import react from '../../../media/react.png'

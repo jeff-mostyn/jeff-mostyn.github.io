@@ -2,6 +2,7 @@ import React from "react";
 
 import { data } from "../_data/Home/home";
 import Markdown from "markdown-to-jsx";
+import { GetLocalizedContentValue } from "src/components/Util/util";
 
 export const About = () => {
 	return (
@@ -22,14 +23,14 @@ export const About = () => {
 			/>
 			<div className="pt-4 self-center md:w-1/2 md:pt-0 md:pl-12 lg:3/5">
 				<div className="text-left self-center text-gray-100">
-					<div className="pb-6 font-noto-sans-jp text-xl">
-						{data.header}
+					<div className="pb-6 text-xl">
+						{GetLocalizedContentValue(data.header)}
 					</div>
 					<ul>
 						{data.bio.map((line, i) => {
 							return (
-								<li className="pb-2.5 font-noto-sans-jp list-inside list-disc text-base" key={i}>
-									<Markdown>{line}</Markdown>
+								<li className="pb-2.5 list-inside list-disc text-base" key={i}>
+									<Markdown>{GetLocalizedContentValue(line)}</Markdown>
 								</li>
 							)
 						})}

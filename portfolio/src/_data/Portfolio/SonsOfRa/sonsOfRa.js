@@ -1,4 +1,4 @@
-import banner from './sor_banner.jpg';
+import banner from './sor_banner.webp';
 import radialMenu from '../../WorkSamples/radialMenu.gif'
 
 import { Roles } from 'src/components/Util/util';

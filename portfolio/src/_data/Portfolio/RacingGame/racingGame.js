@@ -1,4 +1,4 @@
-import banner from './racingGame_banner.png'
+import banner from './racingGame_banner.webp'
 import main_menu_flow from './main_menu_flow.gif'
 import keyImage from './racingGame_keyImage.png'
 import characterSelect from './racingGame_characterSelect.png'

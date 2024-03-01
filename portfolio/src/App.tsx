@@ -28,7 +28,7 @@ function App() {
   if (!document.getElementById("noto-sans-jp-font")) {
     let link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "https://fonts.googleapis.com/css?family=Noto+Sans+JP";
+    link.href = "https://fonts.googleapis.com/css2?family=Noto+Sans+JP";
     link.id = "noto-sans-jp-font"
     head.append(link);
   }
