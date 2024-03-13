@@ -25,13 +25,6 @@ function App() {
     link.id = "urbanist-font"
     head.append(link);
   }
-  if (!document.getElementById("noto-sans-jp-font")) {
-    let link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "https://fonts.googleapis.com/css2?family=Noto+Sans+JP";
-    link.id = "noto-sans-jp-font"
-    head.append(link);
-  }
 
   return (
     <div className="App min-h-screen h-full w-full bg-zinc-700">

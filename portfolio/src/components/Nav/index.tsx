@@ -37,7 +37,7 @@ export const Nav = () => {
 			</a>
 			<div className="flex w-8 h-8 items-center justify-center transition-colors duration-300 bg-white hover:bg-theme1 rounded-lg">
 			<a className="flex self-center" href="https://github.com/jeff-mostyn">
-				<img src={github} className="h-6 w-6"/>
+				<img src={github} className="h-6 w-6" alt={"github"}/>
 			</a>	
 			</div>
 		</div>

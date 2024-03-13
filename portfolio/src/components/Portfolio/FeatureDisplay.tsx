@@ -105,7 +105,7 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 									<div className="hidden md:flex md:flex-row md:justify-center md:gap-3 md:visible">
 										{
 											data.icons.map((icon, key) => {
-												return <img className="rounded-md" src={icon} key={key} height={"48"} width={"48px"}/>
+												return <img className="rounded-md" src={icon} key={key} height={"48"} width={"48px"} alt={icon.split(".")[0]}/>
 											})
 										}
 									</div>
