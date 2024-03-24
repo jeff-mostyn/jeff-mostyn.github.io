@@ -16,7 +16,10 @@ export const racingGameData = {
       "en": "Unannounced Racing Game",
       "ja": "未発表なレーシング・ゲーム"
     },
-    "tagline": "Anti-grav racer inspired by F-Zero and Mario Kart"
+    "tagline": {
+      "en": "Anti-grav racer inspired by F-Zero and Mario Kart",
+      "ja": "F-Zeroとマリオカートからインスピレーションを受けたアンチグラビティー・レーシング・ゲーム"
+    }
   },
   "content": {
     "title": "Unannounced Racing Game",

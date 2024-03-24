@@ -11,7 +11,10 @@ export const racingGameData = {
       "en": "Mini Minecraft",
       "ja": "ミニMinecraft"
     },
-    "tagline": "University of Pennsylvania CIS 5600 Introduction to Computer Graphics Final Project"
+    "tagline": {
+      "en": "University of Pennsylvania CIS 5600 Introduction to Computer Graphics Final Project",
+      "ja": "ペン大学CIS5600授業のファイナル・プロジェクト"
+    },
   },
   "content": {
     "title": "Mini Minecraft",

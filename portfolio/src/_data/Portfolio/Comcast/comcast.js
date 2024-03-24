@@ -13,7 +13,10 @@ export const racingGameData = {
       "en": "Front-end Engineer @ Comcast",
       "ja": "コムキャストでのWebプログラマー"
     },
-    "tagline": "Development of business critical sales website features and initiatives"
+    "tagline": {
+      "en": "Development of business critical sales website features and initiatives",
+      "ja": "ビジネスに重要な販売サイトの開発"
+    },
   },
   "content": {
     "title": "Front-end Engineer @ Comcast",

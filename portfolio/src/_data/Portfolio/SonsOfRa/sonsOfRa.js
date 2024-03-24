@@ -13,7 +13,11 @@ export const sonsOfRaData = {
       "en": "Sons of Ra",
       "ja": "サンズ・オブ・ラー"
     },
-    "tagline": "Competitive tower defense game that draws on ancient Egyptian mythology"
+    "tagline": 
+    {
+      "en": "Competitive tower defense game that draws on ancient Egyptian mythology",
+      "ja": "エジプト神話基本の2プレーヤー競争的なタワー・ディフェンス・ゲーム"
+    },
   },
   "content": {
     "title": "Sons of Ra",

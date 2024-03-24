@@ -10,7 +10,7 @@ export type PortfolioItemData = {
 	banner: {
 		image: string;
 		label: LocalizedContent;
-		tagline: string;
+		tagline: LocalizedContent;
 	}
 	content: {
 		title: string;
@@ -100,7 +100,7 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 									className={`${isHovered && "md:animate-fastFadeIn"} ${!isHovered && "md:animate-fastFadeOut"}`}
 								>
 									<div className="pb-2 text-white font-urbanist font-medium text-md md:text-lg">
-										{data.banner.tagline}
+										{GetLocalizedContentValue(data.banner.tagline)}
 									</div>
 									<div className="hidden md:flex md:flex-row md:justify-center md:gap-3 md:visible">
 										{
