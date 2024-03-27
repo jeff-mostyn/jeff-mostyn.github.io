@@ -4,7 +4,7 @@ import { ImageAndText } from "src/components/Util/ImageAndText";
 // import { ImageAndText } from "src/components/Util/ImageAndText";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { YoutubeEmbed } from "src/components/Util/YoutubeEmbed";
-import { Sizes } from "src/components/Util/util";
+import { GetLocalizedContentValue, Sizes } from "src/components/Util/util";
 
 type PortfolioPageProps = {
   data: PortfolioItemData;
@@ -20,7 +20,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
         <div className="relative flex flex-col justify-center h-full px-5 md:px-28 2xl:w-[1500px]">
           <div className="flex flex-col justify-center items-center pt-8 md:pt-4">
             <div className="text-4xl font-urbanist font-normal md:text-6xl px-8">
-              {data.content.title}
+              {GetLocalizedContentValue(data.content.title)}
             </div>
             <div className="flex flex-wrap justify-center pt-3 flex-row">
               {data.content.roles.map((role, key) => {
@@ -32,7 +32,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
           <div className="flex flex-col items-center px-2">
             {/* Summary */}
             <div className="pt-4 text-left indent-6 md:w-[600px] lg:w-[800px]">
-              {data.content.summary}
+              {data.content.summary && GetLocalizedContentValue(data.content.summary)}
             </div>
 
             {/* {data.content.steamEmbed && <iframe src={data.content.steamEmbed} className="mt-6 mb-4" width="646" height="190"></iframe>} */}

@@ -17,12 +17,18 @@ export const racingGameData = {
     },
   },
   "content": {
-    "title": "Mini Minecraft",
+    "title": {
+      "en": "Mini Minecraft",
+      "ja": "ミニMinecraft"
+    },
     "roles": [
       "Programming",
       "Tech Art",
     ],
-    "summary": "Mini Minecraft is the final project for CIS 5600 - Introduction to Computer Graphics at the University of Pennsylvania. As a group, our task was to create a very basic version of Minecraft from scratch using OpenGL, the same way as Notch did originally. Some of the baseline requirements included terrain generation, chunking and rendering of terrain with OpenGL, and implementing player physics and interactions, among others. In addition to this, we were tasked with adding some  original features of our own.",
+    "summary": {
+      "en": "Mini Minecraft is the final project for CIS 5600 - Introduction to Computer Graphics at the University of Pennsylvania. As a group, our task was to create a very basic version of Minecraft from scratch using OpenGL, the same way as Notch did originally. Some of the baseline requirements included terrain generation, chunking and rendering of terrain with OpenGL, and implementing player physics and interactions, among others. In addition to this, we were tasked with adding some original features of our own.",
+      "ja": "ミニMinecraftはペン大学CIS5600 - Introduction to Computer Graphics授業のファイナル・プロジェクトです。私たちの目的は、グループで基本から凄く簡単なMinecraftのバージョンを本来クリエーターのNotchのように、OpenGLで作ることでした。最小要件は、地面ジェネレーションとか、地面を「チャンク」してOpenGLでレンダーするを含む。その上に自分で決めたフィーチャーをプログラムする事も要求された。",
+    },
     "hyperlinks": [],
     "keyVideo": "VvQwWRIcAGM?si=9gZ1dwFEEcZ3q69o",
     "involvement": [

@@ -13,9 +13,9 @@ export type PortfolioItemData = {
 		tagline: LocalizedContent;
 	}
 	content: {
-		title: string;
+		title: LocalizedContent;
 		roles: string[];
-		summary?: string;
+		summary?: LocalizedContent;
 		steamEmbed?: string;
 		hyperlinks: {
 			text: string;

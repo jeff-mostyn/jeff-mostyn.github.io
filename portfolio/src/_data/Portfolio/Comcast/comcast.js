@@ -19,7 +19,10 @@ export const racingGameData = {
     },
   },
   "content": {
-    "title": "Front-end Engineer @ Comcast",
+    "title": {
+      "en": "Front-end Engineer @ Comcast",
+      "ja": "コムキャストでのWebプログラマー"
+    },
     "roles": [
       Roles.UI_PROGRAMMING,
       Roles.PROGRAMMING,
