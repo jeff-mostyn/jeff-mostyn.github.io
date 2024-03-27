@@ -31,7 +31,7 @@ export const sonsOfRaData = {
     ],
     "summary": {
       "en": "Sons of Ra is an award winning two-player competitive tower defense game where players take control of opposing pharaohs in Egypt. Send your armies and build up defenses in a fast-paced strategy game designed for competition between two local or online players. Choose a patron deity and unleash mighty abilities to turn the tide of battle, or expand your kingdom to gain a strategic edge.",
-      "ja": "賞をもらったサンズ・オブ・ラーはプレイヤーが反対エジプトのファラオをコントロールする2プレーヤー競争的なタワー・ディフェンス・ゲームです。このペースが速い戦略ゲームで、軍隊をコマンドしたり防御を築いたり、神々の力で相手を倒したりします。領域を広げて、優勝を取る。",
+      "ja": "賞をもらったサンズ・オブ・ラーはプレイヤーが反対エジプトのファラオをコントロールする2プレーヤー競争的なタワー・ディフェンス・ゲームです。このペースが速い戦略ゲームで、軍隊をコマンドしたり防御を築いたり、神々の力で相手を倒したりします。領域を膨らんで、エジプトを克服する。",
     },
     "steamEmbed": "https://store.steampowered.com/widget/1134020/",
     "hyperlinks": [
