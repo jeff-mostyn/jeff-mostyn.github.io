@@ -94,13 +94,13 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 						<div className={`flex flex-col h-full justify-end opacity-0 animate-slideInFromRight`}>
 							<div className={`translate-y-0 ${isHovered && "md:animate-slideUpFeatureDisplay"} ${!isHovered && "md:animate-slideDownFeatureDisplay"}`}>
 								<div className="pb-1 text-4xl text-white font-urbanist font-medium md:text-5xl">
-									{GetLocalizedContentValue(data.banner.label)}
+									<h2>{GetLocalizedContentValue(data.banner.label)}</h2>	
 								</div>
 								<div 
 									className={`${isHovered && "md:animate-fastFadeIn"} ${!isHovered && "md:animate-fastFadeOut"}`}
 								>
 									<div className="pb-2 text-white font-urbanist font-medium text-md md:text-lg">
-										{GetLocalizedContentValue(data.banner.tagline)}
+										<p>{GetLocalizedContentValue(data.banner.tagline)}</p>				
 									</div>
 									<div className="hidden md:flex md:flex-row md:justify-center md:gap-3 md:visible">
 										{

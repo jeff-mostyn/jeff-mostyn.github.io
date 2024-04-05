@@ -17,7 +17,8 @@ export enum Projects {
 export const Portfolio = () => {
 	
 	return (
-		<div className="bg-zinc-700">
+		<div className="bg-zinc-800">
+			<h1 className="py-4 text-3xl font-urbanist text-white">Jeff Mostyn's Portfolio</h1>
 			<div>
 				<FeatureDisplay 
 					data={sonsOfRaData}
