@@ -13,8 +13,8 @@ export const racingGameData = {
   "banner": {
     "image": banner,
     "label": {
-      "en": "Unannounced Racing Game",
-      "ja": "未発表なレーシング・ゲーム"
+      "en": "Nova Chasers",
+      "ja": "ノヴァ・チェーサーズ"
     },
     "tagline": {
       "en": "Anti-grav racer inspired by F-Zero and Mario Kart",
@@ -23,8 +23,8 @@ export const racingGameData = {
   },
   "content": {
     "title": {
-      "en": "Unannounced Racing Game",
-      "ja": "未発表なレーシング・ゲーム"
+      "en": "Nova Chasers",
+      "ja": "ノヴァ・チェーサーズ"
     },
     "roles": [
       Roles.PROGRAMMING,
@@ -34,8 +34,8 @@ export const racingGameData = {
       Roles.ANIMATION
     ],
     "summary": {
-      "en": "Our currently unannounced anti-grav racer seeks to emulate the adrenaline of F-Zero's lightning-fast gameplay, while also incorporating the accesibility and casual fun of Mario Kart. Gain advantage with the careful use of items and your vehicle's boost gauge, but be careful as your opponents have access to the same dangerous tools. Weave through the skyscrapers of the cities of future America at breakneck speed as you aim to become the greatest racer alive.",
-      "ja": "この現在未発表なレーシングゲームは、F-Zeroの超速いゲームプレイもMario Kartのカジュアル楽しさもプレイヤーに伝えてみます。アイテムやブーストで相手に勝ってみるけど、相手もその道具が使えるので気を付けて。未来アメリカの都市を快速で飛び込んで、世界一のレーサーになれ！",
+      "en": "Nova Chasers seeks to emulate the adrenaline of F-Zero's lightning-fast gameplay, while also incorporating the accesibility and casual fun of Mario Kart. Gain advantage with the careful use of items and your vehicle's boost gauge, but be careful as your opponents have access to the same dangerous tools. Weave through the skyscrapers of the cities of future America at breakneck speed as you aim to become the greatest racer alive.",
+      "ja": "ノヴァ・チェーサーズ、F-Zeroの超速いゲームプレイもMario Kartのカジュアル楽しさもプレイヤーに伝えてみます。アイテムやブーストで相手に勝ってみるけど、相手もその道具が使えるので気を付けて。未来アメリカの都市を快速で飛び込んで、世界一のレーサーになれ！",
     },
     "hyperlinks": [],
     "keyImage": racing_game_feature,

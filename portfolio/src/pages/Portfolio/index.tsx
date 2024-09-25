@@ -3,7 +3,7 @@ import { FeatureDisplay } from "../../components/Portfolio/FeatureDisplay";
 
 import comcastData from "../../_data/Portfolio/Comcast/comcast";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
-import racingGameData from "../../_data/Portfolio/RacingGame/racingGame";
+import racingGameData from "../../_data/Portfolio/NovaChasers/racingGame";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
 
 import workSampleData from "../../_data/WorkSamples/workSamples";
@@ -27,7 +27,7 @@ export const Portfolio = () => {
 				/>
 				<FeatureDisplay 
 					data={racingGameData}
-					route={"/Portfolio/RacingGame"}
+					route={"/Portfolio/NovaChasers"}
 					order={1}
 				/>
 				<FeatureDisplay 
