@@ -1,62 +1,79 @@
-import React from "react";
-import { FeatureDisplay } from "../../components/Portfolio/FeatureDisplay";
+import React, { useState } from "react";
+import { FeatureDisplay, FeatureDisplayProps } from "../../components/Portfolio/FeatureDisplay";
 
 import comcastData from "../../_data/Portfolio/Comcast/comcast";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "../../_data/Portfolio/NovaChasers/racingGame";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
-
-import workSampleData from "../../_data/WorkSamples/workSamples";
-import { WorkSample, WorkSampleContent } from "src/components/Portfolio/WorkSample";
+import { Roles, Sizes } from "src/components/Util/util";
+import { RoleBadge } from "src/components/Util/RoleBadge";
 
 export enum Projects {
   SONS_OF_RA = "Sons of Ra",
   RACING_GAME = "Racing game"
 }
 
+const FeatureDisplayData: FeatureDisplayProps[] = [
+	{
+		data: sonsOfRaData,
+		route: "/Portfolio/SonsOfRa",
+		order: 0
+	},
+	{
+		data: racingGameData,
+		route: "/Portfolio/NovaChasers",
+		order: 0
+	},
+	{
+		data: miniMinecraftData,
+		route: "/Portfolio/MiniMinecraft",
+		order: 0
+	},
+	{
+		data: comcastData,
+		route: "/Portfolio/Comcast",
+		order: 0
+	},
+]
+
+const roleList: string[] = [
+	Roles.ANIMATION, Roles.DESIGN, Roles.PROGRAMMING, Roles.TECH_ART, Roles.UI_PROGRAMMING, Roles.UI_UX
+] 
+
 export const Portfolio = () => {
-	
+
+	const [roleFilter, setRoleFilter] = useState<string | undefined>();
+
 	return (
 		<div className="bg-zinc-800">
 			<h1 className="py-4 text-3xl font-urbanist text-white">Jeff Mostyn's Portfolio</h1>
-			<div>
-				<FeatureDisplay 
-					data={sonsOfRaData}
-					route={"/Portfolio/SonsOfRa"}
-					order={0}
-				/>
-				<FeatureDisplay 
-					data={racingGameData}
-					route={"/Portfolio/NovaChasers"}
-					order={1}
-				/>
-				<FeatureDisplay 
-					data={miniMinecraftData}
-					route={"/Portfolio/MiniMinecraft"}
-					order={2}
-				/>
-				<FeatureDisplay 
-					data={comcastData}
-					route={"/Portfolio/Comcast"}
-					order={3}
-				/>
-			</div>
-
-			{/* Professional Work */}
-			{/* <div className="flex flex-col px-6 pt-14 pb-10 md:px-16">
-				<div className="pb-8 text-white font-urbanist font-medium text-5xl md:text-6xl">
-					Work Samples
-				</div>
-				<div className="grid grid-cols-1 md:grid-cols-3">
-					{ workSampleData.map((sample: WorkSampleContent, key: number) => {
+			<div className="pb-2">
+				<>
+					{roleList.map((role, key) => {
 						return (
-							<div className="col-span-1" key={key}>
-								<WorkSample {...sample}/>
-							</div>
+							<button onClick={() => {
+								setRoleFilter(roleFilter === role ? undefined : role);
+							}}>
+								<RoleBadge role={role} size={Sizes.SM} key={key} showBorder={roleFilter === role}/>
+							</button>
 						)
-					}) }
-				</div>
-			</div> */}
+					})}
+				</>
+			</div>
+			<div>
+				{
+					FeatureDisplayData.map((featureDisplay, key) => {
+						return (
+							(!roleFilter || featureDisplay.data.content.roles.includes(roleFilter as Roles)) && 
+								<FeatureDisplay 
+									data={featureDisplay.data}
+									route={featureDisplay.route}
+									order={key}
+								/>
+						)
+					})
+				}
+			</div>
 		</div>
 	)
 }

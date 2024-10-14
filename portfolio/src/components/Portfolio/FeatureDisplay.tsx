@@ -38,7 +38,7 @@ export type PortfolioItemData = {
 	path: string;
 }
 
-type FeatureDisplayProps = {
+export type FeatureDisplayProps = {
 	data: PortfolioItemData;
 	route: string;
 	order: number;
