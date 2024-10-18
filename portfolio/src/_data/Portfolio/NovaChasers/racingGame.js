@@ -1,7 +1,7 @@
 import banner from './racingGame_banner.webp'
 import main_menu_flow from './main_menu_flow.gif'
 import keyImage from './racingGame_keyImage.png'
-import characterSelect from './racingGame_characterSelect.png'
+import characterSelect from './nova_charSelect.gif'
 import racing_game_feature from './racing_game_feature.gif';
 
 import unreal_notext from '../../../media/unreal_notext.png'
