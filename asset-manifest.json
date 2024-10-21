@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "./static/css/main.78952ff8.css",
-    "main.js": "./static/js/main.64d9bfb6.js",
+    "main.js": "./static/js/main.0f81d9cd.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/racing_game_feature.gif": "./static/media/racing_game_feature.540757eb1330b458560b.gif",
+    "static/media/nova_charSelect.gif": "./static/media/nova_charSelect.0b96aeba86614c887508.gif",
     "static/media/radialMenu.gif": "./static/media/radialMenu.1e674e3c5c1535675349.gif",
     "static/media/main_menu_flow.gif": "./static/media/main_menu_flow.6b33c9033442a7e21a16.gif",
     "static/media/racingGame_keyImage.png": "./static/media/racingGame_keyImage.01f46824ab9601d1ff80.png",
-    "static/media/racingGame_characterSelect.png": "./static/media/racingGame_characterSelect.7ca665b7806e14d057a3.png",
     "static/media/react.png": "./static/media/react.6bcffb56bd0efaa47767.png",
     "static/media/csharp.png": "./static/media/csharp.f0ad910d245c243c42d9.png",
     "static/media/racingGame_banner.webp": "./static/media/racingGame_banner.5672c5b52edf0a330d3f.webp",
@@ -24,11 +24,11 @@
     "static/media/unity.png": "./static/media/unity.dce03716ca0bd431081e.png",
     "index.html": "./index.html",
     "main.78952ff8.css.map": "./static/css/main.78952ff8.css.map",
-    "main.64d9bfb6.js.map": "./static/js/main.64d9bfb6.js.map",
+    "main.0f81d9cd.js.map": "./static/js/main.0f81d9cd.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78952ff8.css",
-    "static/js/main.64d9bfb6.js"
+    "static/js/main.0f81d9cd.js"
   ]
 }
