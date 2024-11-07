@@ -5,6 +5,7 @@ import comcastData from "../../_data/Portfolio/Comcast/comcast";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "../../_data/Portfolio/NovaChasers/racingGame";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
+import stylizedToonShaderData from '../../_data/Portfolio/ColoredPencilShader/coloredPencilShader'
 import { Roles, Sizes } from "src/components/Util/util";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 
@@ -32,6 +33,11 @@ const FeatureDisplayData: FeatureDisplayProps[] = [
 	{
 		data: comcastData,
 		route: "/Portfolio/Comcast",
+		order: 0
+	},
+	{
+		data: stylizedToonShaderData,
+		route: "/Portfolio/ColoredPencilShader",
 		order: 0
 	},
 ]

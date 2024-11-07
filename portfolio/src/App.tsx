@@ -37,6 +37,7 @@ function App() {
           <Route path='/Portfolio/NovaChasers' element={<PortfolioPage data={racingGameData}/>} />
           <Route path='/Portfolio/MiniMinecraft' element={<PortfolioPage data={miniMinecraftData}/>} />
           <Route path='/Portfolio/Comcast' element={<PortfolioPage data={comcastData}/>} />
+          <Route path='/Portfolio/ColoredPencilShader' element={<div> <iframe height="540" width="960" src="./_data/Portfolio/ColoredPencilShader/WebGL/index.html"/> </div>} />
         </Routes>
       </Router>
     </div>
