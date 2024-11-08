@@ -19,8 +19,8 @@ export const shaderImplementationData = {
   },
   "content": {
     "title": {
-      "en": "Sons of Ra",
-      "ja": "サンズ・オブ・ラー"
+      "en": "Stylized Toon Shader",
+      "ja": "Stylized Toon Shader"
     },
     "roles": [
       Roles.TECH_ART,
@@ -32,9 +32,12 @@ export const shaderImplementationData = {
     "steamEmbed": "",
     "hyperlinks": [
     ],
-    "keyVideo": "",
+    "keyVideo": "Mvyy41NYnyI",
     "involvement": [],
-    "accomplishments": [],
+    "accomplishments": [
+      "Created base toon shader in Unity Shadergraph",
+      "Utilized Roberts Cross edge detection algorithm, paired with scene depth and normal vector data to create post-process outline shader"
+    ],
     "skills": [
       "Unity Engine",
       "Autodesk Maya"
