@@ -29,7 +29,7 @@ export const Nav = () => {
 				<NavLinkWrapper route={"/About"} label={GetLocalizedContentValue(labels.about)}/>
 				<a 
 					className="flex self-center pt-0.5 transition-colors duration-300 text-white hover:text-theme1" 
-					href="https://drive.google.com/file/d/15_5zlLIkhksZl5qFxardgRfM9zL-XgUT/view?usp=sharing"
+					href="https://drive.google.com/file/d/1qDVNx8KCV2D5rOPRf7rE9zLEiokatI1V/view?usp=sharing"
 				>
 					{GetLocalizedContentValue(labels.resume)}
 				</a>
