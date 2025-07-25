@@ -23,7 +23,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
               {GetLocalizedContentValue(data.content.title)}
             </div>
             <div className="flex flex-wrap justify-center pt-3 flex-row">
-              {data.content.roles.map((role, key) => {
+              {data.content.roles.map((role: string, key: number) => {
                 return <RoleBadge role={role} size={Sizes.MD} key={key}/>
               })}
             </div>
@@ -39,7 +39,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
 
             {/* Links */}
             <div className="flex flex-col justify-center pt-4 md:flex-row md:divide-x">
-              { data.content.hyperlinks.map((link, key) => {
+              { data.content.hyperlinks.map((link, key: number) => {
                   return <a className="pb-1 px-3 text-theme1 underline" href={link.url} key={key}>{link.text}</a>
                 })
               }
@@ -67,11 +67,11 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
                 <div className="pt-4 self-center lg:w-1/2 lg:pt-0 lg:pl-12">
                   <div className="text-left self-center">
                     <ul className="text-left list-disc list-outside pl-4 pb-6">
-                      {data.content.accomplishments.map((line, key) => {
+                      {data.content.accomplishments.map((line: string, key: number) => {
                         return <li className="list-item" key={key}>{line}</li>
                       })}
                     </ul>
-                    {data.content.involvement.map((paragraph, i) => {
+                    {data.content.involvement.map((paragraph: string, i: number) => {
                       return (
                         <div className="pb-4 whitespace-pre-line indent-6" key={i}>
                           {paragraph}
@@ -83,7 +83,7 @@ export const PortfolioPage = ( { data }: PortfolioPageProps) => {
               </div>
             }
 
-            {data.content.sections.map((section, key) => {
+            {data.content.sections.map((section, key: number) => {
               return <ImageAndText title={section.title} image={section.image} text={section.description ?? []} imageLeft={section.imageLeft} key={key} />
             })}
           </div>
