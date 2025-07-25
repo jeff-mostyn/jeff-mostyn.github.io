@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.78952ff8.css",
-    "main.js": "./static/js/main.bf0cf4dd.js",
+    "main.js": "./static/js/main.dbb7135b.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/racing_game_feature.gif": "./static/media/racing_game_feature.540757eb1330b458560b.gif",
     "static/media/nova_charSelect.gif": "./static/media/nova_charSelect.0b96aeba86614c887508.gif",
@@ -13,6 +13,7 @@
     "static/media/csharp.png": "./static/media/csharp.f0ad910d245c243c42d9.png",
     "static/media/racingGame_banner.webp": "./static/media/racingGame_banner.5672c5b52edf0a330d3f.webp",
     "static/media/unreal_notext.png": "./static/media/unreal_notext.03538c192a294cc67750.png",
+    "static/media/cart3RewriteAndNextGen.png": "./static/media/cart3RewriteAndNextGen.12038452c875654d2895.png",
     "static/media/sor_banner.webp": "./static/media/sor_banner.0d409d061b2d2b6a2ddd.webp",
     "static/media/cpp.png": "./static/media/cpp.191c0892a2a3dca56087.png",
     "static/media/cart3.png": "./static/media/cart3.bb23bb75f5317a271dc7.png",
@@ -24,11 +25,11 @@
     "static/media/unity.png": "./static/media/unity.dce03716ca0bd431081e.png",
     "index.html": "./index.html",
     "main.78952ff8.css.map": "./static/css/main.78952ff8.css.map",
-    "main.bf0cf4dd.js.map": "./static/js/main.bf0cf4dd.js.map",
+    "main.dbb7135b.js.map": "./static/js/main.dbb7135b.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.78952ff8.css",
-    "static/js/main.bf0cf4dd.js"
+    "static/js/main.dbb7135b.js"
   ]
 }
