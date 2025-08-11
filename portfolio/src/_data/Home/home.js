@@ -17,8 +17,8 @@ export const data = {
   // ]
   bio: [
     {
-      en: "Front-end Engineer of 4.5 years at Comcast in Philadelphia",
-      ja: "４年半間株式会社コムキャストでWebプログラマーを務めています。"
+      en: "Front-end Engineer of 6 years at Comcast in Philadelphia",
+      ja: "6年間株式会社コムキャストでフロントエンド・エンジニアを務めています。"
     }, 
     {
       en: "Master's student at the University of Pennsylvania, studying Computer Graphics & Game Technology",
