@@ -37,7 +37,16 @@ export const racingGameData = {
       "en": "Nova Chasers seeks to emulate the adrenaline of F-Zero's lightning-fast gameplay, while also incorporating the accesibility and casual fun of Mario Kart. Gain advantage with the careful use of items and your vehicle's boost gauge, but be careful as your opponents have access to the same dangerous tools. Weave through the skyscrapers of the cities of future America at breakneck speed as you aim to become the greatest racer alive.",
       "ja": "ノヴァ・チェーサーズ、F-Zeroの超速いゲームプレイもMario Kartのカジュアル楽しさもプレイヤーに伝えてみます。アイテムやブーストで相手に勝ってみるけど、相手もその道具が使えるので気を付けて。未来アメリカの都市を快速で飛び込んで、世界一のレーサーになれ！",
     },
-    "hyperlinks": [],
+    "hyperlinks": [
+      {
+        "text": "Playable Build (Google Drive)",
+        "url": "https://drive.google.com/file/d/17-ZS8PGc-7QHmIJU9x6x33ECIhkFZhGf/view?usp=sharing"
+      },
+      {
+        "text": "Demo Video (YouTube)",
+        "url": "https://www.youtube.com/watch?v=qr_dv6Tl9j8"
+      },
+    ],
     "keyImage": racing_game_feature,
     "involvement": [
       "For this project, I explored aspects of development that were new to me, and deepened my experience with others. My Master's degree program at the University of Pennsylvania was my first exposure to shader writing, and the visual effects here were the perfect chance to put that learning into practice. I also did more in the realm of UI/UX than I ever had in a game before, moving beyond just writing its code to also create the designs, effects, and much of the art myself, excluding the characters and item icons.",

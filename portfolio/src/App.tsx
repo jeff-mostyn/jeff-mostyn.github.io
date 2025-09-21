@@ -34,11 +34,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path='/About' element={<About/>} />
-          <Route path='/Portfolio/SonsOfRa' element={<PortfolioPage data={sonsOfRaData}/>} />
+          {/* <Route path='/Portfolio/SonsOfRa' element={<PortfolioPage data={sonsOfRaData}/>} />
           <Route path='/Portfolio/NovaChasers' element={<PortfolioPage data={racingGameData}/>} />
           <Route path='/Portfolio/MiniMinecraft' element={<PortfolioPage data={miniMinecraftData}/>} />
           <Route path='/Portfolio/Comcast' element={<PortfolioPage data={comcastData}/>} />
-          <Route path='/Portfolio/ColoredPencilShader' element={<PortfolioPage data={toonShaderData}/>} />
+          <Route path='/Portfolio/ColoredPencilShader' element={<PortfolioPage data={toonShaderData}/>} /> */}
         </Routes>
       </Router>
     </div>

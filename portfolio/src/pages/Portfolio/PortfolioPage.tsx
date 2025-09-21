@@ -8,27 +8,35 @@ import { GetLocalizedContentValue, Sizes } from "src/components/Util/util";
 
 type PortfolioPageProps = {
   data: PortfolioItemData;
+  setActivePage: (data: PortfolioItemData | null) => void;
 }
 
-export const PortfolioPage = ( { data }: PortfolioPageProps) => {
+export const PortfolioPage = ( { data, setActivePage }: PortfolioPageProps) => {
   return (
     <div className="text-white">
       <div className="relative w-full h-60">
         <img className="w-full h-full object-cover object-center" src={data.banner.image} alt="bannerImage"/>
       </div>
       <div className="w-full flex flex-col items-center">
-        <div className="relative flex flex-col justify-center h-full px-5 md:px-28 2xl:w-[1500px]">
-          <div className="flex flex-col justify-center items-center pt-8 md:pt-4">
-            <div className="text-4xl font-urbanist font-normal md:text-6xl px-8">
+        <div className="w-full flex flex-col justify-center items-center pt-8 md:pt-4">
+          <div className="w-full grid grid-cols-8">
+            <button 
+              className="grid col-start-1 col-span-1 self-center"
+              onClick={() => setActivePage(null)}
+            >
+              {"< Back"}
+            </button>
+            <h1 className="grid col-start-2 col-span-6 text-4xl font-urbanist font-normal md:text-6xl px-8">
               {GetLocalizedContentValue(data.content.title)}
-            </div>
-            <div className="flex flex-wrap justify-center pt-3 flex-row">
-              {data.content.roles.map((role: string, key: number) => {
-                return <RoleBadge role={role} size={Sizes.MD} key={key}/>
-              })}
-            </div>
+            </h1>
           </div>
-
+          <div className="flex flex-wrap justify-center pt-3 flex-row">
+            {data.content.roles.map((role: string, key: number) => {
+              return <RoleBadge role={role} size={Sizes.MD} key={key}/>
+            })}
+          </div>
+        </div>
+        <div className="relative flex flex-col justify-center h-full px-5 md:px-28 2xl:w-[1500px]">
           <div className="flex flex-col items-center px-2">
             {/* Summary */}
             <div className="pt-4 text-left indent-6 md:w-[600px] lg:w-[800px]">

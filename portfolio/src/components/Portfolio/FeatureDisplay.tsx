@@ -42,13 +42,14 @@ export type FeatureDisplayProps = {
 	data: PortfolioItemData;
 	route: string;
 	order: number;
+	setActivePage?: (data: PortfolioItemData) => void;
 }
 
 const getAnimationDelay = (order: number): number => {
 	return 300 + (300 * order);
 }
 
-export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) => {
+export const FeatureDisplay = ( { data, route, order, setActivePage } : FeatureDisplayProps ) => {
 	const [animationStarted, setAnimationStarted] = useState(false);
 	const [animationFinished, setAnimationFinished] = useState(false);
 	const [isHovered, setIsHovered] = useState(false);
@@ -71,12 +72,17 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
     setIsHovered(false);
   };
 
+	const handleClick = () => {
+		if (setActivePage) setActivePage(data);
+	}
+
 	return (
-		<NavLink to={route}>
+		// <NavLink to={route}>
 			<div 
 				className={`relative w-full h-64 overflow-hidden ${!animationFinished && "md:pointer-events-none"}`} 
 				onMouseOver={handleMouseOver} 
 				onMouseOut={handleMouseOut}
+				onClick={handleClick}
 			>
 				{ animationStarted 
 					? <div className={`
@@ -84,7 +90,7 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 						 	md:animate-darkOverlayFade md:transition-opacity md:duration-300 md:opacity-60 md:hover:opacity-25`}
 						/> 
 					:	<div className="absolute w-full h-full bg-black opacity-0"/>
-					}
+				}
 				<img className={`w-full h-full object-cover object-center`} src={data.banner.image} alt="bannerImage"/>
 				<div className="
 					absolute flex flex-col justify-center w-full h-full bottom-0 items-center pb-8 px-6 
@@ -123,6 +129,6 @@ export const FeatureDisplay = ( { data, route, order } : FeatureDisplayProps ) =
 					}
 				</div>
 			</div>
-		</NavLink>
+		// </NavLink>
 	)
 }
