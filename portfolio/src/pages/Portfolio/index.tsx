@@ -9,6 +9,7 @@ import stylizedToonShaderData from '../../_data/Portfolio/ColoredPencilShader/co
 import { Roles, Sizes } from "src/components/Util/util";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { PortfolioPage } from "./PortfolioPage";
+import { useBoundStore } from "src/store/store";
 
 export enum Projects {
   SONS_OF_RA = "Sons of Ra",
@@ -48,45 +49,42 @@ const roleList: string[] = [
 ] 
 
 export const Portfolio = () => {
-
-	const [roleFilter, setRoleFilter] = useState<string | undefined>();
-
-	const [activePage, setActivePage] = useState<PortfolioItemData | null>(null);
+	const activePortfolioItem = useBoundStore(state => state.activePortfolioItem);
+	const setActivePortfolioItem = useBoundStore(state => state.setActivePortfolioItem);
+	const activeRole = useBoundStore(state => state.roleFilter);
+	const setActiveRole = useBoundStore(state => state.setRoleFilter);
 
 	return (
 		<div className="bg-zinc-800">
-			{activePage ? (
-				<PortfolioPage 
-					data={activePage}
-					setActivePage={setActivePage}
-				/>
+			{activePortfolioItem ? (
+				<PortfolioPage/>
 			) :
 			(
 				<>
 					<h1 className="py-4 text-3xl font-urbanist text-white">Jeff Mostyn's Portfolio</h1>
 					<div className="pb-2">
-						<>
+						<div className="flex flex-row flex-wrap items-center justify-center max-h-20 min-h-10">
 							{roleList.map((role, key) => {
 								return (
 									<button onClick={() => {
-										setRoleFilter(roleFilter === role ? undefined : role);
+										setActiveRole(activeRole === role ? '' : role);
 									}}>
-										<RoleBadge role={role} size={Sizes.SM} key={key} showBorder={roleFilter === role}/>
+										<RoleBadge role={role} size={Sizes.SM} key={key} showBorder={activeRole === role}/>
 									</button>
 								)
 							})}
-						</>
+						</div>
 					</div>
 					<div>
 						{
 							FeatureDisplayData.map((featureDisplay, key) => {
 								return (
-									(!roleFilter || featureDisplay.data.content.roles.includes(roleFilter as Roles)) && 
+									(!activeRole || featureDisplay.data.content.roles.includes(activeRole as Roles)) && 
 										<FeatureDisplay 
 											data={featureDisplay.data}
 											route={featureDisplay.route}
 											order={key}
-											setActivePage={setActivePage}
+											setActivePage={setActivePortfolioItem}
 										/>
 								)
 							})
