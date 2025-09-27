@@ -19,28 +19,28 @@ export enum Projects {
 const FeatureDisplayData: FeatureDisplayProps[] = [
 	{
 		data: sonsOfRaData,
-		route: "/Portfolio/SonsOfRa",
-		order: 0
+		order: 0,
+		onClick: () => {},
 	},
 	{
 		data: racingGameData,
-		route: "/Portfolio/NovaChasers",
-		order: 0
+		order: 0,
+		onClick: () => {}
 	},
 	{
 		data: miniMinecraftData,
-		route: "/Portfolio/MiniMinecraft",
-		order: 0
+		order: 0,
+		onClick: () => {}
 	},
 	{
 		data: comcastData,
-		route: "/Portfolio/Comcast",
-		order: 0
+		order: 0,
+		onClick: () => {}
 	},
 	{
 		data: stylizedToonShaderData,
-		route: "/Portfolio/ColoredPencilShader",
-		order: 0
+		order: 0,
+		onClick: () => {}
 	},
 ]
 
@@ -54,44 +54,47 @@ export const Portfolio = () => {
 	const activeRole = useBoundStore(state => state.roleFilter);
 	const setActiveRole = useBoundStore(state => state.setRoleFilter);
 
+	const [playAnim, setPlayAnim] = useState<boolean>(true); 
+
+	const handleClick = (newItem: PortfolioItemData | null) => {
+		setPlayAnim(false);
+		setActivePortfolioItem(newItem);
+	}
+
 	return (
 		<div className="bg-zinc-800">
-			{activePortfolioItem ? (
-				<PortfolioPage/>
-			) :
-			(
-				<>
-					<h1 className="py-4 text-3xl font-urbanist text-white">Jeff Mostyn's Portfolio</h1>
-					<div className="pb-2">
-						<div className="flex flex-row flex-wrap items-center justify-center max-h-20 min-h-10">
-							{roleList.map((role, key) => {
-								return (
-									<button onClick={() => {
-										setActiveRole(activeRole === role ? '' : role);
-									}}>
-										<RoleBadge role={role} size={Sizes.SM} key={key} showBorder={activeRole === role}/>
-									</button>
-								)
-							})}
-						</div>
+			{activePortfolioItem && <PortfolioPage/> }
+			<div className={`${activePortfolioItem && 'hidden'}`}>
+				<h1 className="py-4 text-3xl font-urbanist text-white">Jeff Mostyn's Portfolio</h1>
+				<div className="pb-2">
+					<div className="flex flex-row flex-wrap items-center justify-center max-h-20 min-h-10">
+						{roleList.map((role, key) => {
+							return (
+								<button onClick={() => {
+									setActiveRole(activeRole === role ? '' : role);
+								}}>
+									<RoleBadge role={role} size={Sizes.SM} key={key} showBorder={activeRole === role}/>
+								</button>
+							)
+						})}
 					</div>
-					<div>
-						{
-							FeatureDisplayData.map((featureDisplay, key) => {
-								return (
-									(!activeRole || featureDisplay.data.content.roles.includes(activeRole as Roles)) && 
-										<FeatureDisplay 
-											data={featureDisplay.data}
-											route={featureDisplay.route}
-											order={key}
-											setActivePage={setActivePortfolioItem}
-										/>
-								)
-							})
-						}
-					</div>
-				</>
-			)}
+				</div>
+				<div>
+					{
+						FeatureDisplayData.map((featureDisplay, key) => {
+							return (
+								(!activeRole || featureDisplay.data.content.roles.includes(activeRole as Roles)) && 
+									<FeatureDisplay 
+										data={featureDisplay.data}
+										order={key}
+										onClick={handleClick}
+										playAnim={playAnim}
+									/>
+							)
+						})
+					}
+				</div>
+			</div>
 		</div>
 	)
 }
