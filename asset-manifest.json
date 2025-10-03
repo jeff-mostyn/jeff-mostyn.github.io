@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.859cc6ec.css",
-    "main.js": "./static/js/main.0538330e.js",
+    "main.js": "./static/js/main.a2c92c80.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/racing_game_feature.gif": "./static/media/racing_game_feature.540757eb1330b458560b.gif",
     "static/media/nova_charSelect.gif": "./static/media/nova_charSelect.0b96aeba86614c887508.gif",
@@ -26,11 +26,11 @@
     "index.html": "./index.html",
     "static/media/close-svgrepo-com.svg": "./static/media/close-svgrepo-com.b8ac9cdea9ca6881f029a4fde7fdfc4e.svg",
     "main.859cc6ec.css.map": "./static/css/main.859cc6ec.css.map",
-    "main.0538330e.js.map": "./static/js/main.0538330e.js.map",
+    "main.a2c92c80.js.map": "./static/js/main.a2c92c80.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.859cc6ec.css",
-    "static/js/main.0538330e.js"
+    "static/js/main.a2c92c80.js"
   ]
 }
