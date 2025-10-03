@@ -68,6 +68,11 @@ export const Portfolio = () => {
 		setActivePortfolioItem(newItem);
 	}
 
+	const handleRoleFilter = (newRole: string) => {
+		setPlayAnim(false);
+		setActiveRole(newRole);
+	}
+
 	return (
 		<div className="bg-zinc-800" >
 			{activePortfolioItem && <PortfolioPage/> }
@@ -78,7 +83,7 @@ export const Portfolio = () => {
 						{roleList.map((role, key) => {
 							return (
 								<button onClick={() => {
-									setActiveRole(activeRole === role ? '' : role);
+									handleRoleFilter(activeRole === role ? '' : role);
 								}}>
 									<RoleBadge role={role} size={Sizes.SM} key={key} showBorder={activeRole === role}/>
 								</button>
