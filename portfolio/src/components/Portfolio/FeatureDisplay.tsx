@@ -5,39 +5,7 @@ import { NavLink } from "react-router-dom";
 import classNames from "classnames";
 import { GetLocalizedContentValue, LocalizedContent, browserLanguage, languages } from "../Util/util";
 import { useBoundStore } from "src/store/store";
-
-export type PortfolioItemData = {
-	project?: Projects;
-	banner: {
-		image: string;
-		label: LocalizedContent;
-		tagline: LocalizedContent;
-	}
-	content: {
-		title: LocalizedContent;
-		roles: string[];
-		summary?: LocalizedContent;
-		steamEmbed?: string;
-		hyperlinks: {
-			text: string;
-			url: string;
-		}[];
-		keyImage?: string;
-		keyVideo?: string;
-		involvement: string[];
-		accomplishments: string[];
-		skills: string[];
-		sections: {
-			title: string;
-			image?: string;
-			video?: string;
-			description?: string[];
-			imageLeft: boolean;
-		}[]
-	};
-	icons: string[];
-	path: string;
-}
+import { PortfolioItemData } from "src/utils/types";
 
 export type FeatureDisplayProps = {
 	data: PortfolioItemData;
@@ -105,9 +73,9 @@ export const FeatureDisplay = ( { data, order, onClick, playAnim } : FeatureDisp
 				{(animationStarted || !playAnim) &&
 					<div className={`flex flex-col h-full justify-end opacity-0 ${playAnim ? 'animate-slideInFromRight' : 'translate-x-0 opacity-100'}`}>
 						<div className={`translate-y-0 ${isHovered && "md:animate-slideUpFeatureDisplay"} ${!isHovered && "md:animate-slideDownFeatureDisplay"}`}>
-							<div className="pb-1 text-4xl text-white font-urbanist font-medium md:text-5xl">
-								<h2>{GetLocalizedContentValue(data.banner.label)}</h2>	
-							</div>
+							<h2 className="pb-1 text-4xl text-white font-urbanist font-medium md:text-5xl">
+								{GetLocalizedContentValue(data.banner.label)}
+							</h2>	
 							<div 
 								className={`${isHovered && "md:animate-fastFadeIn"} ${!isHovered && "md:animate-fastFadeOut"}`}
 							>

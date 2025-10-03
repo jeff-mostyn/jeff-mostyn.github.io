@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { FeatureDisplay, FeatureDisplayProps, PortfolioItemData } from "../../components/Portfolio/FeatureDisplay";
+import { FeatureDisplay, FeatureDisplayProps } from "../../components/Portfolio/FeatureDisplay";
 
 import comcastData from "../../_data/Portfolio/Comcast/comcast";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "../../_data/Portfolio/NovaChasers/racingGame";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
 import stylizedToonShaderData from '../../_data/Portfolio/ColoredPencilShader/coloredPencilShader'
+import shaderImplementationData from "../../_data/SmallProjects/ColoredPencilShader/coloredPencilShader";
 import { Roles, Sizes } from "src/components/Util/util";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { PortfolioPage } from "./PortfolioPage";
 import { useBoundStore } from "src/store/store";
+import { PortfolioItemData, ProjectData } from "src/utils/types";
+import { WorkSample } from "src/components/Portfolio/WorkSample";
 
 export enum Projects {
   SONS_OF_RA = "Sons of Ra",
@@ -37,11 +40,15 @@ const FeatureDisplayData: FeatureDisplayProps[] = [
 		order: 0,
 		onClick: () => {}
 	},
-	{
-		data: stylizedToonShaderData,
-		order: 0,
-		onClick: () => {}
-	},
+	// {
+	// 	data: stylizedToonShaderData,
+	// 	order: 0,
+	// 	onClick: () => {}
+	// },
+]
+
+const ProjectsData: ProjectData[] = [
+	shaderImplementationData
 ]
 
 const roleList: string[] = [
@@ -62,9 +69,9 @@ export const Portfolio = () => {
 	}
 
 	return (
-		<div className="bg-zinc-800">
+		<div className="bg-zinc-800" >
 			{activePortfolioItem && <PortfolioPage/> }
-			<div className={`${activePortfolioItem && 'hidden'}`}>
+			<div className={`${activePortfolioItem ? 'hidden' : ""}`}>
 				<h1 className="py-4 text-3xl font-urbanist text-white">Jeff Mostyn's Portfolio</h1>
 				<div className="pb-2">
 					<div className="flex flex-row flex-wrap items-center justify-center max-h-20 min-h-10">
@@ -79,7 +86,7 @@ export const Portfolio = () => {
 						})}
 					</div>
 				</div>
-				<div>
+				<div className="mb-8">
 					{
 						FeatureDisplayData.map((featureDisplay, key) => {
 							return (
@@ -93,6 +100,24 @@ export const Portfolio = () => {
 							)
 						})
 					}
+				</div>
+				<div>
+					<h2 className="pb-8 text-2xl text-white font-urbanist font-medium md:text-5xl">
+						Projects
+					</h2>
+					<div
+						className="flex flex-row flex-wrap justify-center gap-4"
+					>
+						{ProjectsData.map((data, i) => {
+							return (
+								(!activeRole || data.roles.includes(activeRole as Roles)) &&
+									<WorkSample 
+									key={i}
+									sampleData={data}
+								/>
+							)})
+						}
+					</div>
 				</div>
 			</div>
 		</div>

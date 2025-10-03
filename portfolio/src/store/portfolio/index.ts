@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { StoreSlice } from '../store';
-import { PortfolioItemData } from 'src/components/Portfolio/FeatureDisplay';
+import { PortfolioItemData } from 'src/utils/types';
 
 export type PortfolioState = {
   roleFilter: string;

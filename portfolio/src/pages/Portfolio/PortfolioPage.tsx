@@ -1,5 +1,4 @@
 import React from "react";
-import { PortfolioItemData } from "src/components/Portfolio/FeatureDisplay";
 import { ImageAndText } from "src/components/Util/ImageAndText";
 // import { ImageAndText } from "src/components/Util/ImageAndText";
 import { RoleBadge } from "src/components/Util/RoleBadge";

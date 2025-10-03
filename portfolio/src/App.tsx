@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className="App min-h-screen h-full w-full bg-zinc-700">
+    <div className="App min-h-screen h-full w-full bottom-0 bg-zinc-800">
       <Router>
         <Nav />
         <Routes>
