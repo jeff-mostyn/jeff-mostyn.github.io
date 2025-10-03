@@ -20,13 +20,11 @@ export const WorkSample = ( { sampleData }: WorkSampleProps) => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
   const handleImageClick = () => {
-    console.log("OPENING MODAL")
     setModalOpen(true);
     document.body.classList.add("overflow-hidden");
   }
 
   const handleOverlayClick = () => {
-    console.log("CLOSING MODAL");
     setModalOpen(false);
     document.body.classList.remove("overflow-hidden");
   }
@@ -44,7 +42,7 @@ export const WorkSample = ( { sampleData }: WorkSampleProps) => {
           onClick={() => handleOverlayClick()}
         />
         {/* This div is the modal */}
-        <div className="flex flex-col w-5/6 h-3/4 p-4 rounded-lg bg-zinc-700 items-center overflow-scroll z-30 md:w-2/3">
+        <div className="flex flex-col w-5/6 h-3/4 p-4 rounded-lg bg-zinc-700 items-center overflow-scroll z-30 md:w-1/2 md:h-5/6">
           <img className="flex aspect-video rounded-md w-11/12 top-0 right-0 left-0 md:w-5/6" src={image} alt={"Work Sample"} />
           <h3 className="pt-4 text-white text-3xl font-urbanist">
             { GetLocalizedContentValue(label) }
@@ -65,9 +63,11 @@ export const WorkSample = ( { sampleData }: WorkSampleProps) => {
 
           <div className="min-h-px w-5/6 my-4 bg-gradient-to-r from-white/0 via-white/100 to-white/0"/>
 
-          <p className="w-3/4 text-md text-left indent-8 text-white">
-            { GetLocalizedContentValue(description) }
-          </p>
+          {description.map((paragraph, i) => (
+            <p className="w-5/6 pb-2 text-md text-left indent-8 text-white">
+              { GetLocalizedContentValue(paragraph) }
+            </p>
+          ))}
         </div>
       </div>
 

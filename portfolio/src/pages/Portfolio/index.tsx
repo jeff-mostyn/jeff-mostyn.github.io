@@ -108,7 +108,7 @@ export const Portfolio = () => {
 				</div>
 				<div>
 					<h2 className="pb-8 text-2xl text-white font-urbanist font-medium md:text-5xl">
-						Projects
+						Work Samples
 					</h2>
 					<div
 						className="flex flex-row flex-wrap justify-center gap-4"

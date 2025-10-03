@@ -39,5 +39,5 @@ export type ProjectData = {
   icons: string[];
   roles: string[];
   label: LocalizedContent;
-  description: LocalizedContent;
+  description: LocalizedContent[];
 }
