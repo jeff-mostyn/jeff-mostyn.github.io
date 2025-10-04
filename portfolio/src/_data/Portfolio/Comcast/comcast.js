@@ -55,7 +55,7 @@ export const comcastData = {
     ]
   },
   "icons": [typescript, react, tailwind],
-  "path": "/Portfolio/RacingGame"
+  "path": "comcast_web_frontend"
 }
 
 export default comcastData;

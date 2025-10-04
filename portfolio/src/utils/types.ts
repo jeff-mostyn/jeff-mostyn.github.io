@@ -1,8 +1,6 @@
 import { LocalizedContent } from "src/components/Util/util";
-import { Projects } from "src/pages/Portfolio";
 
 export type PortfolioItemData = {
-  project?: Projects;
   banner: {
     image: string;
     label: LocalizedContent;

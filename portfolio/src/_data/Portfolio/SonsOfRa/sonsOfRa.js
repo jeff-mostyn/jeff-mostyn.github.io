@@ -89,7 +89,7 @@ export const sonsOfRaData = {
     ]
   },
   "icons": [unity, csharp],
-  "path": "/Portfolio/SonsOfRa"
+  "path": "sons_of_ra"
 }
 
 export default sonsOfRaData;

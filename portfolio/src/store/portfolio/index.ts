@@ -10,7 +10,7 @@ export type PortfolioState = {
   setActivePortfolioItem: (newActiveItem: PortfolioItemData | null) => void;
 }
 
-export const createPortfolioSlice: StoreSlice<PortfolioState>= (set) => ({
+export const createPortfolioSlice: StoreSlice<PortfolioState> = (set) => ({
   roleFilter: "",
   activePortfolioItem: null,
 

@@ -95,7 +95,7 @@ export const racingGameData = {
     unreal_notext,
     cpp
   ],
-  "path": "/Portfolio/RacingGame"
+  "path": "nova_chasers"
 }
 
 export default racingGameData;

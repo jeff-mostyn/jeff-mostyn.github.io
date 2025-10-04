@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Projects } from "src/pages/Portfolio";
-import { NavLink } from "react-router-dom";
-import classNames from "classnames";
-import { GetLocalizedContentValue, LocalizedContent, browserLanguage, languages } from "../Util/util";
-import { useBoundStore } from "src/store/store";
+import { GetLocalizedContentValue } from "../Util/util";
 import { PortfolioItemData } from "src/utils/types";
 
 export type FeatureDisplayProps = {

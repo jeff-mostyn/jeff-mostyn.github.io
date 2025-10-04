@@ -28,6 +28,13 @@ export const Nav = () => {
 	const activePortfolioItem = useBoundStore(state => state.activePortfolioItem);
 	const setActivePortfolioItem = useBoundStore(state => state.setActivePortfolioItem);
 
+	// in addition to setting the portfolio item to null, we want to erase any query parameters that
+	// may have directed the user to a specific project
+	const handleBackClick = () => {
+		setActivePortfolioItem(null);
+		window.history.replaceState(null, "Portfolio Overview", "/");
+	}
+
 	return (
 		<div className="sticky top-0 z-10 h-16 border-b-2 border-theme1">
 			<div className="flex h-full flex-row bg-zinc-800 justify-center items-center">
@@ -35,7 +42,7 @@ export const Nav = () => {
 				{activePortfolioItem && 
 					<button 
 						className=" hidden md:flex md:items-center md:justify-center md:absolute md:left-4 w-16 h-8 rounded-sm bg-theme1 text-white"
-						onClick={() => setActivePortfolioItem(null)}
+						onClick={() => handleBackClick()}
 					>
 						Back
 					</button>
@@ -73,7 +80,7 @@ export const Nav = () => {
 				>
 					<button
 						className="flex flex-end h-16 w-16 rounded-full bg-theme1 border-4 border-white items-center justify-center self-center"
-						onClick={() => setActivePortfolioItem(null)}
+						onClick={() => handleBackClick}
 					>
 						<img className="h-10 w-10 filter-white" src={close} />
 					</button>

@@ -44,7 +44,7 @@ export const racingGameData = {
     "sections": []
   },
   "icons": [qt, cpp, opengl],
-  "path": "/Portfolio/RacingGame"
+  "path": "mini_minecraft"
 }
 
 export default racingGameData;

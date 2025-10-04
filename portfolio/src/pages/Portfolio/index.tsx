@@ -5,8 +5,9 @@ import comcastData from "../../_data/Portfolio/Comcast/comcast";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import racingGameData from "../../_data/Portfolio/NovaChasers/racingGame";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
-import stylizedToonShaderData from '../../_data/Portfolio/ColoredPencilShader/coloredPencilShader'
-import shaderImplementationData from "../../_data/SmallProjects/ColoredPencilShader/coloredPencilShader";
+import { shaderImplementationData } from "../../_data/SmallProjects/ColoredPencilShader/coloredPencilShader";
+import { openGlPathTracerData } from "../../_data/SmallProjects/OpenGLPathTracer/openGlPathTracer";
+
 import { Roles, Sizes } from "src/components/Util/util";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { PortfolioPage } from "./PortfolioPage";
@@ -14,10 +15,6 @@ import { useBoundStore } from "src/store/store";
 import { PortfolioItemData, ProjectData } from "src/utils/types";
 import { WorkSample } from "src/components/Portfolio/WorkSample";
 
-export enum Projects {
-  SONS_OF_RA = "Sons of Ra",
-  RACING_GAME = "Racing game"
-}
 
 const FeatureDisplayData: FeatureDisplayProps[] = [
 	{
@@ -39,16 +36,12 @@ const FeatureDisplayData: FeatureDisplayProps[] = [
 		data: comcastData,
 		order: 0,
 		onClick: () => {}
-	},
-	// {
-	// 	data: stylizedToonShaderData,
-	// 	order: 0,
-	// 	onClick: () => {}
-	// },
+	}
 ]
 
 const ProjectsData: ProjectData[] = [
-	shaderImplementationData
+	shaderImplementationData,
+	//openGlPathTracerData
 ]
 
 const roleList: string[] = [
@@ -62,6 +55,27 @@ export const Portfolio = () => {
 	const setActiveRole = useBoundStore(state => state.setRoleFilter);
 
 	const [playAnim, setPlayAnim] = useState<boolean>(true); 
+
+	// look for query params for automatically opening project
+	const urlParams = new URLSearchParams(window.location.search);
+	const project = urlParams.get('project');
+
+	switch (project) {
+		case comcastData.path:
+			setActivePortfolioItem(comcastData);
+			break;
+		case miniMinecraftData.path:
+			setActivePortfolioItem(miniMinecraftData);
+			break;
+		case racingGameData.path:
+			setActivePortfolioItem(racingGameData);
+			break;
+		case sonsOfRaData.path:
+			setActivePortfolioItem(sonsOfRaData);
+			break;
+		default:
+			break;
+	}
 
 	const handleClick = (newItem: PortfolioItemData | null) => {
 		setPlayAnim(false);
