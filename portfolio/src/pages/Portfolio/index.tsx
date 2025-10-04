@@ -41,7 +41,7 @@ const FeatureDisplayData: FeatureDisplayProps[] = [
 
 const ProjectsData: ProjectData[] = [
 	shaderImplementationData,
-	//openGlPathTracerData
+	openGlPathTracerData
 ]
 
 const roleList: string[] = [
