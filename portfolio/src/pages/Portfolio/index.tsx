@@ -79,6 +79,9 @@ export const Portfolio = () => {
 		case sonsOfRaData.path:
 			setActivePortfolioItem(sonsOfRaData);
 			break;
+		case pathRedesignData.path:
+			setActivePortfolioItem(pathRedesignData);
+			break;
 		default:
 			break;
 	}
