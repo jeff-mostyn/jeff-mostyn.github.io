@@ -3,6 +3,7 @@ import { FeatureDisplay, FeatureDisplayProps } from "../../components/Portfolio/
 
 import comcastData from "../../_data/Portfolio/Comcast/comcast";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
+import pathRedesignData from '../../_data/Portfolio/PathRedesign/pathRedesign';
 import racingGameData from "../../_data/Portfolio/NovaChasers/racingGame";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa'
 import { shaderImplementationData } from "../../_data/SmallProjects/ColoredPencilShader/coloredPencilShader";
@@ -34,6 +35,11 @@ const FeatureDisplayData: FeatureDisplayProps[] = [
 	},
 	{
 		data: comcastData,
+		order: 0,
+		onClick: () => {}
+	},
+	{
+		data: pathRedesignData,
 		order: 0,
 		onClick: () => {}
 	}

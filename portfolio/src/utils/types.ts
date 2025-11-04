@@ -16,7 +16,9 @@ export type PortfolioItemData = {
       url: string;
     }[];
     keyImage?: string;
+    keyImageComparison?: string;
     keyVideo?: string;
+    reverseLeadSection?: boolean;
     involvement: string[];
     accomplishments: string[];
     skills: string[];

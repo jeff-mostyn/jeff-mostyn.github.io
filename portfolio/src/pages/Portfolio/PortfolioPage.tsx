@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 import { ImageAndText } from "src/components/Util/ImageAndText";
 // import { ImageAndText } from "src/components/Util/ImageAndText";
 import { RoleBadge } from "src/components/Util/RoleBadge";
@@ -33,7 +34,7 @@ export const PortfolioPage = () => {
         <div className="relative flex flex-col justify-center h-full px-5 md:px-28 2xl:w-[1500px]">
           <div className="flex flex-col items-center px-2">
             {/* Summary */}
-            <div className="pt-4 text-left indent-6 md:w-[600px] lg:w-[800px]">
+            <div className="pt-4 text-left indent-6 md:w-[600px] lg:w-[800px]" id="summary">
               {activePortfolioItem.content.summary && GetLocalizedContentValue(activePortfolioItem.content.summary)}
             </div>
 
@@ -57,7 +58,13 @@ export const PortfolioPage = () => {
                   }
                   {
                     activePortfolioItem.content.keyImage &&
-                    <img className="aspect-video rounded-md" src={activePortfolioItem.content.keyImage} alt={"Key"} />
+                    (activePortfolioItem.content.keyImageComparison 
+                      ? <ReactCompareSlider 
+                          itemOne={<ReactCompareSliderImage src={activePortfolioItem.content.keyImage} alt="Hi-Res Design" />}
+                          itemTwo={<ReactCompareSliderImage src={activePortfolioItem.content.keyImageComparison} alt="Wireframe" />}                      
+                        /> 
+                      : <img className="aspect-video rounded-md" src={activePortfolioItem.content.keyImage} alt={"Key"} />
+                    )
                   }
                 </div>
                 {(activePortfolioItem.content.keyImage || activePortfolioItem.content.keyVideo) && <div 
@@ -67,7 +74,7 @@ export const PortfolioPage = () => {
                   "
                 />}
                 <div className="pt-4 self-center lg:w-1/2 lg:pt-0 lg:pl-12">
-                  <div className="text-left self-center">
+                  <div className={`flex ${activePortfolioItem.content.reverseLeadSection ? "flex-col-reverse" : "flex-col"} text-left self-center`}>
                     <ul className="text-left list-disc list-outside pl-4 pb-6">
                       {activePortfolioItem.content.accomplishments.map((line: string, key: number) => {
                         return <li className="list-item" key={key}>{line}</li>
