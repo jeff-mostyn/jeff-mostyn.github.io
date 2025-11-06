@@ -6,6 +6,7 @@ import { RoleBadge } from "src/components/Util/RoleBadge";
 import { YoutubeEmbed } from "src/components/Util/YoutubeEmbed";
 import { GetLocalizedContentValue, Sizes } from "src/components/Util/util";
 import { useBoundStore } from "src/store/store";
+import { mapContainerComponent } from "src/utils/componentMapping";
 
 export const PortfolioPage = () => {
   const activePortfolioItem = useBoundStore(state => state.activePortfolioItem);
@@ -40,15 +41,19 @@ export const PortfolioPage = () => {
 
             {/* {data.content.steamEmbed && <iframe src={data.content.steamEmbed} className="mt-6 mb-4" width="646" height="190"></iframe>} */}
 
+            {activePortfolioItem.content.containers.map((container, i) => (
+              mapContainerComponent(container)
+            ))}
+
             {/* Links */}
-            <div className="flex flex-col justify-center pt-4 md:flex-row md:divide-x">
+            {/* <div className="flex flex-col justify-center pt-4 md:flex-row md:divide-x">
               { activePortfolioItem.content.hyperlinks.map((link, key: number) => {
                   return <a className="pb-1 px-3 text-theme1 underline" href={link.url} key={key}>{link.text}</a>
                 })
               }
             </div>
 
-            {/* Main Content */}
+            {/* Main Content
             { ((activePortfolioItem.content.keyImage || activePortfolioItem.content.keyVideo) 
               && (activePortfolioItem.content.accomplishments.length > 0 || activePortfolioItem.content.involvement)) &&
               <div className="flex flex-col lg:flex-row pt-8 pb-8">
@@ -94,7 +99,7 @@ export const PortfolioPage = () => {
 
             {activePortfolioItem.content.sections.map((section, key: number) => {
               return <ImageAndText title={section.title} image={section.image} text={section.description ?? []} imageLeft={section.imageLeft} key={key} />
-            })}
+            })} */}
           </div>
         </div>
       </div>

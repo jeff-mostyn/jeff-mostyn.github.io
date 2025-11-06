@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { GetLocalizedContentValue } from "../Util/util";
-import { PortfolioItemData } from "src/utils/types";
+import { PortfolioItemData } from "src/utils/portfolioSegmentTypes"
 
 export type FeatureDisplayProps = {
 	data: PortfolioItemData;

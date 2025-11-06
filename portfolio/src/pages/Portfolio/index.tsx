@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FeatureDisplay, FeatureDisplayProps } from "../../components/Portfolio/FeatureDisplay";
 
-import comcastData from "../../_data/Portfolio/Comcast/comcast";
+import comcastData from "../../_data/Portfolio/Comcast/comcast_comp";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft";
 import pathRedesignData from '../../_data/Portfolio/PathRedesign/pathRedesign';
 import racingGameData from "../../_data/Portfolio/NovaChasers/racingGame";
@@ -13,36 +13,37 @@ import { Roles, Sizes } from "src/components/Util/util";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { PortfolioPage } from "./PortfolioPage";
 import { useBoundStore } from "src/store/store";
-import { PortfolioItemData, ProjectData } from "src/utils/types";
+import { ProjectData } from "src/utils/types";
+import { PortfolioItemData } from "src/utils/portfolioSegmentTypes";
 import { WorkSample } from "src/components/Portfolio/WorkSample";
 
 
 const FeatureDisplayData: FeatureDisplayProps[] = [
-	{
-		data: sonsOfRaData,
-		order: 0,
-		onClick: () => {},
-	},
-	{
-		data: racingGameData,
-		order: 0,
-		onClick: () => {}
-	},
-	{
-		data: miniMinecraftData,
-		order: 0,
-		onClick: () => {}
-	},
+	// {
+	// 	data: sonsOfRaData,
+	// 	order: 0,
+	// 	onClick: () => {},
+	// },
+	// {
+	// 	data: racingGameData,
+	// 	order: 0,
+	// 	onClick: () => {}
+	// },
+	// {
+	// 	data: miniMinecraftData,
+	// 	order: 0,
+	// 	onClick: () => {}
+	// },
 	{
 		data: comcastData,
 		order: 0,
 		onClick: () => {}
 	},
-	{
-		data: pathRedesignData,
-		order: 0,
-		onClick: () => {}
-	}
+	// {
+	// 	data: pathRedesignData,
+	// 	order: 0,
+	// 	onClick: () => {}
+	// }
 ]
 
 const ProjectsData: ProjectData[] = [
@@ -70,18 +71,18 @@ export const Portfolio = () => {
 		case comcastData.path:
 			setActivePortfolioItem(comcastData);
 			break;
-		case miniMinecraftData.path:
-			setActivePortfolioItem(miniMinecraftData);
-			break;
-		case racingGameData.path:
-			setActivePortfolioItem(racingGameData);
-			break;
-		case sonsOfRaData.path:
-			setActivePortfolioItem(sonsOfRaData);
-			break;
-		case pathRedesignData.path:
-			setActivePortfolioItem(pathRedesignData);
-			break;
+		// case miniMinecraftData.path:
+		// 	setActivePortfolioItem(miniMinecraftData);
+		// 	break;
+		// case racingGameData.path:
+		// 	setActivePortfolioItem(racingGameData);
+		// 	break;
+		// case sonsOfRaData.path:
+		// 	setActivePortfolioItem(sonsOfRaData);
+		// 	break;
+		// case pathRedesignData.path:
+		// 	setActivePortfolioItem(pathRedesignData);
+		// 	break;
 		default:
 			break;
 	}
