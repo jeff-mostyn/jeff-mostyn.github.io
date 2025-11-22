@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "./static/css/main.b80f6afa.css",
-    "main.js": "./static/js/main.679ac4d6.js",
+    "main.css": "./static/css/main.8ec45036.css",
+    "main.js": "./static/js/main.b5213e98.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/racing_game_feature.gif": "./static/media/racing_game_feature.540757eb1330b458560b.gif",
     "static/media/nova_charSelect.gif": "./static/media/nova_charSelect.0b96aeba86614c887508.gif",
     "static/media/radialMenu.gif": "./static/media/radialMenu.1e674e3c5c1535675349.gif",
-    "static/media/main_menu_flow.gif": "./static/media/main_menu_flow.6b33c9033442a7e21a16.gif",
     "static/media/racingGame_keyImage.png": "./static/media/racingGame_keyImage.01f46824ab9601d1ff80.png",
     "static/media/CornellBox.png": "./static/media/CornellBox.72e7c5f5d6895e192bec.png",
     "static/media/hires.png": "./static/media/hires.51b735c7ab50f46349c7.png",
@@ -29,12 +28,12 @@
     "static/media/unity.png": "./static/media/unity.dce03716ca0bd431081e.png",
     "index.html": "./index.html",
     "static/media/close-svgrepo-com.svg": "./static/media/close-svgrepo-com.b8ac9cdea9ca6881f029a4fde7fdfc4e.svg",
-    "main.b80f6afa.css.map": "./static/css/main.b80f6afa.css.map",
-    "main.679ac4d6.js.map": "./static/js/main.679ac4d6.js.map",
+    "main.8ec45036.css.map": "./static/css/main.8ec45036.css.map",
+    "main.b5213e98.js.map": "./static/js/main.b5213e98.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b80f6afa.css",
-    "static/js/main.679ac4d6.js"
+    "static/css/main.8ec45036.css",
+    "static/js/main.b5213e98.js"
   ]
 }
