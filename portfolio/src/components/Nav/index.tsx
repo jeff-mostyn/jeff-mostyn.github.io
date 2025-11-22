@@ -33,6 +33,7 @@ export const Nav = () => {
 	const handleBackClick = () => {
 		setActivePortfolioItem(null);
 		window.history.replaceState(null, "Portfolio Overview", "/");
+		window.scrollTo(0, 0);
 	}
 
 	return (

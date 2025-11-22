@@ -7,15 +7,8 @@ import {
   Route,
 } from "react-router-dom";
 
-import comcastData from "./_data/Portfolio/Comcast/comcast";
-import miniMinecraftData from "./_data/Portfolio/MiniMinecraft/miniMinecraft";
-import racingGameData from "./_data/Portfolio/NovaChasers/racingGame";
-import sonsOfRaData from './_data/Portfolio/SonsOfRa/sonsOfRa'
-import toonShaderData from './_data/Portfolio/ColoredPencilShader/coloredPencilShader'
-
 import { About } from './pages/About';
 import { Portfolio } from './pages/Portfolio';
-import { PortfolioPage } from './pages/Portfolio/PortfolioPage';
 
 function App() {
   const head = document.head;
@@ -34,11 +27,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path='/About' element={<About/>} />
-          {/* <Route path='/Portfolio/SonsOfRa' element={<PortfolioPage data={sonsOfRaData}/>} />
-          <Route path='/Portfolio/NovaChasers' element={<PortfolioPage data={racingGameData}/>} />
-          <Route path='/Portfolio/MiniMinecraft' element={<PortfolioPage data={miniMinecraftData}/>} />
-          <Route path='/Portfolio/Comcast' element={<PortfolioPage data={comcastData}/>} />
-          <Route path='/Portfolio/ColoredPencilShader' element={<PortfolioPage data={toonShaderData}/>} /> */}
         </Routes>
       </Router>
     </div>

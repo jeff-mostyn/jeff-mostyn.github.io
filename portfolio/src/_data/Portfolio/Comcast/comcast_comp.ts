@@ -30,8 +30,8 @@ export const comcastData: PortfolioItemData = {
       Roles.PROGRAMMING,
     ],
     summary: {
-      "en": "Front-end Engineer @ Comcast",
-      "ja": "コムキャストでのWebプログラマー"
+      "en": "Develop features and provide support for Xfinity.com, the primary sales website of Comcast, the 4th largest global telecommunications company. The site has on average 60+ million visits and 250,000+ orders using my apps each month.",
+      "ja": "Develop features and provide support for Xfinity.com, the primary sales website of Comcast, the 4th largest global telecommunications company. The site has on average 60+ million visits and 250,000+ orders using my apps each month."
     },
     containers: [
       {
@@ -43,7 +43,8 @@ export const comcastData: PortfolioItemData = {
         children: [
           {
             name: visualizationTypes.IMAGE,
-            image: cart3Rewrite
+            image: cart3Rewrite,
+            altText: "Xfinity.com Cart 3 (2025)"
           },
           {
             name: visualizationTypes.SUMMARY,
@@ -74,7 +75,8 @@ export const comcastData: PortfolioItemData = {
         children: [
           {
             name: visualizationTypes.IMAGE,
-            image: cart3
+            image: cart3,
+            altText: "Xfinity.com Cart 3 (2023)"
           },
           {
             name: visualizationTypes.SUMMARY,

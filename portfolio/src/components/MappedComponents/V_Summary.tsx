@@ -6,7 +6,7 @@ export const V_Summary: React.FC<Vis_Summary> = ({ paragraphs }: Vis_Summary) =>
     <div>
       {paragraphs.map((paragraph: LocalizedContent, i: number) => {
         return (
-          <div className="pb-4 whitespace-pre-line indent-6" key={i}>
+          <div className={`text-left indent-6 ${i > 0 ? "pt-2" : "pt-0"}`} key={i}>
             {GetLocalizedContentValue(paragraph)}
           </div>
         )}

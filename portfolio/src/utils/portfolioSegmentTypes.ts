@@ -9,7 +9,8 @@ export enum visualizationTypes {
   IMAGE = "IMAGE",
   IMAGE_COMPARE = "IMAGE_COMPARE",
   LIST_AND_SUMMARY = "LIST_AND_SUMMARY",
-  SUMMARY = "SUMMARY"
+  SUMMARY = "SUMMARY",
+  YOUTUBE = "YOUTUBE"
 }
 
 type VisualizationInfo = {
@@ -19,12 +20,15 @@ type VisualizationInfo = {
 export type Vis_Img = VisualizationInfo & {
   name: visualizationTypes.IMAGE;
   image: string;
+  altText: string;
 }
 
 export type Vis_ImgCompare = VisualizationInfo & {
   name: visualizationTypes.IMAGE_COMPARE;
   image1: string;
+  altText1: string;
   image2: string;
+  altText2: string;
 }
 
 export type Vis_ListAndSum = VisualizationInfo & {
@@ -39,11 +43,17 @@ export type Vis_Summary = VisualizationInfo & {
   paragraphs: LocalizedContent[]
 }
 
+export type Vis_Youtube = VisualizationInfo & {
+  name: visualizationTypes.YOUTUBE;
+  id: string;
+}
+
 export type VisualizationTypes = 
   Vis_Img | 
   Vis_ImgCompare |
   Vis_ListAndSum |
-  Vis_Summary
+  Vis_Summary |
+  Vis_Youtube
 
 export type Container = {
   name: containerTypes;
@@ -55,7 +65,7 @@ export type Hyperlinks = Container & {
   links: {
     text: LocalizedContent;
     url: string;
-  }
+  }[];
 }
 
 export type SideBySide = Container & {
