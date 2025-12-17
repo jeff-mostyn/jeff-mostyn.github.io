@@ -19,6 +19,9 @@ module.exports = {
       },
       colors: {
         theme1: "#e68d09",
+        'theme1-hover': "#8c5400",
+        "material-neutral-primary": "#2c2f34",
+        "material-neutral-secondary": "#1f2226",
         "zinc-750": "#33333c"
       },
       fontFamily: {

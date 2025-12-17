@@ -29,13 +29,13 @@ const FeatureDisplayData: FeatureDisplayProps[] = [
 		order: 0,
 		onClick: () => {}
 	},
-	{
-		data: miniMinecraftData,
+		{
+		data: comcastData,
 		order: 0,
 		onClick: () => {}
 	},
 	{
-		data: comcastData,
+		data: miniMinecraftData,
 		order: 0,
 		onClick: () => {}
 	},
@@ -102,11 +102,13 @@ export const Portfolio = () => {
 	}
 
 	return (
-		<div className="bg-zinc-800" >
+		<div className="bg-material-neutral-primary">
 			{activePortfolioItem && <PortfolioPage/> }
 			<div className={`${activePortfolioItem ? 'hidden' : ""}`}>
-				<h1 className="py-4 text-3xl font-urbanist text-white">Jeff Mostyn's Portfolio</h1>
-				<div className="pb-2">
+				<h1 className="pt-5 pb-6 pl-8 text-3xl text-left font-urbanist text-white border-b-2 border-theme1">
+					Jeff Mostyn's Portfolio
+				</h1>
+				<div className="pt-4 pb-2">
 					<div className="flex flex-row flex-wrap items-center justify-center max-h-20 min-h-10">
 						{roleList.map((role, key) => {
 							return (

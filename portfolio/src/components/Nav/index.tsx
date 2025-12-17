@@ -37,36 +37,38 @@ export const Nav = () => {
 	}
 
 	return (
-		<div className="sticky top-0 z-10 h-16 border-b-2 border-theme1">
-			<div className="flex h-full flex-row bg-zinc-800 justify-center items-center">
-				{/* Back button for breakpoints medium and above is in the nav bar*/}
-				{activePortfolioItem && 
-					<button 
-						className=" hidden md:flex md:items-center md:justify-center md:absolute md:left-4 w-16 h-8 rounded-sm bg-theme1 text-white"
-						onClick={() => handleBackClick()}
-					>
-						Back
-					</button>
-				}
-				<div className="flex flex-row w-full self-center justify-center items-center gap-6 md:gap-8">
-					<NavLinkWrapper route={"/"} label={GetLocalizedContentValue(labels.portfolio)}/>
-					<NavLinkWrapper route={"/About"} label={GetLocalizedContentValue(labels.about)}/>
-					<a 
-						className="flex self-center pt-0.5 transition-colors duration-300 text-white hover:text-theme1" 
-						href="https://drive.google.com/file/d/1PYKZ72kfuU87XZK8oWvgJzjk9SHivaNf/view?usp=sharing"
-					>
-						{GetLocalizedContentValue(labels.resume)}
-					</a>
-					<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
-						<SVG name="linkedin" size={Sizes.LG} baseColor="white" transition={true} transitionColor="theme1"/>
-					</a>
-					<div className="flex w-8 h-8 items-center justify-center transition-colors duration-300 bg-white hover:bg-theme1 rounded-lg">
+		<div className="flex flex-row-reverse justify-between items-center fixed top-0 z-10 w-full h-fit px-8 pt-4 pb-2">
+			<div className="
+				flex flex-row self-center items-center px-8 py-2 w-fit gap-4 bg-material-neutral-secondary rounded-xl shadow-[0px_4px_8px_1px_rgba(0,_0,_0,_0.65)] 
+				md:gap-6
+			">
+				<NavLinkWrapper route={"/"} label={GetLocalizedContentValue(labels.portfolio)}/>
+				<NavLinkWrapper route={"/About"} label={GetLocalizedContentValue(labels.about)}/>
+				<a 
+					className="flex self-center pt-0.5 transition-colors duration-300 text-white hover:text-theme1" 
+					href="https://drive.google.com/file/d/1PYKZ72kfuU87XZK8oWvgJzjk9SHivaNf/view?usp=sharing"
+				>
+					{GetLocalizedContentValue(labels.resume)}
+				</a>
+				<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
+					<SVG name="linkedin" size={Sizes.MD} baseColor="white" transition={true} transitionColor="theme1"/>
+				</a>
+				<div className="flex w-6 h-6 items-center justify-center transition-colors duration-300 bg-white hover:bg-theme1 rounded-md">
 					<a className="flex self-center" href="https://github.com/jeff-mostyn">
-						<img src={github} className="h-6 w-6" alt={"github"}/>
+						<img src={github} className="h-5 w-5" alt={"github"}/>
 					</a>	
-					</div>
+				</div>
 			</div>
-			</div>
+
+			{/* Back button for breakpoints medium and above is in the nav bar*/}
+			{activePortfolioItem && 
+				<button 
+					className=" hidden md:flex items-center justify-center h-10 px-4 rounded-md bg-theme1 hover:bg-theme1-hover transition-colors duration-200 text-white font-semibold shadow-[0px_4px_8px_2px_rgba(0,_0,_0,_0.65)]"
+					onClick={() => handleBackClick()}
+				>
+					Return
+				</button>
+			}
 			
 			{
 				browserLanguage() == languages.JAPANESE && 

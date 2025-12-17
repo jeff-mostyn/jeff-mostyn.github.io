@@ -30,8 +30,8 @@ export const comcastData: PortfolioItemData = {
       Roles.PROGRAMMING,
     ],
     summary: {
-      "en": "Develop features and provide support for Xfinity.com, the primary sales website of Comcast, the 4th largest global telecommunications company. The site has on average 60+ million visits and 250,000+ orders using my apps each month.",
-      "ja": "Develop features and provide support for Xfinity.com, the primary sales website of Comcast, the 4th largest global telecommunications company. The site has on average 60+ million visits and 250,000+ orders using my apps each month."
+      "en": "Develop features and provide support for Xfinity.com, the primary sales website of Comcast, the 4th largest global telecommunications company. The site has on average 60+ million visits and receives 250,000+ orders using my apps each month.",
+      "ja": "Develop features and provide support for Xfinity.com, the primary sales website of Comcast, the 4th largest global telecommunications company. The site has on average 60+ million visits and receives 250,000+ orders using my apps each month."
     },
     containers: [
       {
