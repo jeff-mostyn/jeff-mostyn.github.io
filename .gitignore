@@ -1,2 +1,5 @@
 /portfolio/node_modules
 /portfolio/node_modules/.bin
+portfolio\node_modules
+\portfolio\node_modules
+\portfolio\node_modules\*
