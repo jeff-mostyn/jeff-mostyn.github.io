@@ -27,13 +27,13 @@ export const PortfolioPage = () => {
             })}
           </div>
         </div>
-        <div className="relative flex flex-col justify-center h-full px-5 md:px-12 2xl:w-[1500px]">
+        <div className="relative flex flex-col justify-center h-full px-8 md:px-12 2xl:max-w-[1500px]">
           {activePortfolioItem.content.summary && 
             <div className="flex flex-wrap self-center text-left indent-4 flex-row md:w-[600px] lg:w-[800px]">
               {GetLocalizedContentValue(activePortfolioItem.content.summary)}
             </div>
           }
-          <div className="flex flex-col items-center px-2">
+          <div className="flex flex-col items-center">
             {activePortfolioItem.content.containers.map((container, i) => (
               mapContainerComponent(container)
             ))}
