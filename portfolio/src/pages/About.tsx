@@ -6,7 +6,7 @@ import { GetLocalizedContentValue } from "src/components/Util/util";
 
 export const About = () => {
 	return (
-		<div className="flex flex-col justify-center items-center w-full">
+		<div className="flex flex-col justify-center items-center w-full pb-16 md:pb-0">
 			<h1 className="w-full pt-5 pb-6 pl-8 text-3xl text-left font-urbanist text-white border-b-2 border-theme1">
 				About Me
 			</h1>

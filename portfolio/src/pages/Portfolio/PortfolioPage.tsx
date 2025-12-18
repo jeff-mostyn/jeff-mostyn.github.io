@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
 import { RoleBadge } from "src/components/Util/RoleBadge";
 import { GetLocalizedContentValue, Sizes } from "src/components/Util/util";
 import { useBoundStore } from "src/store/store";
@@ -13,7 +12,7 @@ export const PortfolioPage = () => {
   }
 
   return (
-    <div className="text-white pb-24">
+    <div className="bg-material-neutral-primary text-white pb-24">
       <div className="relative w-full h-60">
         <img className="w-full h-full object-cover object-center" src={activePortfolioItem.banner.image} alt="bannerImage"/>
       </div>
@@ -28,7 +27,7 @@ export const PortfolioPage = () => {
             })}
           </div>
         </div>
-        <div className="relative flex flex-col justify-center h-full px-5 md:px-28 2xl:w-[1500px]">
+        <div className="relative flex flex-col justify-center h-full px-5 md:px-12 2xl:w-[1500px]">
           {activePortfolioItem.content.summary && 
             <div className="flex flex-wrap self-center text-left indent-4 flex-row md:w-[600px] lg:w-[800px]">
               {GetLocalizedContentValue(activePortfolioItem.content.summary)}

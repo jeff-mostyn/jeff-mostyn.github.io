@@ -15,5 +15,5 @@ export const createPortfolioSlice: StoreSlice<PortfolioState> = (set) => ({
   activePortfolioItem: null,
 
   setRoleFilter: (newRoleFilter: string) => set(() => ({roleFilter: newRoleFilter})),
-  setActivePortfolioItem: (newActiveItem: PortfolioItemData | null) => set(() => ({activePortfolioItem: newActiveItem}))
+  setActivePortfolioItem: (newActiveItem: PortfolioItemData | null) => set(() => ({activePortfolioItem: newActiveItem})),
 });

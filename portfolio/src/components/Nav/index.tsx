@@ -15,6 +15,10 @@ export const Nav = () => {
 			"en": "About",
 			"ja": "について",
 		},
+		close: {
+			"en": "Close",
+			"ja": "戻る"
+		},
 		portfolio: {
 			"en": "Portfolio",
 			"ja": "ポートフォリオ",
@@ -37,58 +41,62 @@ export const Nav = () => {
 	}
 
 	return (
-		<div className="flex flex-row-reverse justify-between items-center fixed top-0 z-10 w-full h-fit px-8 pt-4 pb-2">
-			<div className="
-				flex flex-row self-center items-center px-8 py-2 w-fit gap-4 bg-material-neutral-secondary rounded-xl shadow-[0px_4px_8px_1px_rgba(0,_0,_0,_0.65)] 
-				md:gap-6
-			">
-				<NavLinkWrapper route={"/"} label={GetLocalizedContentValue(labels.portfolio)}/>
-				<NavLinkWrapper route={"/About"} label={GetLocalizedContentValue(labels.about)}/>
-				<a 
-					className="flex self-center pt-0.5 transition-colors duration-300 text-white hover:text-theme1" 
-					href="https://drive.google.com/file/d/1PYKZ72kfuU87XZK8oWvgJzjk9SHivaNf/view?usp=sharing"
-				>
-					{GetLocalizedContentValue(labels.resume)}
-				</a>
-				<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
-					<SVG name="linkedin" size={Sizes.MD} baseColor="white" transition={true} transitionColor="theme1"/>
-				</a>
-				<div className="flex w-6 h-6 items-center justify-center transition-colors duration-300 bg-white hover:bg-theme1 rounded-md">
-					<a className="flex self-center" href="https://github.com/jeff-mostyn">
-						<img src={github} className="h-5 w-5" alt={"github"}/>
-					</a>	
-				</div>
+		<div className="
+			fixed flex flex-row items-center z-30 left-0 right-0 bottom-4 mx-auto px-8 py-2 w-fit h-fit gap-4 bg-material-neutral-secondary rounded-xl shadow-[0px_4px_8px_1px_rgba(0,_0,_0,_0.65)] 
+			sm:left-0
+			md:gap-6 md:mr-8 md:top-4
+		">
+			<NavLinkWrapper route={"/"} label={
+				GetLocalizedContentValue(!!activePortfolioItem ? labels.close : labels.portfolio)}
+			/>
+			<NavLinkWrapper route={"/About"} label={GetLocalizedContentValue(labels.about)}/>
+			<a 
+				className="flex self-center transition-colors duration-300 text-white hover:text-theme1" 
+				href="https://drive.google.com/file/d/1PYKZ72kfuU87XZK8oWvgJzjk9SHivaNf/view?usp=sharing"
+			>
+				{GetLocalizedContentValue(labels.resume)}
+			</a>
+			<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
+				<SVG name="linkedin" size={Sizes.MD} baseColor="white" transition={true} transitionColor="theme1"/>
+			</a>
+			<div className="flex w-6 h-6 items-center justify-center transition-colors duration-300 bg-white hover:bg-theme1 rounded-md">
+				<a className="flex self-center" href="https://github.com/jeff-mostyn">
+					<img src={github} className="h-5 w-5" alt={"github"}/>
+				</a>	
 			</div>
-
-			{/* Back button for breakpoints medium and above is in the nav bar*/}
-			{activePortfolioItem && 
-				<button 
-					className=" hidden md:flex items-center justify-center h-10 px-4 rounded-md bg-theme1 hover:bg-theme1-hover transition-colors duration-200 text-white font-semibold shadow-[0px_4px_8px_2px_rgba(0,_0,_0,_0.65)]"
-					onClick={() => handleBackClick()}
-				>
-					Return
-				</button>
-			}
-			
-			{
-				browserLanguage() == languages.JAPANESE && 
-				<div className="px-4 bg-theme1 min-h-8">
-					このサイトは私の日本語能力限り翻訳されました。間違いや不自然な文法などがあれば、申し訳ございません。
-				</div>
-			}
-			{/* small screen back button */}
-			{activePortfolioItem && 
-				<div
-					className=" md:hidden flex flex-col fixed h-32 w-full bottom-0 justify-center bg-gradient-to-t from-black/60 to-black/0"
-				>
-					<button
-						className="flex flex-end h-16 w-16 rounded-full bg-theme1 border-4 border-white items-center justify-center self-center"
-						onClick={() => handleBackClick}
-					>
-						<img className="h-10 w-10 filter-white" src={close} />
-					</button>
-				</div>
-			}
 		</div>
+		// <div className="flex flex-row-reverse justify-between items-center fixed top-0 z-20 w-full h-fit px-8 pt-4 pb-2">
+			
+
+		// 	{/* Back button for breakpoints medium and above is in the nav bar*/}
+		// 	{activePortfolioItem && 
+		// 		<button 
+		// 			className=" hidden md:flex items-center justify-center h-10 px-4 rounded-md bg-theme1 hover:bg-theme1-hover transition-colors duration-200 text-white font-semibold shadow-[0px_4px_8px_2px_rgba(0,_0,_0,_0.65)]"
+		// 			onClick={() => handleBackClick()}
+		// 		>
+		// 			Return
+		// 		</button>
+		// 	}
+			
+		// 	{
+		// 		browserLanguage() == languages.JAPANESE && 
+		// 		<div className="px-4 bg-theme1 min-h-8">
+		// 			このサイトは私の日本語能力限り翻訳されました。間違いや不自然な文法などがあれば、申し訳ございません。
+		// 		</div>
+		// 	}
+		// 	{/* small screen back button */}
+		// 	{activePortfolioItem && 
+		// 		<div
+		// 			className=" md:hidden flex flex-col fixed h-32 w-full bottom-0 justify-center bg-gradient-to-t from-black/60 to-black/0"
+		// 		>
+		// 			<button
+		// 				className="flex flex-end h-16 w-16 rounded-full bg-theme1 border-4 border-white items-center justify-center self-center"
+		// 				onClick={() => handleBackClick}
+		// 			>
+		// 				<img className="h-10 w-10 filter-white" src={close} />
+		// 			</button>
+		// 		</div>
+		// 	}
+		// </div>
 	)
 }
