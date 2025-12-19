@@ -41,11 +41,11 @@ module.exports = {
         },
         darkOverlayFade: {
           '0%': { opacity: "0" },
-          '100%': { opacity: "0.6" }
+          '100%': { opacity: "0.7" }
         },
         darkOverlayFadeResponsive: {
           '0%': { opacity: "0" },
-          '100%': { opacity: "0.35" }
+          '100%': { opacity: "0.6" }
         },
         slideInFromRight: {
           '0%': {

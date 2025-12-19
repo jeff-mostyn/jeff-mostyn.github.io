@@ -37,6 +37,11 @@ const FeatureDisplayData: FeatureDisplayProps[] = [
 		onClick: () => {}
 	},
 	{
+		data: gameLogData,
+		order: 0,
+		onClick: () => {}
+	},
+	{
 		data: miniMinecraftData,
 		order: 0,
 		onClick: () => {}

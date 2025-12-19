@@ -52,13 +52,13 @@ export const FeatureDisplay = ( { data, order, onClick, playAnim } : FeatureDisp
 			{ playAnim 
 					?	animationStarted 
 						? <div className={`
-								absolute w-full h-full bg-black opacity-35 animate-darkOverlayFadeResponsive
-								md:animate-darkOverlayFade md:transition-opacity md:duration-300 md:opacity-60 md:hover:opacity-25`}
+								absolute w-full h-full bg-black opacity-60 animate-darkOverlayFadeResponsive
+								md:animate-darkOverlayFade md:transition-opacity md:duration-300 md:opacity-70 md:hover:opacity-50`}
 							/> 
 						:	<div className="absolute w-full h-full bg-black opacity-0"/>
 					: <div className={`
-							absolute w-full h-full bg-black opacity-35
-							md:opacity-60 md:hover:opacity-25`}
+							absolute w-full h-full bg-black opacity-60
+							md:opacity-70 md:hover:opacity-50`}
 						/> 
 			}
 			<img className={`w-full h-full object-cover object-center`} src={data.banner.image} alt="bannerImage"/>
