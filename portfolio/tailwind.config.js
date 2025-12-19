@@ -13,6 +13,8 @@ module.exports = {
         darkOverlayFadeResponsive: "darkOverlayFadeResponsive 750ms ease-in-out",
         slideInFromRight: "slideInFromRight 750ms ease-in-out forwards",
         slideUpFeatureDisplay: "slideUp48px 250ms ease-out forwards",
+        slideUpModal: "slideUpFade 250ms ease-out forwards",
+        slideDownModal: "slideUpFade 250ms ease-out reverse",
         slideDownFeatureDisplay: "slideDown48px 250ms ease-out forwards",
         fastFadeIn: "fadeIn 250ms ease-in-out forwards",
         fastFadeOut: "fadeOut 250ms ease-in-out forwards",
@@ -71,6 +73,10 @@ module.exports = {
             transform: "translateY(0px)"
           }
         },
+        slideUpFade: {
+          "0%": {translateY: "100%"},
+          "100%": {translateY: "0"},
+        }
       }
     },
   },

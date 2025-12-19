@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { FeatureDisplay, FeatureDisplayProps } from "../../components/Portfolio/FeatureDisplay";
+import classNames from "classnames";
 
 import comcastData from "../../_data/Portfolio/Comcast/comcast_comp";
 import miniMinecraftData from "../../_data/Portfolio/MiniMinecraft/miniMinecraft_comp";
 import pathRedesignData from '../../_data/Portfolio/PathRedesign/pathRedesign_comp';
 import racingGameData from "../../_data/Portfolio/NovaChasers/nova_comp";
 import sonsOfRaData from '../../_data/Portfolio/SonsOfRa/sonsOfRa_comp'
+import { gameLogData } from "../../_data/Portfolio/GameLog/gameLog_comp";
 import { shaderImplementationData } from "../../_data/SmallProjects/ColoredPencilShader/coloredPencilShader";
 import { openGlPathTracerData } from "../../_data/SmallProjects/OpenGLPathTracer/openGlPathTracer";
 
@@ -29,7 +31,7 @@ const FeatureDisplayData: FeatureDisplayProps[] = [
 		order: 0,
 		onClick: () => {}
 	},
-		{
+	{
 		data: comcastData,
 		order: 0,
 		onClick: () => {}
@@ -61,11 +63,12 @@ export const Portfolio = () => {
 	const activeRole = useBoundStore(state => state.roleFilter);
 	const setActiveRole = useBoundStore(state => state.setRoleFilter);
 
-	const [playAnim, setPlayAnim] = useState<boolean>(true); 
-
 	// look for query params for automatically opening project
 	const urlParams = new URLSearchParams(window.location.search);
 	const project = urlParams.get('project');
+
+	const [playAnim, setPlayAnim] = useState<boolean>(true); 
+	const [itemOpen, setItemOpen] = useState<boolean>(false || !!project); 
 
 	useEffect(() => {
 		if (!!activePortfolioItem) {
@@ -75,6 +78,27 @@ export const Portfolio = () => {
 			document.body.classList.remove("overflow-hidden");
 		}
 	}, [activePortfolioItem])
+
+	const portfolioItemStyles = () => classNames(
+		`fixed z-10 bottom-0 left-0 right-0 w-11/12 h-5/6 mx-auto overflow-y-scroll rounded-t-xl transition-translate motion-reduce:transition-none`,
+		{
+			'translate-y-0 duration-500': itemOpen,
+			'translate-y-full duration-200': !itemOpen,
+		}
+	);
+
+	const openCloseItem = async (item: PortfolioItemData | null) => {
+		setPlayAnim(false);
+		if (!!item) {
+			setActivePortfolioItem(item);
+			setItemOpen(true);
+		}
+		else {
+			setItemOpen(false);
+			await new Promise(resolve => setTimeout(resolve, 200));
+			setActivePortfolioItem(item);
+		}
+	}
 
 	switch (project) {
 		case comcastData.path:
@@ -99,12 +123,6 @@ export const Portfolio = () => {
 			break;
 	}
 
-	const handleClick = (newItem: PortfolioItemData | null) => {
-		setPlayAnim(false);
-		setActivePortfolioItem(newItem);
-		//window.scrollTo(0, 0);
-	}
-
 	const handleRoleFilter = (newRole: string) => {
 		setPlayAnim(false);
 		setActiveRole(newRole);
@@ -115,11 +133,9 @@ export const Portfolio = () => {
 			{activePortfolioItem && <div
 				className="fixed z-10 top-0 right-0 left-0 bg-black opacity-60 w-full h-full"
 				id={"overlay"}
-				onClick={() => setActivePortfolioItem(null)}
+				onClick={() => openCloseItem(null)}
 			/>}
-			<div className={`
-				fixed z-10 bottom-0 left-0 right-0 ${activePortfolioItem ? "translate-y-0" : "translate-y-full"} w-11/12 h-5/6 mx-auto overflow-y-scroll rounded-t-xl
-			`}>
+			<div className={portfolioItemStyles()}>
 				<PortfolioPage/>
 			</div>
 			<div className={""/*`${activePortfolioItem ? 'hidden' : ""}`*/}>
@@ -147,7 +163,7 @@ export const Portfolio = () => {
 									<FeatureDisplay 
 										data={featureDisplay.data}
 										order={key}
-										onClick={handleClick}
+										onClick={openCloseItem}
 										playAnim={playAnim}
 									/>
 							)

@@ -6,6 +6,7 @@ import { V_Summary } from "src/components/MappedComponents/V_Summary";
 import { V_ListAndSummary } from "src/components/MappedComponents/V_ListAndSummary";
 import { V_ImageComparison } from "src/components/MappedComponents/V_ImageComparison";
 import { V_Youtube } from "src/components/MappedComponents/V_Youtube";
+import { ContainerSingleItem } from "src/components/MappedComponents/SingleItem";
 
 export const mapContainerComponent = (containerInfo: ContainerTypes): React.ReactElement => {
   return (
@@ -21,7 +22,12 @@ export const mapContainerComponent = (containerInfo: ContainerTypes): React.Reac
             name={containerInfo.name}
             links={containerInfo.links}
           />
-        : <></>
+        : containerInfo.name === containerTypes.SINGLE_ITEM
+         ? <ContainerSingleItem 
+            name={containerInfo.name}
+            child={containerInfo.child}
+          />
+         : <></>
   )
 }
 

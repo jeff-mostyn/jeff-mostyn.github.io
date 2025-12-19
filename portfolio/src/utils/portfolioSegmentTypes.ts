@@ -2,7 +2,8 @@ import { LocalizedContent } from "src/components/Util/util";
 
 export enum containerTypes {
   HYPERLINKS = "HYPERLINKS",
-  SIDE_BY_SIDE = "SIDE_BY_SIDE"
+  SIDE_BY_SIDE = "SIDE_BY_SIDE",
+  SINGLE_ITEM = "SINGLE_ITEM",
 }
 
 export enum visualizationTypes {
@@ -74,9 +75,15 @@ export type SideBySide = Container & {
   reverse: boolean;
 }
 
+export type SingleItem = Container & {
+  name: containerTypes.SINGLE_ITEM;
+  child: VisualizationTypes;
+}
+
 export type ContainerTypes = 
   Hyperlinks |
-  SideBySide;
+  SideBySide |
+  SingleItem;
 
 export type PortfolioItemData = {
   banner: {
