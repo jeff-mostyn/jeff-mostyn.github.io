@@ -32,7 +32,7 @@ export const WorkSample = ( { sampleData }: WorkSampleProps) => {
   return (
     <div className="pb-10">
       <div 
-        className={`${modalOpen ? 'fixed' : 'hidden'} flex flex-col top-0 right-0 left-0 z-20 justify-center items-center w-full h-full`}
+        className={`${modalOpen ? 'fixed' : 'hidden'} flex flex-col top-0 right-0 left-0 z-30 justify-center items-center w-full h-full`}
         id={"modal"}
       >
         {/* this div is the overlay */}

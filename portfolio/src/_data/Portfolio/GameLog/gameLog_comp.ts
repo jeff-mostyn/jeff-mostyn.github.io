@@ -400,5 +400,5 @@ export const gameLogData: PortfolioItemData = {
     ]
   },
   icons: [figma],
-  path: ""
+  path: "gamelog"
 }

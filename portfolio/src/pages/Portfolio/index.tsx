@@ -67,13 +67,10 @@ export const Portfolio = () => {
 	const setActivePortfolioItem = useBoundStore(state => state.setActivePortfolioItem);
 	const activeRole = useBoundStore(state => state.roleFilter);
 	const setActiveRole = useBoundStore(state => state.setRoleFilter);
-
-	// look for query params for automatically opening project
-	const urlParams = new URLSearchParams(window.location.search);
-	const project = urlParams.get('project');
+	const itemOpen = useBoundStore(state => state.portfolioItemOpen);
+	const setItemOpen = useBoundStore(state => state.setPortfolioItemOpen);
 
 	const [playAnim, setPlayAnim] = useState<boolean>(true); 
-	const [itemOpen, setItemOpen] = useState<boolean>(false || !!project); 
 
 	useEffect(() => {
 		if (!!activePortfolioItem) {
@@ -105,33 +102,45 @@ export const Portfolio = () => {
 		}
 	}
 
-	switch (project) {
-		case comcastData.path:
-			setActivePortfolioItem(comcastData);
-			break;
-		case comcastData.path:
-			setActivePortfolioItem(comcastData);
-			break;
-		case miniMinecraftData.path:
-			setActivePortfolioItem(miniMinecraftData);
-			break;
-		case racingGameData.path:
-			setActivePortfolioItem(racingGameData);
-			break;
-		case sonsOfRaData.path:
-			setActivePortfolioItem(sonsOfRaData);
-			break;
-		case pathRedesignData.path:
-			setActivePortfolioItem(pathRedesignData);
-			break;
-		default:
-			break;
-	}
+	// look for query params for automatically opening project on page load
+	useEffect(() => {
+		const urlParams = new URLSearchParams(window.location.search);
+		const project = urlParams.get('project');
+
+		switch (project) {
+			case comcastData.path:
+				setActivePortfolioItem(comcastData);
+				break;
+			case gameLogData.path:
+				setActivePortfolioItem(gameLogData);
+				break;
+			case miniMinecraftData.path:
+				setActivePortfolioItem(miniMinecraftData);
+				break;
+			case racingGameData.path:
+				setActivePortfolioItem(racingGameData);
+				break;
+			case sonsOfRaData.path:
+				setActivePortfolioItem(sonsOfRaData);
+				break;
+			case pathRedesignData.path:
+				setActivePortfolioItem(pathRedesignData);
+				break;
+			default:
+				break;
+		}
+
+		urlParams.delete('project');
+		setItemOpen(!!project);
+	}, [])
 
 	const handleRoleFilter = (newRole: string) => {
 		setPlayAnim(false);
 		setActiveRole(newRole);
 	}
+
+	console.log("playAnim: ", playAnim);
+	console.log("itemOpen: ", itemOpen);
 
 	return (
 		<div className="bg-material-neutral-primary">

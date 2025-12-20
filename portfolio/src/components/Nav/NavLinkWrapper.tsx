@@ -9,9 +9,11 @@ type NavLinkWrapperProps = {
 
 export const NavLinkWrapper = ({ route, label }: NavLinkWrapperProps) => {
 	const setActivePortfolioItem = useBoundStore(state => state.setActivePortfolioItem);
+	const setPortfolioItemOpen = useBoundStore(state => state.setPortfolioItemOpen);
 	
 	const handleBackClick = () => {
 		setActivePortfolioItem(null);
+		setPortfolioItemOpen(false);
 		window.history.replaceState(null, "Portfolio Overview", "/");
 	}
 

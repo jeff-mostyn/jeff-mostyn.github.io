@@ -65,38 +65,5 @@ export const Nav = () => {
 				</a>	
 			</div>
 		</div>
-		// <div className="flex flex-row-reverse justify-between items-center fixed top-0 z-20 w-full h-fit px-8 pt-4 pb-2">
-			
-
-		// 	{/* Back button for breakpoints medium and above is in the nav bar*/}
-		// 	{activePortfolioItem && 
-		// 		<button 
-		// 			className=" hidden md:flex items-center justify-center h-10 px-4 rounded-md bg-theme1 hover:bg-theme1-hover transition-colors duration-200 text-white font-semibold shadow-[0px_4px_8px_2px_rgba(0,_0,_0,_0.65)]"
-		// 			onClick={() => handleBackClick()}
-		// 		>
-		// 			Return
-		// 		</button>
-		// 	}
-			
-		// 	{
-		// 		browserLanguage() == languages.JAPANESE && 
-		// 		<div className="px-4 bg-theme1 min-h-8">
-		// 			このサイトは私の日本語能力限り翻訳されました。間違いや不自然な文法などがあれば、申し訳ございません。
-		// 		</div>
-		// 	}
-		// 	{/* small screen back button */}
-		// 	{activePortfolioItem && 
-		// 		<div
-		// 			className=" md:hidden flex flex-col fixed h-32 w-full bottom-0 justify-center bg-gradient-to-t from-black/60 to-black/0"
-		// 		>
-		// 			<button
-		// 				className="flex flex-end h-16 w-16 rounded-full bg-theme1 border-4 border-white items-center justify-center self-center"
-		// 				onClick={() => handleBackClick}
-		// 			>
-		// 				<img className="h-10 w-10 filter-white" src={close} />
-		// 			</button>
-		// 		</div>
-		// 	}
-		// </div>
 	)
 }
