@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.6fcb016d.css",
-    "main.js": "./static/js/main.09533896.js",
+    "main.css": "./static/css/main.8064cf62.css",
+    "main.js": "./static/js/main.5ed7716e.js",
     "static/js/787.7da95b79.chunk.js": "./static/js/787.7da95b79.chunk.js",
     "static/media/racing_game_feature.gif": "./static/media/racing_game_feature.540757eb1330b458560b.gif",
     "static/media/nova_charSelect.gif": "./static/media/nova_charSelect.0b96aeba86614c887508.gif",
@@ -9,7 +9,10 @@
     "static/media/racingGame_keyImage.png": "./static/media/racingGame_keyImage.01f46824ab9601d1ff80.png",
     "static/media/CornellBox.png": "./static/media/CornellBox.72e7c5f5d6895e192bec.png",
     "static/media/hires.png": "./static/media/hires.51b735c7ab50f46349c7.png",
+    "static/media/GameLogPrimary.webp": "./static/media/GameLogPrimary.a0e8a7c753eb6d7ba2b2.webp",
     "static/media/wireframe.png": "./static/media/wireframe.a9872d17d740f17ba244.png",
+    "static/media/GameLogHighFidelity.webp": "./static/media/GameLogHighFidelity.7fbb94e44faeb38305ec.webp",
+    "static/media/hero2.webp": "./static/media/hero2.9b44903857eb7e38e755.webp",
     "static/media/banner.webp": "./static/media/banner.44af8d40a8a749a3e28c.webp",
     "static/media/react.png": "./static/media/react.6bcffb56bd0efaa47767.png",
     "static/media/csharp.png": "./static/media/csharp.f0ad910d245c243c42d9.png",
@@ -18,21 +21,26 @@
     "static/media/cart3RewriteAndNextGen.png": "./static/media/cart3RewriteAndNextGen.12038452c875654d2895.png",
     "static/media/sor_banner.webp": "./static/media/sor_banner.0d409d061b2d2b6a2ddd.webp",
     "static/media/cpp.png": "./static/media/cpp.191c0892a2a3dca56087.png",
+    "static/media/GameLogAddFlow.webp": "./static/media/GameLogAddFlow.51e2abc5727d61d7c804.webp",
     "static/media/cart3.png": "./static/media/cart3.bb23bb75f5317a271dc7.png",
     "static/media/miniMinecraft_banner.webp": "./static/media/miniMinecraft_banner.0b63e5541f62ca139ba0.webp",
+    "static/media/GameLogWireframes.webp": "./static/media/GameLogWireframes.fd41c383551e768d2951.webp",
     "static/media/Headshot1.png": "./static/media/Headshot1.b09db54604de0c42b728.png",
     "static/media/typescript.png": "./static/media/typescript.1e3902edbe4c3f2970d8.png",
+    "static/media/GameLogTypography.webp": "./static/media/GameLogTypography.67ca7c021f04d96bf9a0.webp",
+    "static/media/GameLogSketches.webp": "./static/media/GameLogSketches.4470e4f9956459d9ae33.webp",
+    "static/media/GameLogColorGuide.webp": "./static/media/GameLogColorGuide.b08853d98a480db6363f.webp",
     "static/media/banner.png": "./static/media/banner.161b56044fc2263b856b.png",
     "static/media/qt.png": "./static/media/qt.3c3229ec39fc9915d857.png",
     "static/media/opengl.jpg": "./static/media/opengl.f4f49a3cba1c7365852d.jpg",
     "static/media/unity.png": "./static/media/unity.dce03716ca0bd431081e.png",
     "index.html": "./index.html",
-    "main.6fcb016d.css.map": "./static/css/main.6fcb016d.css.map",
-    "main.09533896.js.map": "./static/js/main.09533896.js.map",
+    "main.8064cf62.css.map": "./static/css/main.8064cf62.css.map",
+    "main.5ed7716e.js.map": "./static/js/main.5ed7716e.js.map",
     "787.7da95b79.chunk.js.map": "./static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fcb016d.css",
-    "static/js/main.09533896.js"
+    "static/css/main.8064cf62.css",
+    "static/js/main.5ed7716e.js"
   ]
 }
