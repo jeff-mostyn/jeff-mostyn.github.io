@@ -29,7 +29,7 @@ export const PortfolioPage = () => {
         </div>
         <div className="relative flex flex-col justify-center h-full px-8 md:px-12 2xl:max-w-[1500px]">
           {activePortfolioItem.content.summary && 
-            <div className="flex flex-wrap self-center text-left indent-4 flex-row md:w-[600px] lg:w-[800px]">
+            <div className="flex flex-row flex-wrap self-center text-left indent-4 pb-2 md:w-[600px] lg:w-[800px]">
               {GetLocalizedContentValue(activePortfolioItem.content.summary)}
             </div>
           }

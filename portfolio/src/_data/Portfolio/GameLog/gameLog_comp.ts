@@ -54,8 +54,12 @@ export const gameLogData: PortfolioItemData = {
           ]
         },
         heading: {
-          "en": "Background",
-          "ja": "Background"
+          text: {
+            "en": "Background",
+            "ja": "Background"
+          },
+          alignment: "left",
+          size: "2"
         },
         padding: Sizes.LG
       },
@@ -71,8 +75,12 @@ export const gameLogData: PortfolioItemData = {
           ]
         },
         heading: {
-          "en": "Problem",
-          "ja": "Problem"
+          text: {
+            "en": "Problem",
+            "ja": "Problem"
+          },
+          alignment: "left",
+          size: "3"
         },
         padding: Sizes.LG
       },
@@ -88,8 +96,12 @@ export const gameLogData: PortfolioItemData = {
           ]
         },
         heading: {
-          "en": "User Research",
-          "ja": "User Research"
+          text: {
+            "en": "User Research",
+            "ja": "User Research"
+          },
+          alignment: "left",
+          size: "3"
         },
         padding: Sizes.LG
       },
@@ -148,8 +160,12 @@ export const gameLogData: PortfolioItemData = {
           reverse: true
         },
         heading: {
-          "en": "Initial Design",
-          "ja": "Initial Design"
+          text: {
+            "en": "Initial Design",
+            "ja": "Initial Design"
+          },
+          alignment: "left",
+          size: "2"
         },
         padding: Sizes.LG
       },
@@ -187,8 +203,12 @@ export const gameLogData: PortfolioItemData = {
           ]
         },
         heading: {
-          "en": "Thoughts",
-          "ja": "Thoughts"
+          text: {
+            "en": "Thoughts",
+            "ja": "Thoughts"
+          },
+          alignment: "left",
+          size: "3"
         },
         padding: Sizes.LG
       },
@@ -204,8 +224,12 @@ export const gameLogData: PortfolioItemData = {
           ]
         },
         heading: {
-          "en": "Design Refinement",
-          "ja": "Design Refinement"
+          text: {
+            "en": "Design Refinement",
+            "ja": "Design Refinement"
+          },
+          alignment: "left",
+          size: "2"
         },
         padding: Sizes.LG
       },
@@ -253,8 +277,12 @@ export const gameLogData: PortfolioItemData = {
           reverse: true
         },
         heading: {
-          "en": "User Testing",
-          "ja": "User Testing"
+          text: {
+            "en": "User Testing",
+            "ja": "User Testing"
+          },
+          alignment: "left",
+          size: "3"
         },
         padding: Sizes.LG
       },
@@ -270,8 +298,12 @@ export const gameLogData: PortfolioItemData = {
           ]
         },
         heading: {
-          "en": "High Fidelity",
-          "ja": "High Fidelity"
+          text: {
+            "en": "High Fidelity",
+            "ja": "High Fidelity"
+          },
+          alignment: "left",
+          size: "2"
         },
         padding: Sizes.LG
       },
@@ -330,8 +362,12 @@ export const gameLogData: PortfolioItemData = {
           ]
         },
         heading: {
-          "en": "Looking Forward",
-          "ja": "Looking Forward"
+          text: {
+            "en": "Looking Forward",
+            "ja": "Looking Forward"
+          },
+          alignment: "left",
+          size: "2"
         },
         padding: Sizes.LG
       },
@@ -343,8 +379,12 @@ export const gameLogData: PortfolioItemData = {
           altText: "color guide"
         },
         heading: {
-          "en": "Style Guide",
-          "ja": "Style Guide"
+          text: {
+            "en": "Style Guide",
+            "ja": "Style Guide"
+          },
+          alignment: "center",
+          size: "1"
         },
         padding: Sizes.SM
       },

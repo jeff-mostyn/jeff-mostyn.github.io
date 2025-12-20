@@ -1,12 +1,13 @@
 import { SideBySide } from "src/utils/portfolioSegmentTypes"
 import { GetLocalizedContentValue } from "../Util/util";
 import { mapVisualizationComponent } from "src/utils/componentMapping";
+import { headingStyles } from "src/utils/styles";
 
 export const C_SideBySide: React.FC<SideBySide> = ({heading, children, reverse}: SideBySide) => {
   return (
     <div className="pt-8">
-      {heading && <h2 className="text-3xl text-white py-6 md:text-5xl">
-         {GetLocalizedContentValue(heading)}
+      {heading && <h2 className={headingStyles(heading)}>
+         {GetLocalizedContentValue(heading.text)}
       </h2>}
       <div className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} lg:gap-12`}>
         { children[0] && <div className={`pb-4 self-center w-full lg:w-1/2 lg:pb-0`}>

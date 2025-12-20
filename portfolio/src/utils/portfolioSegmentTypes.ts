@@ -14,6 +14,12 @@ export enum visualizationTypes {
   YOUTUBE = "YOUTUBE"
 }
 
+export type Header = {
+  text: LocalizedContent;
+  alignment: 'left' | 'center' | 'right';
+  size: '1' | '2' | '3' | '4'
+}
+
 type VisualizationInfo = {
   name: visualizationTypes;
 }
@@ -58,7 +64,7 @@ export type VisualizationTypes =
 
 export type Container = {
   name: containerTypes;
-  heading?: LocalizedContent;
+  heading?: Header;
   padding?: Sizes;
 }
 

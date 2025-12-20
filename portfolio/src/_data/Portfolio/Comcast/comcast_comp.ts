@@ -37,8 +37,12 @@ export const comcastData: PortfolioItemData = {
       {
         name: containerTypes.SIDE_BY_SIDE,
         heading: {
-          "en": "Xfinity.com Cart Rewrite & Next-Gen Pricing",
-          "ja": "Xfinity.com Cart Rewrite & Next-Gen Pricing"
+          text: {
+            "en": "Xfinity.com Cart Rewrite & Next-Gen Pricing",
+            "ja": "Xfinity.com Cart Rewrite & Next-Gen Pricing"
+          },
+          alignment: 'center',
+          size: '1'
         },
         children: [
           {
@@ -69,8 +73,12 @@ export const comcastData: PortfolioItemData = {
       {
         name: containerTypes.SIDE_BY_SIDE,
         heading: {
-          "en": "Xfinity Sales Site Cart 3",
-          "ja": "Xfinity Sales Site Cart 3"
+          text: {
+            "en": "Xfinity Sales Site Cart 3",
+            "ja": "Xfinity Sales Site Cart 3"
+          },
+          alignment: 'center',
+          size: '1'
         },
         children: [
           {

@@ -106,8 +106,12 @@ export const comcastData: PortfolioItemData = {
       {
         name: containerTypes.SIDE_BY_SIDE,
         heading: {
-          "en": "Character Select",
-          "ja": "Character Select"
+          text: {
+            "en": "Character Select",
+            "ja": "Character Select"
+          },
+          alignment: 'center',
+          size: '1'
         },
         children: [
           {
@@ -134,8 +138,12 @@ export const comcastData: PortfolioItemData = {
       {
         name: containerTypes.SIDE_BY_SIDE,
         heading: {
-          "en": "Racing Heads-Up Display",
-          "ja": "Racing Heads-Up Display"
+          text: {
+            "en": "Racing Heads-Up Display",
+            "ja": "Racing Heads-Up Display"
+          },
+          alignment: 'center',
+          size: '1'
         },
         children: [
           {

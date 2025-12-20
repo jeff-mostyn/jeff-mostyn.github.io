@@ -111,8 +111,12 @@ export const sonsOfRaData: PortfolioItemData = {
       {
         name: containerTypes.SIDE_BY_SIDE,
         heading: {
-          "en": "Radial UI",
-          "ja": "Radial UI"
+          text: {
+            "en": "Radial UI",
+            "ja": "Radial UI"
+          },
+          alignment: 'center',
+          size: '1'
         },
         children: [
           {
