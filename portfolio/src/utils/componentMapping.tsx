@@ -26,6 +26,8 @@ export const mapContainerComponent = (containerInfo: ContainerTypes): React.Reac
          ? <ContainerSingleItem 
             name={containerInfo.name}
             child={containerInfo.child}
+            heading={containerInfo.heading}
+            padding={containerInfo.padding}
           />
          : <></>
   )

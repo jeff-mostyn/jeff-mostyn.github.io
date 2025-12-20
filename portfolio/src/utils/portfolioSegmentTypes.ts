@@ -1,4 +1,4 @@
-import { LocalizedContent } from "src/components/Util/util";
+import { LocalizedContent, Sizes } from "src/components/Util/util";
 
 export enum containerTypes {
   HYPERLINKS = "HYPERLINKS",
@@ -58,7 +58,8 @@ export type VisualizationTypes =
 
 export type Container = {
   name: containerTypes;
-  heading?: LocalizedContent
+  heading?: LocalizedContent;
+  padding?: Sizes;
 }
 
 export type Hyperlinks = Container & {

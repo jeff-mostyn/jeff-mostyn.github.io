@@ -35,7 +35,9 @@ export const PortfolioPage = () => {
           }
           <div className="flex flex-col items-center">
             {activePortfolioItem.content.containers.map((container, i) => (
-              mapContainerComponent(container)
+              <div key={i}>
+                {mapContainerComponent(container)}
+              </div>
             ))}
           </div>
         </div>
