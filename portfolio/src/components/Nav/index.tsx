@@ -7,8 +7,6 @@ import { SVG } from "../Util/Svg";
 import { GetLocalizedContentValue, Sizes, browserLanguage, languages } from "../Util/util";
 import { useBoundStore } from "src/store/store";
 
-import close from '../../svg/close-svgrepo-com.svg'
-
 export const Nav = () => {
 	const labels = {
 		about: {
@@ -30,39 +28,42 @@ export const Nav = () => {
 	}
 
 	const activePortfolioItem = useBoundStore(state => state.activePortfolioItem);
-	const setActivePortfolioItem = useBoundStore(state => state.setActivePortfolioItem);
 
-	// in addition to setting the portfolio item to null, we want to erase any query parameters that
-	// may have directed the user to a specific project
-	const handleBackClick = () => {
-		setActivePortfolioItem(null);
-		window.history.replaceState(null, "Portfolio Overview", "/");
-		window.scrollTo(0, 0);
-	}
+	const hasNotif = browserLanguage() == languages.JAPANESE;
 
 	return (
 		<div className="
-			fixed flex flex-row items-center z-30 left-0 right-0 bottom-4 mx-auto px-8 py-2 w-fit h-fit gap-4 bg-material-neutral-secondary rounded-xl shadow-[0px_4px_8px_1px_rgba(0,_0,_0,_0.65)] 
+			fixed items-center z-30 left-0 right-0 bottom-8 mx-auto h-fit max-w-96 w-fit
 			sm:left-0
 			md:gap-6 md:mr-8 md:top-4
 		">
-			<NavLinkWrapper route={"/"} label={
-				GetLocalizedContentValue(!!activePortfolioItem ? labels.close : labels.portfolio)}
-			/>
-			<NavLinkWrapper route={"/About"} label={GetLocalizedContentValue(labels.about)}/>
-			<a 
-				className="flex self-center transition-colors duration-300 text-white hover:text-theme1" 
-				href="https://drive.google.com/file/d/1PYKZ72kfuU87XZK8oWvgJzjk9SHivaNf/view?usp=sharing"
-			>
-				{GetLocalizedContentValue(labels.resume)}
-			</a>
-			<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
-				<SVG name="linkedin" size={Sizes.MD} baseColor="white" transition={true} transitionColor="theme1"/>
-			</a>
-			<div className="flex w-6 h-6 items-center justify-center transition-colors duration-300 bg-white hover:bg-theme1 rounded-md">
-				<a className="flex self-center" href="https://github.com/jeff-mostyn">
-					<img src={github} className="h-5 w-5" alt={"github"}/>
-				</a>	
+			<div className={`flex flex-col ${hasNotif && 'bg-theme1'} rounded-t-2xl rounded-xl h-fit shadow-[0px_4px_8px_1px_rgba(0,_0,_0,_0.65)]`}>
+				<div className="flex flex-row px-8 py-2 w-fit h-fit gap-4 bg-material-neutral-secondary rounded-xl">
+					<NavLinkWrapper route={"/"} label={
+						GetLocalizedContentValue(!!activePortfolioItem ? labels.close : labels.portfolio)}
+					/>
+					<NavLinkWrapper route={"/About"} label={GetLocalizedContentValue(labels.about)}/>
+					<a 
+						className="flex self-center transition-colors duration-300 text-white hover:text-theme1" 
+						href="https://drive.google.com/file/d/1PYKZ72kfuU87XZK8oWvgJzjk9SHivaNf/view?usp=sharing"
+					>
+						{GetLocalizedContentValue(labels.resume)}
+					</a>
+					<a className="flex self-center pt-0.5" href="https://www.linkedin.com/in/jeffreymostyn/">
+						<SVG name="linkedin" size={Sizes.MD} baseColor="white" transition={true} transitionColor="theme1"/>
+					</a>
+					<div className="flex w-6 h-6 items-center justify-center transition-colors duration-300 bg-white hover:bg-theme1 rounded-md">
+						<a className="flex self-center" href="https://github.com/jeff-mostyn">
+							<img src={github} className="h-5 w-5" alt={"github"}/>
+						</a>	
+					</div>
+				</div>
+				{
+					browserLanguage() == languages.JAPANESE && 
+					<div className="px-4 min-h-8 rounded-b-xl">
+						このサイトは翻訳が途中です。
+					</div>
+				}
 			</div>
 		</div>
 	)
